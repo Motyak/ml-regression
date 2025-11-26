@@ -2,6 +2,14 @@
 set -o errexit
 set -o nounset
 
+[ "${BASH_SOURCE[0]}" == "$0" ] || {
+    >&2 echo "script must be executed, not sourced"
+    return 1
+}
+
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+cd "$SCRIPT_DIR"
+
 # we want to sort the resulting json array by:
 # 1) creation time
 # 2) category + path
@@ -18,6 +26,7 @@ function mergeCreationTimes {
 }
 
 creationTimes="$(mergeCreationTimes | sort)"
+# echo "\`$creationTimes\`"
 
 INDENT_SIZE=4
 indent=0
@@ -25,36 +34,49 @@ indent=0
 function print {
     local str="$1"
 
-    spaces=""
-    for ((i = 0; i < INDENT_SIZE * indent; ++i)); do
-        spaces+=" "
-    done
-    echo -n "$spaces"
+    # spaces=""
+    # for ((i = 0; i < INDENT_SIZE * indent; ++i)); do
+    #     spaces+=" "
+    # done
+    # echo -n "$spaces"
+    printf '%*s' "$((INDENT_SIZE * indent))" ''
     
-    echo "$str"
+    echo -n "$str"
+}
+
+function println {
+    print "${@:-}"
+    echo
 }
 
 function print_programs {
-    print "["
+    println "["
     indent=$((indent + 1))
+        local first_it="true"
         while IFS= read line; do
-            IFS=' ' read creationTime category path
-            print_program "$creationTime" "$category" "$path"
+            IFS=' ' read creationTime category path <<< "$line"
+            print_program "$creationTime" "$category" "$path" "$first_it"
+            first_it="false"
             :
         done <<< "$creationTimes"
+        println
     indent=$((indent - 1))
-    print "]"
+    println "]"
 }
 
 function print_program {
     local creationTime="$1"
     local category="$2"
     local path="$3"
-    print "{"
+    local first_it="${4:-true}"
+    [ "$first_it" != "true" ] && {
+        echo ","
+    }
+    println "{"
     indent=$((indent + 1))
-        print "\"category\": \"$category\","
-        print "\"path\": \"$path\","
-        print "\"creation_time\": \"$creationTime\","
+        println "\"category\": \"$category\","
+        println "\"path\": \"$path\","
+        println "\"creation_time\": \"$creationTime\","
         print_baseline_commits "$creationTime"
     indent=$((indent - 1))
     print "}"
@@ -62,13 +84,13 @@ function print_program {
 
 function print_baseline_commits {
     local creationTime="$1"
-    print "\"baseline_commits\": {"
+    println "\"baseline_commits\": {"
     indent=$((indent + 1))
         print_commit LV1 "$creationTime"
         print_commit parser "$creationTime"
         print_commit interpreter "$creationTime"
     indent=$((indent - 1))
-    print "}"
+    println "}"
 }
 
 # e.g.: get_commit monlang.git '2025-01-17T17:04:36Z'
@@ -93,21 +115,21 @@ function print_commit {
     local commit; commit="$(get_commit "${git_dir["$repo"]}" "$creationTime")"
     IFS=' ' read author_date hash title_line <<< "$commit"
 
-    print "${repo}: {"
+    println "\"${repo}\": {"
     indent=$((indent + 1))
-        print "\"hash\": \"${hash}\","
-        print "\"title_line\": \"${title_line//\"/\\\"}\","
-        # convert date with offset => UTC
-        print "\"author_date\": \"$(date -d "$author_date" -u +"%Y-%m-%dT%H:%M:%SZ")\""
+        println "\"hash\": \"${hash}\","
+        println "\"title_line\": \"${title_line//\"/\\\"}\","
+        # convert date with offset => UTC, default to linux epoch
+        println "\"author_date\": \"$(date -d "${author_date:-@0}" -u +"%Y-%m-%dT%H:%M:%SZ")\""
     indent=$((indent - 1))
 
     local closing_bracket
-    if [ "${git_dir["$repo"]}" == "interpreter" ]; then
+    if [ "$repo" == "interpreter" ]; then
         closing_bracket="}"
     else
         closing_bracket="},"
     fi
-    print "$closing_bracket"
+    println "$closing_bracket"
 }
 
 print_programs > programs.json
