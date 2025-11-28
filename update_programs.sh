@@ -10,6 +10,10 @@ set -o nounset
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 cd "$SCRIPT_DIR"
 
+# data/parser/update.sh
+# data/interpreter/update.sh
+# data/bookmarks/update.sh
+
 # we want to sort the resulting json array by:
 # 1) creation time
 # 2) category + path
@@ -28,20 +32,17 @@ function mergeCreationTimes {
 creationTimes="$(mergeCreationTimes | sort)"
 # echo "\`$creationTimes\`"
 
-INDENT_SIZE=4
 indent=0
 
 function print {
     local str="$1"
 
-    # spaces=""
-    # for ((i = 0; i < INDENT_SIZE * indent; ++i)); do
-    #     spaces+=" "
-    # done
-    # echo -n "$spaces"
-    printf '%*s' "$((INDENT_SIZE * indent))" ''
-    
-    echo -n "$str"
+    tabs=""
+    for ((i = 1; i <= indent; ++i)); do
+        tabs+=$'\t'
+    done
+
+    echo -n "${tabs}${str}"
 }
 
 function println {
@@ -59,7 +60,7 @@ function print_programs {
             first_it="false"
             :
         done <<< "$creationTimes"
-        println
+        echo
     indent=$((indent - 1))
     println "]"
 }
