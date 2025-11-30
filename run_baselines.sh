@@ -55,7 +55,7 @@ function handle_programs {
         # ..we rely on monlang-parser/common/utils/ and monlang-parser/montree/ for building LV1
         [[ -n "$parser_hash" && "$parser_hash" != "$prev_parser_hash" ]] && {
             git -C ml-tools/monlang-parser checkout -f "$parser_hash"
-            git -C ml-tools/monlang-parser checkout master -- common/utils
+            # git -C ml-tools/monlang-parser checkout master -- common/utils
             git -C ml-tools/monlang-parser checkout 71c69a07d9d93e4963bc244cebe1b51bf6189980~1 -- common/utils/stdfunc-utils.h
         } >> "data/${program}.log" 2>&1
 
