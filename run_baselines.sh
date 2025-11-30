@@ -1,5 +1,5 @@
 #!/bin/bash
-set -o errexit
+set -o errexit -o errtrace
 shopt -s expand_aliases
 
 [ "${BASH_SOURCE[0]}" == "$0" ] || {
@@ -14,6 +14,8 @@ trap on_error ERR
 function on_error {
     [ -n "$program" ] && {
         rm -f "data/${program}.out.json"
+        # revert any potential occuring stdout/stderr redirection
+        exec &>/dev/tty
         >&2 echo "Error in \`data/${program}.log\`"
     }
 }
@@ -36,7 +38,7 @@ prev_LV1_hash=""
 prev_parser_hash=""
 prev_interpreter_hash=""
 
-# alias make='make -j16'
+alias make='make -j16'
 
 function handle_programs {
     while IFS= read line; do
@@ -45,29 +47,39 @@ function handle_programs {
             >&2 echo "File already exist: \`data/${program}.out.json\`"
             continue
         }
+        >&2 echo "Processing: \`data/${program}\`"
 
         echo -n > "data/${program}.log"
 
+        # checking out monlang-parser before monlang (LV1) because..
+        # ..we rely on monlang-parser/common/utils/ and monlang-parser/montree/ for building LV1
+        [[ -n "$parser_hash" && "$parser_hash" != "$prev_parser_hash" ]] && {
+            git -C ml-tools/monlang-parser checkout -f "$parser_hash"
+            git -C ml-tools/monlang-parser checkout master -- common/utils
+            git -C ml-tools/monlang-parser checkout 71c69a07d9d93e4963bc244cebe1b51bf6189980~1 -- common/utils/stdfunc-utils.h
+        } >> "data/${program}.log" 2>&1
+
         [[ -n "$LV1_hash" && "$LV1_hash" != "$prev_LV1_hash" ]] && {
             git -C ml-tools/monlang checkout -f "$LV1_hash"
+            rm -rf ml-tools/monlang/include/utils; ln -s ../../monlang-parser/common/utils $_
+            rm -rf ml-tools/monlang/lib/montree; ln -s ../../monlang-parser/montree $_
             sed -i 's/\btee\b/tee -a/g' ml-tools/monlang/tools/aggregate-libs.mri.sh
             rm -rf ml-tools/monlang/.release
-            make -C ml-tools/monlang dist
+            make -C ml-tools/monlang -B dist
         } >> "data/${program}.log" 2>&1
 
         [[ -n "$parser_hash" && "$parser_hash" != "$prev_parser_hash" ]] && {
-            git -C ml-tools/monlang-parser checkout -f "$parser_hash"
             sed -i 's/\btee\b/tee -a/g' ml-tools/monlang-parser/tools/aggregate-libs.mri.sh
-            make -C ml-tools/monlang-parser/monlang-LV2 lib/montree/dist/montree.a
+            make -C ml-tools/monlang-parser/monlang-LV2 -B lib/montree/dist/montree.a
             rm -rf ml-tools/monlang-parser/.deps
-            make -C ml-tools/monlang-parser bin/main.elf
+            make -C ml-tools/monlang-parser -B bin/main.elf
         } >> "data/${program}.log" 2>&1
 
         [[ -n "$interpreter_hash" && "$interpreter_hash" != "$prev_interpreter_hash" ]] && {
             git -C ml-tools/monlang-interpreter checkout -f "$interpreter_hash"
             sed -i 's/\btee\b/tee -a/g' ml-tools/monlang-interpreter/tools/aggregate-libs.mri.sh
             ln -fs ../monlang-parser ml-tools/monlang-interpreter/lib/monlang-parser
-            make -C ml-tools/monlang-interpreter bin/main.elf
+            make -C ml-tools/monlang-interpreter -B bin/main.elf
         } >> "data/${program}.log" 2>&1
 
         curl -sS http://127.0.0.1:55555 \
@@ -80,9 +92,9 @@ function handle_programs {
         prev_LV1_hash="$LV1_hash"
         prev_parser_hash="$parser_hash"
         prev_interpreter_hash="$interpreter_hash"
-        break
+        # break
     done
 }
 
-# programs | handle_programs
-handle_programs
+programs | handle_programs
+# handle_programs
