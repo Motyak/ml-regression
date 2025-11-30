@@ -108,9 +108,9 @@ function print_commit {
     local creationTime="$2"
 
     declare -A git_dir=(
-        ["LV1"]="monlang.git"
-        ["parser"]="monlang-parser.git"
-        ["interpreter"]="monlang-interpreter.git"
+        ["LV1"]="ml-tools/monlang/.git"
+        ["parser"]="ml-tools/monlang-parser/.git"
+        ["interpreter"]="ml-tools/monlang-interpreter/.git"
     )
     
     local commit; commit="$(get_commit "${git_dir["$repo"]}" "$creationTime")"
