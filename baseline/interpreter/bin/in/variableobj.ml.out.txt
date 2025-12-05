@@ -1,0 +1,325 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `tern`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `cond`
+	        -> Term #2
+	          -> Word: Atom: `if_false`
+	        -> Term #3
+	          -> Word: Atom: `if_true`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `res`
+	          -> ProgramWord #3: Atom: `$nil`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `||`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_false`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `&&`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_true`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `res`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `Variable`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `start`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `val`
+	          -> ProgramWord #3: Atom: `start`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `get`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup (empty)
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord: Atom: `val`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `set`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `new_val`
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord #1: Atom: `val`
+	                -> ProgramWord #2: Atom: `:=`
+	                -> ProgramWord #3: Atom: `new_val`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Quotation: `--------------------`
+	        -> ProgramSentence #5
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `dispatcher`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `msg_id`
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord: PostfixParenthesesGroup
+	                  -> Word: Atom: `tern`
+	                  -> ParenthesesGroup
+	                    -> Term #1
+	                      -> Word: Atom: `msg_id`
+	                    -> Term #2
+	                      -> Word: Atom: `get`
+	                    -> Term #3
+	                      -> Word: CurlyBracketsGroup
+	                        -> ProgramSentence
+	                          -> ProgramWord: PostfixParenthesesGroup
+	                            -> Word: Atom: `tern`
+	                            -> ParenthesesGroup
+	                              -> Term #1
+	                                -> Word #1: Atom: `msg_id`
+	                                -> Word #2: Atom: `+`
+	                                -> Word #3: Atom: `-1`
+	                              -> Term #2
+	                                -> Word: Atom: `set`
+	                              -> Term #3
+	                                -> Word: CurlyBracketsGroup
+	                                  -> ProgramSentence #1
+	                                    -> ProgramWord: PostfixParenthesesGroup
+	                                      -> Word: Atom: `print`
+	                                      -> ParenthesesGroup
+	                                        -> Term
+	                                          -> Word #1: Quotation: `ERR invalid msg_id in dispatcher: ``
+	                                          -> Word #2: Atom: `+`
+	                                          -> Word #3: Atom: `msg_id`
+	                                          -> Word #4: Atom: `+`
+	                                          -> Word #5: Quotation: ```
+	                                  -> ProgramSentence #2
+	                                    -> ProgramWord: PostfixParenthesesGroup
+	                                      -> Word: Atom: `exit`
+	                                      -> ParenthesesGroup
+	                                        -> Term
+	                                          -> Word: Atom: `1`
+	        -> ProgramSentence #6
+	          -> ProgramWord: Atom: `dispatcher`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `get`
+	    -> ProgramWord #3: Atom: `0`
+	  -> ProgramSentence #4
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `set`
+	    -> ProgramWord #3: Atom: `1`
+	  -> ProgramSentence #5
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `myvar`
+	    -> ProgramWord #3: PostfixParenthesesGroup
+	      -> Word: Atom: `Variable`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `13`
+	  -> ProgramSentence #6
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: PostfixParenthesesGroup
+	        -> Word: Atom: `myvar`
+	        -> ParenthesesGroup
+	          -> Term
+	            -> Word: Atom: `get`
+	      -> ParenthesesGroup (empty)
+	  -> ProgramSentence #7
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: PostfixParenthesesGroup
+	        -> Word: Atom: `myvar`
+	        -> ParenthesesGroup
+	          -> Term
+	            -> Word: Atom: `set`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `37`
+	  -> ProgramSentence #8
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: PostfixParenthesesGroup
+	        -> Word: Atom: `myvar`
+	        -> ParenthesesGroup
+	          -> Term
+	            -> Word: Atom: `get`
+	      -> ParenthesesGroup (empty)
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `tern`
+	    -> Expression: Lambda
+	      -> parameter #1: `cond`
+	      -> parameter #2: `if_false`
+	      -> parameter #3: `if_true`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `res`
+	          -> Expression: SpecialSymbol: `$nil`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `||`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_false`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `&&`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_true`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: Symbol: `res`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `Variable`
+	    -> Expression: Lambda
+	      -> parameter #1: `start`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `val`
+	          -> Expression: Symbol: `start`
+	        -> Statement #2: VarStatement
+	          -> Symbol: `get`
+	          -> Expression: Lambda
+	            -> (no parameters)
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: Symbol: `val`
+	        -> Statement #3: VarStatement
+	          -> Symbol: `set`
+	          -> Expression: Lambda
+	            -> parameter #1: `new_val`
+	            -> body
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `val`
+	                -> Expression: Symbol: `new_val`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: StrLiteral: `--------------------`
+	        -> Statement #5: VarStatement
+	          -> Symbol: `dispatcher`
+	          -> Expression: Lambda
+	            -> parameter #1: `msg_id`
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `tern`
+	                  -> argument #1
+	                    -> Expression: Symbol: `msg_id`
+	                  -> argument #2
+	                    -> Expression: Symbol: `get`
+	                  -> argument #3
+	                    -> Expression: BlockExpression
+	                      -> Statement: ExpressionStatement
+	                        -> Expression: FunctionCall
+	                          -> function
+	                            -> Expression: Symbol: `tern`
+	                          -> argument #1
+	                            -> Expression: Operation
+	                              -> Expression: Symbol: `msg_id`
+	                              -> operator: `+`
+	                              -> Expression: Numeral: `-1`
+	                          -> argument #2
+	                            -> Expression: Symbol: `set`
+	                          -> argument #3
+	                            -> Expression: BlockExpression
+	                              -> Statement #1: ExpressionStatement
+	                                -> Expression: FunctionCall
+	                                  -> function
+	                                    -> Expression: Symbol: `print`
+	                                  -> argument #1
+	                                    -> Expression: Operation
+	                                      -> Expression: Operation
+	                                        -> Expression: StrLiteral: `ERR invalid msg_id in dispatcher: ``
+	                                        -> operator: `+`
+	                                        -> Expression: Symbol: `msg_id`
+	                                      -> operator: `+`
+	                                      -> Expression: StrLiteral: ```
+	                              -> Statement #2: ExpressionStatement
+	                                -> Expression: FunctionCall
+	                                  -> function
+	                                    -> Expression: Symbol: `exit`
+	                                  -> argument #1
+	                                    -> Expression: Numeral: `1`
+	        -> Statement #6: ExpressionStatement
+	          -> Expression: Symbol: `dispatcher`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `get`
+	    -> Expression: Numeral: `0`
+	  -> Statement #4: VarStatement
+	    -> Symbol: `set`
+	    -> Expression: Numeral: `1`
+	  -> Statement #5: VarStatement
+	    -> Symbol: `myvar`
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `Variable`
+	      -> argument #1
+	        -> Expression: Numeral: `13`
+	  -> Statement #6: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `myvar`
+	          -> argument #1
+	            -> Expression: Symbol: `get`
+	      -> arguments (none)
+	  -> Statement #7: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `myvar`
+	          -> argument #1
+	            -> Expression: Symbol: `set`
+	      -> argument #1
+	        -> Expression: Numeral: `37`
+	  -> Statement #8: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `myvar`
+	          -> argument #1
+	            -> Expression: Symbol: `get`
+	      -> arguments (none)
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

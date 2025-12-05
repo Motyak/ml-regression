@@ -1,0 +1,38 @@
+prog: parser
+
+prog_exitcode: 11
+
+out/traceback.txt: ```
+	data/parser/bin/in/multiline_notok.txt:2:2: LV1 error: Malformed ProgramSentence
+	    2 | a]13
+	      | ^^ERR-102
+	data/parser/bin/in/multiline_notok.txt:2:1: LV1 error: Malformed Program
+	    2 | a]13
+	      | ^ERR-119
+	
+```
+
+out/console.txt: ```
+	Parsing error
+	
+```
+
+out/LV1.ast.txt: ```
+	~> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `let`
+	    -> ProgramWord #2: Atom: `a`
+	    -> ProgramWord #3: Atom: `10`
+	  ~> ProgramSentence #2
+	    -> ProgramWord: Atom: `a`
+	    ~> ERR-102
+	
+```
+
+out/LV2.ast.txt: ```
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

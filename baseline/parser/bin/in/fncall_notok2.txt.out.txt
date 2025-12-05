@@ -1,0 +1,76 @@
+prog: parser
+
+prog_exitcode: 12
+
+out/traceback.txt: ```
+	data/parser/bin/in/fncall_notok2.txt:1:17: LV2 error: Malformed Expression
+	    1 | 1 + (fds(3 + 2, 2 +) + 5)
+	      |                 ^ERR-161
+	data/parser/bin/in/fncall_notok2.txt:1:17: LV2 error: Malformed FunctionCall
+	    1 | 1 + (fds(3 + 2, 2 +) + 5)
+	      |      ^          ^ERR-622
+	data/parser/bin/in/fncall_notok2.txt:1:6: LV2 error: Malformed Operation
+	    1 | 1 + (fds(3 + 2, 2 +) + 5)
+	      |      ^ERR-611
+	data/parser/bin/in/fncall_notok2.txt:1:6: LV2 error: Malformed Operation
+	    1 | 1 + (fds(3 + 2, 2 +) + 5)
+	      | ^    ^ERR-612
+	data/parser/bin/in/fncall_notok2.txt:1:1: LV2 error: Malformed ExpressionStatement
+	    1 | 1 + (fds(3 + 2, 2 +) + 5)
+	      | ^ERR-591
+	data/parser/bin/in/fncall_notok2.txt:1:1: LV2 error: Malformed Program
+	    1 | 1 + (fds(3 + 2, 2 +) + 5)
+	      | ^ERR-111
+	
+```
+
+out/console.txt: ```
+	Parsing error
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence
+	    -> ProgramWord #1: Atom: `1`
+	    -> ProgramWord #2: Atom: `+`
+	    -> ProgramWord #3: ParenthesesGroup
+	      -> Term
+	        -> Word #1: PostfixParenthesesGroup
+	          -> Word: Atom: `fds`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word #1: Atom: `3`
+	              -> Word #2: Atom: `+`
+	              -> Word #3: Atom: `2`
+	            -> Term #2
+	              -> Word #1: Atom: `2`
+	              -> Word #2: Atom: `+`
+	        -> Word #2: Atom: `+`
+	        -> Word #3: Atom: `5`
+	
+```
+
+out/LV2.ast.txt: ```
+	~> Program
+	  ~> Statement: ExpressionStatement
+	    ~> Expression: Operation
+	      -> Expression: Literal: `1`
+	      -> operator: `+`
+	      ~> Expression: Operation
+	        ~> Expression: FunctionCall
+	          -> function
+	            -> Expression: Lvalue: `fds`
+	          ~> arguments
+	            -> Expression: Operation
+	              -> Expression: Literal: `3`
+	              -> operator: `+`
+	              -> Expression: Literal: `2`
+	            ~> Expression
+	              ~> ERR-161
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

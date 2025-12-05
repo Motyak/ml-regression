@@ -1,0 +1,541 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `tern`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `cond`
+	        -> Term #2
+	          -> Word: Atom: `if_true`
+	        -> Term #3
+	          -> Word: Atom: `if_false`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `res`
+	          -> ProgramWord #3: Atom: `_`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `&&`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_true`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `||`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_false`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `res`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `!tern`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `cond`
+	        -> Term #2
+	          -> Word: Atom: `if_false`
+	        -> Term #3
+	          -> Word: Atom: `if_true`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `tern`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `cond`
+	              -> Term #2
+	                -> Word: Atom: `if_true`
+	              -> Term #3
+	                -> Word: Atom: `if_false`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `-len`
+	    -> ProgramWord #3: CurlyBracketsGroup
+	      -> ProgramSentence #1
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `*`
+	        -> ProgramWord #3: Atom: `_`
+	      -> ProgramSentence #2
+	        -> ProgramWord #1: Atom: `*`
+	        -> ProgramWord #2: Atom: `:=`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term #1
+	              -> Word: Atom: `lhs`
+	            -> Term #2
+	              -> Word: Atom: `rhs`
+	          -> Word: CurlyBracketsGroup
+	            -> ProgramSentence
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `!tern`
+	                -> ParenthesesGroup
+	                  -> Term #1
+	                    -> Word: Atom: `rhs`
+	                  -> Term #2
+	                    -> Word: Atom: `0`
+	                  -> Term #3
+	                    -> Word: CurlyBracketsGroup
+	                      -> ProgramSentence
+	                        -> ProgramWord: PostfixParenthesesGroup
+	                          -> Word: Atom: `!tern`
+	                          -> ParenthesesGroup
+	                            -> Term #1
+	                              -> Word #1: Atom: `rhs`
+	                              -> Word #2: Atom: `+`
+	                              -> Word #3: Atom: `-1`
+	                            -> Term #2
+	                              -> Word: Atom: `lhs`
+	                            -> Term #3
+	                              -> Word: CurlyBracketsGroup
+	                                -> ProgramSentence
+	                                  -> ProgramWord #1: Atom: `lhs`
+	                                  -> ProgramWord #2: Atom: `+`
+	                                  -> ProgramWord #3: PostfixParenthesesGroup
+	                                    -> Word: Atom: `*`
+	                                    -> ParenthesesGroup
+	                                      -> Term #1
+	                                        -> Word: Atom: `lhs`
+	                                      -> Term #2
+	                                        -> Word #1: Atom: `rhs`
+	                                        -> Word #2: Atom: `+`
+	                                        -> Word #3: Atom: `-1`
+	      -> ProgramSentence #3
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `-`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `n`
+	          -> Word: CurlyBracketsGroup
+	            -> ProgramSentence
+	              -> ProgramWord #1: Atom: `n`
+	              -> ProgramWord #2: Atom: `+`
+	              -> ProgramWord #3: Atom: `-2`
+	              -> ProgramWord #4: Atom: `*`
+	              -> ProgramWord #5: Atom: `n`
+	      -> ProgramSentence #4
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `-len`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `n`
+	          -> Word: CurlyBracketsGroup
+	            -> ProgramSentence
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `-`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: PostfixParenthesesGroup
+	                      -> Word: Atom: `len`
+	                      -> ParenthesesGroup
+	                        -> Term
+	                          -> Word: Atom: `n`
+	      -> ProgramSentence #5
+	        -> ProgramWord: Atom: `-len`
+	  -> ProgramSentence #4
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `curry`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `fn`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `curried`
+	          -> ProgramWord #3: Atom: `_`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `curried`
+	          -> ProgramWord #2: Atom: `:=`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `args...`
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord: PostfixParenthesesGroup
+	                  -> Word: Atom: `!tern`
+	                  -> ParenthesesGroup
+	                    -> Term #1
+	                      -> Word #1: Atom: `$#varargs`
+	                      -> Word #2: Atom: `+`
+	                      -> Word #3: PostfixParenthesesGroup
+	                        -> Word: Atom: `-len`
+	                        -> ParenthesesGroup
+	                          -> Term
+	                            -> Word: Atom: `fn`
+	                    -> Term #2
+	                      -> Word: PostfixParenthesesGroup
+	                        -> Word: Atom: `fn`
+	                        -> ParenthesesGroup
+	                          -> Term
+	                            -> Word: Atom: `args...`
+	                    -> Term #3
+	                      -> Word: CurlyBracketsGroup
+	                        -> ProgramSentence
+	                          -> ProgramWord: Association
+	                            -> Word: ParenthesesGroup
+	                              -> Term
+	                                -> Word: Atom: `args2...`
+	                            -> Word: CurlyBracketsGroup
+	                              -> Term
+	                                -> Word: PostfixParenthesesGroup
+	                                  -> Word: Atom: `curried`
+	                                  -> ParenthesesGroup
+	                                    -> Term #1
+	                                      -> Word: Atom: `args...`
+	                                    -> Term #2
+	                                      -> Word: Atom: `args2...`
+	        -> ProgramSentence #3
+	          -> ProgramWord: Atom: `curried`
+	  -> ProgramSentence #5
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `add`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `a`
+	        -> Term #2
+	          -> Word: Atom: `b`
+	        -> Term #3
+	          -> Word: Atom: `c`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord #1: Atom: `a`
+	          -> ProgramWord #2: Atom: `+`
+	          -> ProgramWord #3: Atom: `b`
+	          -> ProgramWord #4: Atom: `+`
+	          -> ProgramWord #5: Atom: `c`
+	  -> ProgramSentence #6
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `curried_add`
+	    -> ProgramWord #3: PostfixParenthesesGroup
+	      -> Word: Atom: `curry`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `add`
+	  -> ProgramSentence #7
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: PostfixParenthesesGroup
+	        -> Word: PostfixParenthesesGroup
+	          -> Word: Atom: `curried_add`
+	          -> ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `1`
+	        -> ParenthesesGroup
+	          -> Term
+	            -> Word: Atom: `2`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `3`
+	  -> ProgramSentence #8
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: PostfixParenthesesGroup
+	        -> Word: Atom: `curried_add`
+	        -> ParenthesesGroup
+	          -> Term #1
+	            -> Word: Atom: `1`
+	          -> Term #2
+	            -> Word: Atom: `2`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `3`
+	  -> ProgramSentence #9
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: PostfixParenthesesGroup
+	        -> Word: Atom: `curried_add`
+	        -> ParenthesesGroup
+	          -> Term
+	            -> Word: Atom: `1`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `2`
+	        -> Term #2
+	          -> Word: Atom: `3`
+	  -> ProgramSentence #10
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `curried_add`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `1`
+	        -> Term #2
+	          -> Word: Atom: `2`
+	        -> Term #3
+	          -> Word: Atom: `3`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `tern`
+	    -> Expression: Lambda
+	      -> parameter #1: `cond`
+	      -> parameter #2: `if_true`
+	      -> parameter #3: `if_false`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `res`
+	          -> Expression: Symbol: `_`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `&&`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_true`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `||`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_false`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: Symbol: `res`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `!tern`
+	    -> Expression: Lambda
+	      -> parameter #1: `cond`
+	      -> parameter #2: `if_false`
+	      -> parameter #3: `if_true`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `tern`
+	            -> argument #1
+	              -> Expression: Symbol: `cond`
+	            -> argument #2
+	              -> Expression: Symbol: `if_true`
+	            -> argument #3
+	              -> Expression: Symbol: `if_false`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `-len`
+	    -> Expression: BlockExpression
+	      -> Statement #1: VarStatement
+	        -> Symbol: `*`
+	        -> Expression: Symbol: `_`
+	      -> Statement #2: Assignment
+	        -> Lvalue: Symbol: `*`
+	        -> Expression: Lambda
+	          -> parameter #1: `lhs`
+	          -> parameter #2: `rhs`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `!tern`
+	                -> argument #1
+	                  -> Expression: Symbol: `rhs`
+	                -> argument #2
+	                  -> Expression: Numeral: `0`
+	                -> argument #3
+	                  -> Expression: BlockExpression
+	                    -> Statement: ExpressionStatement
+	                      -> Expression: FunctionCall
+	                        -> function
+	                          -> Expression: Symbol: `!tern`
+	                        -> argument #1
+	                          -> Expression: Operation
+	                            -> Expression: Symbol: `rhs`
+	                            -> operator: `+`
+	                            -> Expression: Numeral: `-1`
+	                        -> argument #2
+	                          -> Expression: Symbol: `lhs`
+	                        -> argument #3
+	                          -> Expression: BlockExpression
+	                            -> Statement: ExpressionStatement
+	                              -> Expression: Operation
+	                                -> Expression: Symbol: `lhs`
+	                                -> operator: `+`
+	                                -> Expression: FunctionCall
+	                                  -> function
+	                                    -> Expression: Symbol: `*`
+	                                  -> argument #1
+	                                    -> Expression: Symbol: `lhs`
+	                                  -> argument #2
+	                                    -> Expression: Operation
+	                                      -> Expression: Symbol: `rhs`
+	                                      -> operator: `+`
+	                                      -> Expression: Numeral: `-1`
+	      -> Statement #3: VarStatement
+	        -> Symbol: `-`
+	        -> Expression: Lambda
+	          -> parameter #1: `n`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: Operation
+	                -> Expression: Symbol: `n`
+	                -> operator: `+`
+	                -> Expression: Operation
+	                  -> Expression: Numeral: `-2`
+	                  -> operator: `*`
+	                  -> Expression: Symbol: `n`
+	      -> Statement #4: VarStatement
+	        -> Symbol: `-len`
+	        -> Expression: Lambda
+	          -> parameter #1: `n`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `-`
+	                -> argument #1
+	                  -> Expression: FunctionCall
+	                    -> function
+	                      -> Expression: Symbol: `len`
+	                    -> argument #1
+	                      -> Expression: Symbol: `n`
+	      -> Statement #5: ExpressionStatement
+	        -> Expression: Symbol: `-len`
+	  -> Statement #4: VarStatement
+	    -> Symbol: `curry`
+	    -> Expression: Lambda
+	      -> parameter #1: `fn`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `curried`
+	          -> Expression: Symbol: `_`
+	        -> Statement #2: Assignment
+	          -> Lvalue: Symbol: `curried`
+	          -> Expression: Lambda
+	            -> (no parameters)
+	            -> variadic parameters: `args...`
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `!tern`
+	                  -> argument #1
+	                    -> Expression: Operation
+	                      -> Expression: SpecialSymbol: `$#varargs`
+	                      -> operator: `+`
+	                      -> Expression: FunctionCall
+	                        -> function
+	                          -> Expression: Symbol: `-len`
+	                        -> argument #1
+	                          -> Expression: Symbol: `fn`
+	                  -> argument #2
+	                    -> Expression: FunctionCall
+	                      -> function
+	                        -> Expression: Symbol: `fn`
+	                      -> argument #1
+	                        -> Expression: Symbol: `args...`
+	                  -> argument #3
+	                    -> Expression: BlockExpression
+	                      -> Statement: ExpressionStatement
+	                        -> Expression: Lambda
+	                          -> (no parameters)
+	                          -> variadic parameters: `args2...`
+	                          -> body
+	                            -> Statement: ExpressionStatement
+	                              -> Expression: FunctionCall
+	                                -> function
+	                                  -> Expression: Symbol: `curried`
+	                                -> argument #1
+	                                  -> Expression: Symbol: `args...`
+	                                -> argument #2
+	                                  -> Expression: Symbol: `args2...`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Symbol: `curried`
+	  -> Statement #5: VarStatement
+	    -> Symbol: `add`
+	    -> Expression: Lambda
+	      -> parameter #1: `a`
+	      -> parameter #2: `b`
+	      -> parameter #3: `c`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Operation
+	              -> Expression: Symbol: `a`
+	              -> operator: `+`
+	              -> Expression: Symbol: `b`
+	            -> operator: `+`
+	            -> Expression: Symbol: `c`
+	  -> Statement #6: VarStatement
+	    -> Symbol: `curried_add`
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `curry`
+	      -> argument #1
+	        -> Expression: Symbol: `add`
+	  -> Statement #7: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: Symbol: `curried_add`
+	              -> argument #1
+	                -> Expression: Numeral: `1`
+	          -> argument #1
+	            -> Expression: Numeral: `2`
+	      -> argument #1
+	        -> Expression: Numeral: `3`
+	  -> Statement #8: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `curried_add`
+	          -> argument #1
+	            -> Expression: Numeral: `1`
+	          -> argument #2
+	            -> Expression: Numeral: `2`
+	      -> argument #1
+	        -> Expression: Numeral: `3`
+	  -> Statement #9: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `curried_add`
+	          -> argument #1
+	            -> Expression: Numeral: `1`
+	      -> argument #1
+	        -> Expression: Numeral: `2`
+	      -> argument #2
+	        -> Expression: Numeral: `3`
+	  -> Statement #10: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `curried_add`
+	      -> argument #1
+	        -> Expression: Numeral: `1`
+	      -> argument #2
+	        -> Expression: Numeral: `2`
+	      -> argument #3
+	        -> Expression: Numeral: `3`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

@@ -1,0 +1,228 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	proc_a
+	proc_b
+	proc_c
+	id
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `proc_b`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `x`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `print`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Quotation: `proc_b`
+	        -> ProgramSentence #2
+	          -> ProgramWord: Quotation: `discards x,` (1 more line)
+	            -> `transforms it to a local variable`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `x`
+	          -> ProgramWord #2: Atom: `:=`
+	          -> ProgramWord #3: Atom: `_`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `$nil`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `proc_c`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `x`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `print`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Quotation: `proc_c`
+	        -> ProgramSentence #2
+	          -> ProgramWord: Quotation: `uses x`
+	        -> ProgramSentence #3
+	          -> ProgramWord: Atom: `x`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `$nil`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `proc_a`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `x`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `print`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Quotation: `proc_a`
+	        -> ProgramSentence #2
+	          -> ProgramWord: Quotation: `uses x indirectly`
+	        -> ProgramSentence #3
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `proc_b`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `x`
+	        -> ProgramSentence #4
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `proc_c`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `x`
+	        -> ProgramSentence #5
+	          -> ProgramWord: Atom: `$nil`
+	  -> ProgramSentence #4
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `id`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `x`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `print`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Quotation: `id`
+	        -> ProgramSentence #2
+	          -> ProgramWord: Atom: `x`
+	  -> ProgramSentence #5
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `proc_a`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `id`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `_`
+	  -> ProgramSentence #6
+	    -> ProgramWord: Quotation: ``id` is printed only once` (5 more lines)
+	      -> `=>`
+	      -> `id() is evaluated only once,`
+	      -> `in proc_c() (not proc_b)`
+	      -> `=>`
+	      -> `pass by delay works`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `proc_b`
+	    -> Expression: Lambda
+	      -> parameter #1: `x`
+	      -> body
+	        -> Statement #1: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `print`
+	            -> argument #1
+	              -> Expression: StrLiteral: `proc_b`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: StrLiteral: `discards x,` (1 more line)
+	            -> `transforms it to a local variable`
+	        -> Statement #3: Assignment
+	          -> Lvalue: Symbol: `x`
+	          -> Expression: Symbol: `_`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: SpecialSymbol: `$nil`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `proc_c`
+	    -> Expression: Lambda
+	      -> parameter #1: `x`
+	      -> body
+	        -> Statement #1: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `print`
+	            -> argument #1
+	              -> Expression: StrLiteral: `proc_c`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: StrLiteral: `uses x`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Symbol: `x`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: SpecialSymbol: `$nil`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `proc_a`
+	    -> Expression: Lambda
+	      -> parameter #1: `x`
+	      -> body
+	        -> Statement #1: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `print`
+	            -> argument #1
+	              -> Expression: StrLiteral: `proc_a`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: StrLiteral: `uses x indirectly`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `proc_b`
+	            -> argument #1
+	              -> Expression: Symbol: `x`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `proc_c`
+	            -> argument #1
+	              -> Expression: Symbol: `x`
+	        -> Statement #5: ExpressionStatement
+	          -> Expression: SpecialSymbol: `$nil`
+	  -> Statement #4: VarStatement
+	    -> Symbol: `id`
+	    -> Expression: Lambda
+	      -> parameter #1: `x`
+	      -> body
+	        -> Statement #1: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `print`
+	            -> argument #1
+	              -> Expression: StrLiteral: `id`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: Symbol: `x`
+	  -> Statement #5: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `proc_a`
+	      -> argument #1
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `id`
+	          -> argument #1
+	            -> Expression: Symbol: `_`
+	  -> Statement #6: ExpressionStatement
+	    -> Expression: StrLiteral: ``id` is printed only once` (5 more lines)
+	      -> `=>`
+	      -> `id() is evaluated only once,`
+	      -> `in proc_c() (not proc_b)`
+	      -> `=>`
+	      -> `pass by delay works`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

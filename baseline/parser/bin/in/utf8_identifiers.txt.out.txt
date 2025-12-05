@@ -1,0 +1,46 @@
+prog: interpreter
+
+prog_exitcode: 134
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	Missing implementation in src/interpret.cpp line 95
+	terminate called without an active exception
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `let`
+	    -> ProgramWord #2: Atom: `名前`
+	    -> ProgramWord #3: Quotation: `太郎`
+	  -> ProgramSentence #2
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `名前`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: LetStatement
+	    -> Symbol: `名前`
+	    -> Expression: StrLiteral: `太郎`
+	  -> Statement #2: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: Symbol: `名前`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

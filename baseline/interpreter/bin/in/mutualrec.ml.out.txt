@@ -1,0 +1,233 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	$true
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `tern`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `cond`
+	        -> Term #2
+	          -> Word: Atom: `if_false`
+	        -> Term #3
+	          -> Word: Atom: `if_true`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `res`
+	          -> ProgramWord #3: Atom: `$nil`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `||`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_false`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `&&`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_true`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `res`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `not`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `bool`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `tern`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `bool`
+	              -> Term #2
+	                -> Word: Atom: `$true`
+	              -> Term #3
+	                -> Word: Atom: `$false`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `is_odd`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `n`
+	      -> Word: CurlyBracketsGroup (empty)
+	  -> ProgramSentence #4
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `is_even`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `n`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `tern`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `n`
+	              -> Term #2
+	                -> Word: Atom: `$true`
+	              -> Term #3
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `not`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: PostfixParenthesesGroup
+	                        -> Word: Atom: `is_odd`
+	                        -> ParenthesesGroup
+	                          -> Term
+	                            -> Word: Atom: `n`
+	  -> ProgramSentence #5
+	    -> ProgramWord #1: Atom: `is_odd`
+	    -> ProgramWord #2: Atom: `:=`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `n`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `is_even`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word #1: Atom: `n`
+	                -> Word #2: Atom: `+`
+	                -> Word #3: Atom: `-1`
+	  -> ProgramSentence #6
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `is_odd`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `5`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `tern`
+	    -> Expression: Lambda
+	      -> parameter #1: `cond`
+	      -> parameter #2: `if_false`
+	      -> parameter #3: `if_true`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `res`
+	          -> Expression: SpecialSymbol: `$nil`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `||`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_false`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `&&`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_true`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: Symbol: `res`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `not`
+	    -> Expression: Lambda
+	      -> parameter #1: `bool`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `tern`
+	            -> argument #1
+	              -> Expression: Symbol: `bool`
+	            -> argument #2
+	              -> Expression: SpecialSymbol: `$true`
+	            -> argument #3
+	              -> Expression: SpecialSymbol: `$false`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `is_odd`
+	    -> Expression: Lambda
+	      -> parameter #1: `n`
+	      -> body (empty)
+	  -> Statement #4: VarStatement
+	    -> Symbol: `is_even`
+	    -> Expression: Lambda
+	      -> parameter #1: `n`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `tern`
+	            -> argument #1
+	              -> Expression: Symbol: `n`
+	            -> argument #2
+	              -> Expression: SpecialSymbol: `$true`
+	            -> argument #3
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `not`
+	                -> argument #1
+	                  -> Expression: FunctionCall
+	                    -> function
+	                      -> Expression: Symbol: `is_odd`
+	                    -> argument #1
+	                      -> Expression: Symbol: `n`
+	  -> Statement #5: Assignment
+	    -> Lvalue: Symbol: `is_odd`
+	    -> Expression: Lambda
+	      -> parameter #1: `n`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `is_even`
+	            -> argument #1
+	              -> Expression: Operation
+	                -> Expression: Symbol: `n`
+	                -> operator: `+`
+	                -> Expression: Numeral: `-1`
+	  -> Statement #6: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `is_odd`
+	          -> argument #1
+	            -> Expression: Numeral: `5`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

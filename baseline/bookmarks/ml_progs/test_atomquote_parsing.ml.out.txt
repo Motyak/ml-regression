@@ -1,0 +1,165 @@
+prog: parser
+
+prog_exitcode: 101
+
+out/traceback.txt: ```
+	data/bookmarks/ml_progs/test_atomquote_parsing.ml:2:1: LV1 error: Malformed Atom
+	    2 | ,'fds
+	      | ^ERR-992
+	data/bookmarks/ml_progs/test_atomquote_parsing.ml:2:1: LV1 error: Malformed ProgramSentence
+	    2 | ,'fds
+	      | ^ERR-129
+	data/bookmarks/ml_progs/test_atomquote_parsing.ml:2:1: LV1 error: Malformed Program
+	    2 | ,'fds
+	      | ^ERR-119
+	
+```
+
+out/console.txt: ```
+	Parsing error
+	
+```
+
+out/LV1.ast.txt: ```
+	~> Program
+	  ~> ProgramSentence
+	    ~> ProgramWord: Atom: ``
+	      ~> ERR-992
+	
+```
+
+out/LV2.ast.txt: ```
+	
+```
+
+out/LV1.tokens.json: {
+	"list": [
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"err_fmt": "ERR-119"
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"err_fmt": "ERR-129"
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"err_fmt": "ERR-992"
+		}
+	],
+	"traceback": [
+		{
+			"name": "Atom",
+			"start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"err_fmt": "ERR-992"
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"err_fmt": "ERR-129"
+		},
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"err_fmt": "ERR-119"
+		}
+	]
+}
+
+out/LV2.tokens.json: {
+	"list": [],
+	"traceback": []
+}

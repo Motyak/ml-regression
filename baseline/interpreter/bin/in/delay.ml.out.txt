@@ -1,0 +1,116 @@
+prog: interpreter
+
+prog_exitcode: 124
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	<defining eval_a>
+	<calling eval_a>
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `delay`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `expr`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: Association
+	            -> Word: ParenthesesGroup (empty)
+	            -> Word: CurlyBracketsGroup
+	              -> Term
+	                -> Word: Atom: `expr`
+	  -> ProgramSentence #2
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Quotation: `<defining eval_a>`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `eval_a`
+	    -> ProgramWord #3: PostfixParenthesesGroup
+	      -> Word: Atom: `delay`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: CurlyBracketsGroup
+	            -> ProgramSentence #1
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `print`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Quotation: `hello`
+	            -> ProgramSentence #2
+	              -> ProgramWord: Atom: `91`
+	  -> ProgramSentence #4
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Quotation: `<calling eval_a>`
+	  -> ProgramSentence #5
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `eval_a`
+	      -> ParenthesesGroup (empty)
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `delay`
+	    -> Expression: Lambda
+	      -> parameter #1: `expr`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: Lambda
+	            -> (no parameters)
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: Symbol: `expr`
+	  -> Statement #2: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `<defining eval_a>`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `eval_a`
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `delay`
+	      -> argument #1
+	        -> Expression: BlockExpression
+	          -> Statement #1: ExpressionStatement
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: Symbol: `print`
+	              -> argument #1
+	                -> Expression: StrLiteral: `hello`
+	          -> Statement #2: ExpressionStatement
+	            -> Expression: Numeral: `91`
+	  -> Statement #4: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `<calling eval_a>`
+	  -> Statement #5: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `eval_a`
+	      -> arguments (none)
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

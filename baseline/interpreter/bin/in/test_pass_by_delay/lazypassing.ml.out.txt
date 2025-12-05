@@ -1,0 +1,187 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	somevar91 91
+	local93 93
+	local94 94
+	somevar92 92
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord: CurlyBracketsGroup
+	      -> ProgramSentence #1
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `fn`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `x`
+	          -> Word: CurlyBracketsGroup (empty)
+	      -> ProgramSentence #2
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `fn`
+	          -> ParenthesesGroup
+	            -> Term
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: Atom: `print`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Quotation: `<not printed>`
+	  -> ProgramSentence #2
+	    -> ProgramWord: CurlyBracketsGroup
+	      -> ProgramSentence #1
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `somevar`
+	        -> ProgramWord #3: Atom: `91`
+	      -> ProgramSentence #2
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `fn`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `x`
+	          -> Word: CurlyBracketsGroup
+	            -> ProgramSentence #1
+	              -> ProgramWord #1: Atom: `somevar`
+	              -> ProgramWord #2: Atom: `+=`
+	              -> ProgramWord #3: Atom: `1`
+	            -> ProgramSentence #2
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `print`
+	                -> ParenthesesGroup
+	                  -> Term #1
+	                    -> Word: Quotation: `local93`
+	                  -> Term #2
+	                    -> Word: Atom: `x`
+	            -> ProgramSentence #3
+	              -> ProgramWord #1: Atom: `x`
+	              -> ProgramWord #2: Atom: `+=`
+	              -> ProgramWord #3: Atom: `1`
+	            -> ProgramSentence #4
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `print`
+	                -> ParenthesesGroup
+	                  -> Term #1
+	                    -> Word: Quotation: `local94`
+	                  -> Term #2
+	                    -> Word: Atom: `x`
+	      -> ProgramSentence #3
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `print`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Quotation: `somevar91`
+	            -> Term #2
+	              -> Word: Atom: `somevar`
+	      -> ProgramSentence #4
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `fn`
+	          -> ParenthesesGroup
+	            -> Term
+	              -> Word #1: Atom: `somevar`
+	              -> Word #2: Atom: `+`
+	              -> Word #3: Atom: `1`
+	      -> ProgramSentence #5
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `print`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Quotation: `somevar92`
+	            -> Term #2
+	              -> Word: Atom: `somevar`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: ExpressionStatement
+	    -> Expression: BlockExpression
+	      -> Statement #1: VarStatement
+	        -> Symbol: `fn`
+	        -> Expression: Lambda
+	          -> parameter #1: `x`
+	          -> body (empty)
+	      -> Statement #2: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `fn`
+	          -> argument #1
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: Symbol: `print`
+	              -> argument #1
+	                -> Expression: StrLiteral: `<not printed>`
+	  -> Statement #2: ExpressionStatement
+	    -> Expression: BlockExpression
+	      -> Statement #1: VarStatement
+	        -> Symbol: `somevar`
+	        -> Expression: Numeral: `91`
+	      -> Statement #2: VarStatement
+	        -> Symbol: `fn`
+	        -> Expression: Lambda
+	          -> parameter #1: `x`
+	          -> body
+	            -> Statement #1: Accumulation
+	              -> Lvalue: Symbol: `somevar`
+	              -> operator: `+`
+	              -> Expression: Numeral: `1`
+	            -> Statement #2: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `print`
+	                -> argument #1
+	                  -> Expression: StrLiteral: `local93`
+	                -> argument #2
+	                  -> Expression: Symbol: `x`
+	            -> Statement #3: Accumulation
+	              -> Lvalue: Symbol: `x`
+	              -> operator: `+`
+	              -> Expression: Numeral: `1`
+	            -> Statement #4: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `print`
+	                -> argument #1
+	                  -> Expression: StrLiteral: `local94`
+	                -> argument #2
+	                  -> Expression: Symbol: `x`
+	      -> Statement #3: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `print`
+	          -> argument #1
+	            -> Expression: StrLiteral: `somevar91`
+	          -> argument #2
+	            -> Expression: Symbol: `somevar`
+	      -> Statement #4: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `fn`
+	          -> argument #1
+	            -> Expression: Operation
+	              -> Expression: Symbol: `somevar`
+	              -> operator: `+`
+	              -> Expression: Numeral: `1`
+	      -> Statement #5: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `print`
+	          -> argument #1
+	            -> Expression: StrLiteral: `somevar92`
+	          -> argument #2
+	            -> Expression: Symbol: `somevar`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

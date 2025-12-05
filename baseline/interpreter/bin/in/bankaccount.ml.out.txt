@@ -1,0 +1,803 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	acc10 10
+	acc13 13
+	acc3 3
+	acc10 10
+	acc13 13
+	acc3 3
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `tern`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `cond`
+	        -> Term #2
+	          -> Word: Atom: `if_true`
+	        -> Term #3
+	          -> Word: Atom: `if_false`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `res`
+	          -> ProgramWord #3: Atom: `$nil`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `&&`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_true`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `||`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_false`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `res`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `!tern`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `cond`
+	        -> Term #2
+	          -> Word: Atom: `if_false`
+	        -> Term #3
+	          -> Word: Atom: `if_true`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `tern`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `cond`
+	              -> Term #2
+	                -> Word: Atom: `if_true`
+	              -> Term #3
+	                -> Word: Atom: `if_false`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `-`
+	    -> ProgramWord #3: Atom: `_`
+	  -> ProgramSentence #4
+	    -> ProgramWord #1: Atom: `-`
+	    -> ProgramWord #2: Atom: `:=`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `lhs`
+	        -> Term #2
+	          -> Word: Atom: `rhs`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `!tern`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `rhs`
+	              -> Term #2
+	                -> Word: Atom: `lhs`
+	              -> Term #3
+	                -> Word: CurlyBracketsGroup
+	                  -> ProgramSentence
+	                    -> ProgramWord #1: PostfixParenthesesGroup
+	                      -> Word: Atom: `-`
+	                      -> ParenthesesGroup
+	                        -> Term #1
+	                          -> Word: Atom: `lhs`
+	                        -> Term #2
+	                          -> Word #1: Atom: `rhs`
+	                          -> Word #2: Atom: `+`
+	                          -> Word #3: Atom: `-1`
+	                    -> ProgramWord #2: Atom: `+`
+	                    -> ProgramWord #3: Atom: `-1`
+	  -> ProgramSentence #5
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `make-account`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `initial`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `bank`
+	          -> ProgramWord #3: Atom: `initial`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `balance`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup (empty)
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord: Atom: `bank`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `deposit`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `n`
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord #1: Atom: `bank`
+	                -> ProgramWord #2: Atom: `+=`
+	                -> ProgramWord #3: Atom: `n`
+	        -> ProgramSentence #4
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `withdraw`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `n`
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord #1: Atom: `bank`
+	                -> ProgramWord #2: Atom: `-=`
+	                -> ProgramWord #3: Atom: `n`
+	        -> ProgramSentence #5
+	          -> ProgramWord: Quotation: `-----------------------`
+	        -> ProgramSentence #6
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `dispatcher`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `msg_id`
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord: PostfixParenthesesGroup
+	                  -> Word: Atom: `!tern`
+	                  -> ParenthesesGroup
+	                    -> Term #1
+	                      -> Word: Atom: `msg_id`
+	                    -> Term #2
+	                      -> Word: Atom: `balance`
+	                    -> Term #3
+	                      -> Word: CurlyBracketsGroup
+	                        -> ProgramSentence
+	                          -> ProgramWord: PostfixParenthesesGroup
+	                            -> Word: Atom: `!tern`
+	                            -> ParenthesesGroup
+	                              -> Term #1
+	                                -> Word #1: Atom: `msg_id`
+	                                -> Word #2: Atom: `-`
+	                                -> Word #3: Atom: `1`
+	                              -> Term #2
+	                                -> Word: Atom: `deposit`
+	                              -> Term #3
+	                                -> Word: CurlyBracketsGroup
+	                                  -> ProgramSentence
+	                                    -> ProgramWord: PostfixParenthesesGroup
+	                                      -> Word: Atom: `!tern`
+	                                      -> ParenthesesGroup
+	                                        -> Term #1
+	                                          -> Word #1: Atom: `msg_id`
+	                                          -> Word #2: Atom: `-`
+	                                          -> Word #3: Atom: `2`
+	                                        -> Term #2
+	                                          -> Word: Atom: `withdraw`
+	                                        -> Term #3
+	                                          -> Word: CurlyBracketsGroup
+	                                            -> ProgramSentence #1
+	                                              -> ProgramWord: PostfixParenthesesGroup
+	                                                -> Word: Atom: `print`
+	                                                -> ParenthesesGroup
+	                                                  -> Term
+	                                                    -> Word #1: Quotation: `ERR invalid msg_id in dispatcher: ``
+	                                                    -> Word #2: Atom: `+`
+	                                                    -> Word #3: Atom: `msg_id`
+	                                                    -> Word #4: Atom: `+`
+	                                                    -> Word #5: Quotation: ```
+	                                            -> ProgramSentence #2
+	                                              -> ProgramWord: PostfixParenthesesGroup
+	                                                -> Word: Atom: `exit`
+	                                                -> ParenthesesGroup
+	                                                  -> Term
+	                                                    -> Word: Atom: `1`
+	        -> ProgramSentence #7
+	          -> ProgramWord: Atom: `dispatcher`
+	  -> ProgramSentence #6
+	    -> ProgramWord: Quotation: `using OOP-like paradigm`
+	  -> ProgramSentence #7
+	    -> ProgramWord: CurlyBracketsGroup
+	      -> ProgramSentence #1
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `balance`
+	        -> ProgramWord #3: Atom: `0`
+	      -> ProgramSentence #2
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `deposit`
+	        -> ProgramWord #3: Atom: `1`
+	      -> ProgramSentence #3
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `withdraw`
+	        -> ProgramWord #3: Atom: `2`
+	      -> ProgramSentence #4
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `acc`
+	        -> ProgramWord #3: PostfixParenthesesGroup
+	          -> Word: Atom: `make-account`
+	          -> ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `10`
+	      -> ProgramSentence #5
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `print`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Quotation: `acc10`
+	            -> Term #2
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `acc`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: Atom: `balance`
+	                -> ParenthesesGroup (empty)
+	      -> ProgramSentence #6
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `acc`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `deposit`
+	          -> ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `3`
+	      -> ProgramSentence #7
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `print`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Quotation: `acc13`
+	            -> Term #2
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `acc`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: Atom: `balance`
+	                -> ParenthesesGroup (empty)
+	      -> ProgramSentence #8
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `acc`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `withdraw`
+	          -> ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `10`
+	      -> ProgramSentence #9
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `print`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Quotation: `acc3`
+	            -> Term #2
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `acc`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: Atom: `balance`
+	                -> ParenthesesGroup (empty)
+	  -> ProgramSentence #8
+	    -> ProgramWord: Quotation: `using procedural-like paradigm`
+	  -> ProgramSentence #9
+	    -> ProgramWord: CurlyBracketsGroup
+	      -> ProgramSentence #1
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `balance`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `acc`
+	          -> Word: CurlyBracketsGroup
+	            -> Term
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `acc`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: Atom: `0`
+	                -> ParenthesesGroup (empty)
+	      -> ProgramSentence #2
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `deposit`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term #1
+	              -> Word: Atom: `acc`
+	            -> Term #2
+	              -> Word: Atom: `n`
+	          -> Word: CurlyBracketsGroup
+	            -> Term
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `acc`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: Atom: `1`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Atom: `n`
+	      -> ProgramSentence #3
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `withdraw`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term #1
+	              -> Word: Atom: `acc`
+	            -> Term #2
+	              -> Word: Atom: `n`
+	          -> Word: CurlyBracketsGroup
+	            -> Term
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `acc`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: Atom: `2`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Atom: `n`
+	      -> ProgramSentence #4
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `acc`
+	        -> ProgramWord #3: PostfixParenthesesGroup
+	          -> Word: Atom: `make-account`
+	          -> ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `10`
+	      -> ProgramSentence #5
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `print`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Quotation: `acc10`
+	            -> Term #2
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: Atom: `balance`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Atom: `acc`
+	      -> ProgramSentence #6
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `deposit`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Atom: `acc`
+	            -> Term #2
+	              -> Word: Atom: `3`
+	      -> ProgramSentence #7
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `print`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Quotation: `acc13`
+	            -> Term #2
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: Atom: `balance`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Atom: `acc`
+	      -> ProgramSentence #8
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `withdraw`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Atom: `acc`
+	            -> Term #2
+	              -> Word: Atom: `10`
+	      -> ProgramSentence #9
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `print`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Quotation: `acc3`
+	            -> Term #2
+	              -> Word: PostfixParenthesesGroup
+	                -> Word: Atom: `balance`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Atom: `acc`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `tern`
+	    -> Expression: Lambda
+	      -> parameter #1: `cond`
+	      -> parameter #2: `if_true`
+	      -> parameter #3: `if_false`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `res`
+	          -> Expression: SpecialSymbol: `$nil`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `&&`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_true`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `||`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_false`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: Symbol: `res`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `!tern`
+	    -> Expression: Lambda
+	      -> parameter #1: `cond`
+	      -> parameter #2: `if_false`
+	      -> parameter #3: `if_true`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `tern`
+	            -> argument #1
+	              -> Expression: Symbol: `cond`
+	            -> argument #2
+	              -> Expression: Symbol: `if_true`
+	            -> argument #3
+	              -> Expression: Symbol: `if_false`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `-`
+	    -> Expression: Symbol: `_`
+	  -> Statement #4: Assignment
+	    -> Lvalue: Symbol: `-`
+	    -> Expression: Lambda
+	      -> parameter #1: `lhs`
+	      -> parameter #2: `rhs`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `!tern`
+	            -> argument #1
+	              -> Expression: Symbol: `rhs`
+	            -> argument #2
+	              -> Expression: Symbol: `lhs`
+	            -> argument #3
+	              -> Expression: BlockExpression
+	                -> Statement: ExpressionStatement
+	                  -> Expression: Operation
+	                    -> Expression: FunctionCall
+	                      -> function
+	                        -> Expression: Symbol: `-`
+	                      -> argument #1
+	                        -> Expression: Symbol: `lhs`
+	                      -> argument #2
+	                        -> Expression: Operation
+	                          -> Expression: Symbol: `rhs`
+	                          -> operator: `+`
+	                          -> Expression: Numeral: `-1`
+	                    -> operator: `+`
+	                    -> Expression: Numeral: `-1`
+	  -> Statement #5: VarStatement
+	    -> Symbol: `make-account`
+	    -> Expression: Lambda
+	      -> parameter #1: `initial`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `bank`
+	          -> Expression: Symbol: `initial`
+	        -> Statement #2: VarStatement
+	          -> Symbol: `balance`
+	          -> Expression: Lambda
+	            -> (no parameters)
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: Symbol: `bank`
+	        -> Statement #3: VarStatement
+	          -> Symbol: `deposit`
+	          -> Expression: Lambda
+	            -> parameter #1: `n`
+	            -> body
+	              -> Statement: Accumulation
+	                -> Lvalue: Symbol: `bank`
+	                -> operator: `+`
+	                -> Expression: Symbol: `n`
+	        -> Statement #4: VarStatement
+	          -> Symbol: `withdraw`
+	          -> Expression: Lambda
+	            -> parameter #1: `n`
+	            -> body
+	              -> Statement: Accumulation
+	                -> Lvalue: Symbol: `bank`
+	                -> operator: `-`
+	                -> Expression: Symbol: `n`
+	        -> Statement #5: ExpressionStatement
+	          -> Expression: StrLiteral: `-----------------------`
+	        -> Statement #6: VarStatement
+	          -> Symbol: `dispatcher`
+	          -> Expression: Lambda
+	            -> parameter #1: `msg_id`
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `!tern`
+	                  -> argument #1
+	                    -> Expression: Symbol: `msg_id`
+	                  -> argument #2
+	                    -> Expression: Symbol: `balance`
+	                  -> argument #3
+	                    -> Expression: BlockExpression
+	                      -> Statement: ExpressionStatement
+	                        -> Expression: FunctionCall
+	                          -> function
+	                            -> Expression: Symbol: `!tern`
+	                          -> argument #1
+	                            -> Expression: Operation
+	                              -> Expression: Symbol: `msg_id`
+	                              -> operator: `-`
+	                              -> Expression: Numeral: `1`
+	                          -> argument #2
+	                            -> Expression: Symbol: `deposit`
+	                          -> argument #3
+	                            -> Expression: BlockExpression
+	                              -> Statement: ExpressionStatement
+	                                -> Expression: FunctionCall
+	                                  -> function
+	                                    -> Expression: Symbol: `!tern`
+	                                  -> argument #1
+	                                    -> Expression: Operation
+	                                      -> Expression: Symbol: `msg_id`
+	                                      -> operator: `-`
+	                                      -> Expression: Numeral: `2`
+	                                  -> argument #2
+	                                    -> Expression: Symbol: `withdraw`
+	                                  -> argument #3
+	                                    -> Expression: BlockExpression
+	                                      -> Statement #1: ExpressionStatement
+	                                        -> Expression: FunctionCall
+	                                          -> function
+	                                            -> Expression: Symbol: `print`
+	                                          -> argument #1
+	                                            -> Expression: Operation
+	                                              -> Expression: Operation
+	                                                -> Expression: StrLiteral: `ERR invalid msg_id in dispatcher: ``
+	                                                -> operator: `+`
+	                                                -> Expression: Symbol: `msg_id`
+	                                              -> operator: `+`
+	                                              -> Expression: StrLiteral: ```
+	                                      -> Statement #2: ExpressionStatement
+	                                        -> Expression: FunctionCall
+	                                          -> function
+	                                            -> Expression: Symbol: `exit`
+	                                          -> argument #1
+	                                            -> Expression: Numeral: `1`
+	        -> Statement #7: ExpressionStatement
+	          -> Expression: Symbol: `dispatcher`
+	  -> Statement #6: ExpressionStatement
+	    -> Expression: StrLiteral: `using OOP-like paradigm`
+	  -> Statement #7: ExpressionStatement
+	    -> Expression: BlockExpression
+	      -> Statement #1: VarStatement
+	        -> Symbol: `balance`
+	        -> Expression: Numeral: `0`
+	      -> Statement #2: VarStatement
+	        -> Symbol: `deposit`
+	        -> Expression: Numeral: `1`
+	      -> Statement #3: VarStatement
+	        -> Symbol: `withdraw`
+	        -> Expression: Numeral: `2`
+	      -> Statement #4: VarStatement
+	        -> Symbol: `acc`
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `make-account`
+	          -> argument #1
+	            -> Expression: Numeral: `10`
+	      -> Statement #5: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `print`
+	          -> argument #1
+	            -> Expression: StrLiteral: `acc10`
+	          -> argument #2
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `acc`
+	                  -> argument #1
+	                    -> Expression: Symbol: `balance`
+	              -> arguments (none)
+	      -> Statement #6: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: Symbol: `acc`
+	              -> argument #1
+	                -> Expression: Symbol: `deposit`
+	          -> argument #1
+	            -> Expression: Numeral: `3`
+	      -> Statement #7: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `print`
+	          -> argument #1
+	            -> Expression: StrLiteral: `acc13`
+	          -> argument #2
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `acc`
+	                  -> argument #1
+	                    -> Expression: Symbol: `balance`
+	              -> arguments (none)
+	      -> Statement #8: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: Symbol: `acc`
+	              -> argument #1
+	                -> Expression: Symbol: `withdraw`
+	          -> argument #1
+	            -> Expression: Numeral: `10`
+	      -> Statement #9: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `print`
+	          -> argument #1
+	            -> Expression: StrLiteral: `acc3`
+	          -> argument #2
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `acc`
+	                  -> argument #1
+	                    -> Expression: Symbol: `balance`
+	              -> arguments (none)
+	  -> Statement #8: ExpressionStatement
+	    -> Expression: StrLiteral: `using procedural-like paradigm`
+	  -> Statement #9: ExpressionStatement
+	    -> Expression: BlockExpression
+	      -> Statement #1: VarStatement
+	        -> Symbol: `balance`
+	        -> Expression: Lambda
+	          -> parameter #1: `acc`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: FunctionCall
+	                    -> function
+	                      -> Expression: Symbol: `acc`
+	                    -> argument #1
+	                      -> Expression: Numeral: `0`
+	                -> arguments (none)
+	      -> Statement #2: VarStatement
+	        -> Symbol: `deposit`
+	        -> Expression: Lambda
+	          -> parameter #1: `acc`
+	          -> parameter #2: `n`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: FunctionCall
+	                    -> function
+	                      -> Expression: Symbol: `acc`
+	                    -> argument #1
+	                      -> Expression: Numeral: `1`
+	                -> argument #1
+	                  -> Expression: Symbol: `n`
+	      -> Statement #3: VarStatement
+	        -> Symbol: `withdraw`
+	        -> Expression: Lambda
+	          -> parameter #1: `acc`
+	          -> parameter #2: `n`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: FunctionCall
+	                    -> function
+	                      -> Expression: Symbol: `acc`
+	                    -> argument #1
+	                      -> Expression: Numeral: `2`
+	                -> argument #1
+	                  -> Expression: Symbol: `n`
+	      -> Statement #4: VarStatement
+	        -> Symbol: `acc`
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `make-account`
+	          -> argument #1
+	            -> Expression: Numeral: `10`
+	      -> Statement #5: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `print`
+	          -> argument #1
+	            -> Expression: StrLiteral: `acc10`
+	          -> argument #2
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: Symbol: `balance`
+	              -> argument #1
+	                -> Expression: Symbol: `acc`
+	      -> Statement #6: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `deposit`
+	          -> argument #1
+	            -> Expression: Symbol: `acc`
+	          -> argument #2
+	            -> Expression: Numeral: `3`
+	      -> Statement #7: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `print`
+	          -> argument #1
+	            -> Expression: StrLiteral: `acc13`
+	          -> argument #2
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: Symbol: `balance`
+	              -> argument #1
+	                -> Expression: Symbol: `acc`
+	      -> Statement #8: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `withdraw`
+	          -> argument #1
+	            -> Expression: Symbol: `acc`
+	          -> argument #2
+	            -> Expression: Numeral: `10`
+	      -> Statement #9: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `print`
+	          -> argument #1
+	            -> Expression: StrLiteral: `acc3`
+	          -> argument #2
+	            -> Expression: FunctionCall
+	              -> function
+	                -> Expression: Symbol: `balance`
+	              -> argument #1
+	                -> Expression: Symbol: `acc`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

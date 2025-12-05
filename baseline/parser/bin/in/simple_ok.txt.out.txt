@@ -1,0 +1,31 @@
+prog: interpreter
+
+prog_exitcode: 101
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	Runtime error: Unbound symbol `fds` (src/interpret.cpp:720)
+	    at <program>(data/parser/bin/in/simple_ok.txt:1:1)
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence
+	    -> ProgramWord: Atom: `fds`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement: ExpressionStatement
+	    -> Expression: Lvalue: `fds`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

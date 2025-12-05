@@ -1,0 +1,186 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	unary_proc
+	binary_proc
+	id
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `binary_proc`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `a`
+	        -> Term #2
+	          -> Word: Atom: `b`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `print`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Quotation: `binary_proc`
+	        -> ProgramSentence #2
+	          -> ProgramWord: Quotation: `uses both a and b`
+	        -> ProgramSentence #3
+	          -> ProgramWord: Atom: `a`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `b`
+	        -> ProgramSentence #5
+	          -> ProgramWord: Atom: `$nil`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `unary_proc`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `x`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `print`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Quotation: `unary_proc`
+	        -> ProgramSentence #2
+	          -> ProgramWord: Quotation: `uses x indirectly`
+	        -> ProgramSentence #3
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `binary_proc`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `x`
+	              -> Term #2
+	                -> Word: Atom: `x`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `$nil`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `id`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `x`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `print`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Quotation: `id`
+	        -> ProgramSentence #2
+	          -> ProgramWord: Atom: `x`
+	  -> ProgramSentence #4
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `unary_proc`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `id`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `_`
+	  -> ProgramSentence #5
+	    -> ProgramWord: Quotation: ``id` is printed only once` (6 more lines)
+	      -> `=>`
+	      -> `id() is evaluated only once,`
+	      -> `in binary_proc, despite having two`
+	      -> `different names (parameters) bound to it`
+	      -> `=>`
+	      -> `pass by delay works`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `binary_proc`
+	    -> Expression: Lambda
+	      -> parameter #1: `a`
+	      -> parameter #2: `b`
+	      -> body
+	        -> Statement #1: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `print`
+	            -> argument #1
+	              -> Expression: StrLiteral: `binary_proc`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: StrLiteral: `uses both a and b`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Symbol: `a`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: Symbol: `b`
+	        -> Statement #5: ExpressionStatement
+	          -> Expression: SpecialSymbol: `$nil`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `unary_proc`
+	    -> Expression: Lambda
+	      -> parameter #1: `x`
+	      -> body
+	        -> Statement #1: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `print`
+	            -> argument #1
+	              -> Expression: StrLiteral: `unary_proc`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: StrLiteral: `uses x indirectly`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `binary_proc`
+	            -> argument #1
+	              -> Expression: Symbol: `x`
+	            -> argument #2
+	              -> Expression: Symbol: `x`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: SpecialSymbol: `$nil`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `id`
+	    -> Expression: Lambda
+	      -> parameter #1: `x`
+	      -> body
+	        -> Statement #1: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `print`
+	            -> argument #1
+	              -> Expression: StrLiteral: `id`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: Symbol: `x`
+	  -> Statement #4: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `unary_proc`
+	      -> argument #1
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `id`
+	          -> argument #1
+	            -> Expression: Symbol: `_`
+	  -> Statement #5: ExpressionStatement
+	    -> Expression: StrLiteral: ``id` is printed only once` (6 more lines)
+	      -> `=>`
+	      -> `id() is evaluated only once,`
+	      -> `in binary_proc, despite having two`
+	      -> `different names (parameters) bound to it`
+	      -> `=>`
+	      -> `pass by delay works`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

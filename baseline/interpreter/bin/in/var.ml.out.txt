@@ -1,0 +1,114 @@
+prog: interpreter
+
+prog_exitcode: 101
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	myvar Runtime error: Unbound symbol `myvar` (src/interpret.cpp:458)
+	    at print(data/interpreter/bin/in/var.ml:2:15)
+	    at <program>(data/interpreter/bin/in/var.ml:2:1)
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `myvar`
+	        -> Term #2
+	          -> Word: Atom: `myvar`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `myvar`
+	    -> ProgramWord #3: Atom: `91`
+	  -> ProgramSentence #3
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `myvar91`
+	        -> Term #2
+	          -> Word: Atom: `myvar`
+	  -> ProgramSentence #4
+	    -> ProgramWord #1: Atom: `myvar`
+	    -> ProgramWord #2: Atom: `:=`
+	    -> ProgramWord #3: Atom: `999`
+	  -> ProgramSentence #5
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `myvar999`
+	        -> Term #2
+	          -> Word: Atom: `myvar`
+	  -> ProgramSentence #6
+	    -> ProgramWord #1: Atom: `myvar`
+	    -> ProgramWord #2: Atom: `+=`
+	    -> ProgramWord #3: Atom: `1`
+	  -> ProgramSentence #7
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `myvar1000`
+	        -> Term #2
+	          -> Word: Atom: `myvar`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `myvar`
+	      -> argument #2
+	        -> Expression: Symbol: `myvar`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `myvar`
+	    -> Expression: Numeral: `91`
+	  -> Statement #3: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `myvar91`
+	      -> argument #2
+	        -> Expression: Symbol: `myvar`
+	  -> Statement #4: Assignment
+	    -> Lvalue: Symbol: `myvar`
+	    -> Expression: Numeral: `999`
+	  -> Statement #5: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `myvar999`
+	      -> argument #2
+	        -> Expression: Symbol: `myvar`
+	  -> Statement #6: Accumulation
+	    -> Lvalue: Symbol: `myvar`
+	    -> operator: `+`
+	    -> Expression: Numeral: `1`
+	  -> Statement #7: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `myvar1000`
+	      -> argument #2
+	        -> Expression: Symbol: `myvar`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

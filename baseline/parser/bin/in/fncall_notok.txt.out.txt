@@ -1,0 +1,67 @@
+prog: parser
+
+prog_exitcode: 12
+
+out/traceback.txt: ```
+	data/parser/bin/in/fncall_notok.txt:1:14: LV2 error: Malformed Expression
+	    1 | fds(1, (2 + (3 +)))
+	      |              ^ERR-161
+	data/parser/bin/in/fncall_notok.txt:1:14: LV2 error: Malformed Operation
+	    1 | fds(1, (2 + (3 +)))
+	      |         ^    ^ERR-612
+	data/parser/bin/in/fncall_notok.txt:1:9: LV2 error: Malformed FunctionCall
+	    1 | fds(1, (2 + (3 +)))
+	      | ^       ^ERR-622
+	data/parser/bin/in/fncall_notok.txt:1:1: LV2 error: Malformed ExpressionStatement
+	    1 | fds(1, (2 + (3 +)))
+	      | ^ERR-591
+	data/parser/bin/in/fncall_notok.txt:1:1: LV2 error: Malformed Program
+	    1 | fds(1, (2 + (3 +)))
+	      | ^ERR-111
+	
+```
+
+out/console.txt: ```
+	Parsing error
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `fds`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `1`
+	        -> Term #2
+	          -> Word: ParenthesesGroup
+	            -> Term
+	              -> Word #1: Atom: `2`
+	              -> Word #2: Atom: `+`
+	              -> Word #3: ParenthesesGroup
+	                -> Term
+	                  -> Word #1: Atom: `3`
+	                  -> Word #2: Atom: `+`
+	
+```
+
+out/LV2.ast.txt: ```
+	~> Program
+	  ~> Statement: ExpressionStatement
+	    ~> Expression: FunctionCall
+	      -> function
+	        -> Expression: Lvalue: `fds`
+	      ~> arguments
+	        -> Expression: Literal: `1`
+	        ~> Expression: Operation
+	          -> Expression: Literal: `2`
+	          -> operator: `+`
+	          ~> Expression
+	            ~> ERR-161
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

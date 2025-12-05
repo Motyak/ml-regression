@@ -1,0 +1,133 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord: Quotation: `in var stmt,` (5 more lines)
+	      -> `when evaluating lvalue before value,`
+	      -> `this program will print `something went wrong``
+	      -> ``
+	      -> `you can test this program with`
+	      -> `git checkout b7945464c702ed40f685c0a8d7d4980bec8f5699`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `check-nil`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `x`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord #1: Atom: `x`
+	          -> ProgramWord #2: Atom: `||`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> ProgramSentence #1
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `print`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Quotation: `something went wrong`
+	            -> ProgramSentence #2
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `exit`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Atom: `1`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `fn`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `x`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord: Quotation: `discards x,` (2 more lines)
+	            -> `transforms the PassByDelay into a local Variable`
+	            -> `(this is why we need to evaluate value before lvalue)`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `x`
+	          -> ProgramWord #2: Atom: `:=`
+	          -> ProgramWord #3: PostfixParenthesesGroup
+	            -> Word: Atom: `check-nil`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `x`
+	  -> ProgramSentence #4
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `fn`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `13`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: ExpressionStatement
+	    -> Expression: StrLiteral: `in var stmt,` (5 more lines)
+	      -> `when evaluating lvalue before value,`
+	      -> `this program will print `something went wrong``
+	      -> ``
+	      -> `you can test this program with`
+	      -> `git checkout b7945464c702ed40f685c0a8d7d4980bec8f5699`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `check-nil`
+	    -> Expression: Lambda
+	      -> parameter #1: `x`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `x`
+	            -> operator: `||`
+	            -> Expression: BlockExpression
+	              -> Statement #1: ExpressionStatement
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `print`
+	                  -> argument #1
+	                    -> Expression: StrLiteral: `something went wrong`
+	              -> Statement #2: ExpressionStatement
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `exit`
+	                  -> argument #1
+	                    -> Expression: Numeral: `1`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `fn`
+	    -> Expression: Lambda
+	      -> parameter #1: `x`
+	      -> body
+	        -> Statement #1: ExpressionStatement
+	          -> Expression: StrLiteral: `discards x,` (2 more lines)
+	            -> `transforms the PassByDelay into a local Variable`
+	            -> `(this is why we need to evaluate value before lvalue)`
+	        -> Statement #2: Assignment
+	          -> Lvalue: Symbol: `x`
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `check-nil`
+	            -> argument #1
+	              -> Expression: Symbol: `x`
+	  -> Statement #4: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `fn`
+	      -> argument #1
+	        -> Expression: Numeral: `13`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

@@ -1,0 +1,190 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	count1 1
+	count'100 100
+	count2 2
+	count'101 101
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `make-counter`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `start`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `i`
+	          -> ProgramWord #3: Atom: `start`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `inc`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup (empty)
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence #1
+	                -> ProgramWord #1: Atom: `i`
+	                -> ProgramWord #2: Atom: `+=`
+	                -> ProgramWord #3: Atom: `1`
+	              -> ProgramSentence #2
+	                -> ProgramWord: Atom: `i`
+	        -> ProgramSentence #3
+	          -> ProgramWord: Atom: `inc`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `count`
+	    -> ProgramWord #3: PostfixParenthesesGroup
+	      -> Word: Atom: `make-counter`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `0`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `count'`
+	    -> ProgramWord #3: PostfixParenthesesGroup
+	      -> Word: Atom: `make-counter`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `99`
+	  -> ProgramSentence #4
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `count1`
+	        -> Term #2
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `count`
+	            -> ParenthesesGroup (empty)
+	  -> ProgramSentence #5
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `count'100`
+	        -> Term #2
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `count'`
+	            -> ParenthesesGroup (empty)
+	  -> ProgramSentence #6
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `count2`
+	        -> Term #2
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `count`
+	            -> ParenthesesGroup (empty)
+	  -> ProgramSentence #7
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `count'101`
+	        -> Term #2
+	          -> Word: PostfixParenthesesGroup
+	            -> Word: Atom: `count'`
+	            -> ParenthesesGroup (empty)
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `make-counter`
+	    -> Expression: Lambda
+	      -> parameter #1: `start`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `i`
+	          -> Expression: Symbol: `start`
+	        -> Statement #2: VarStatement
+	          -> Symbol: `inc`
+	          -> Expression: Lambda
+	            -> (no parameters)
+	            -> body
+	              -> Statement #1: Accumulation
+	                -> Lvalue: Symbol: `i`
+	                -> operator: `+`
+	                -> Expression: Numeral: `1`
+	              -> Statement #2: ExpressionStatement
+	                -> Expression: Symbol: `i`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Symbol: `inc`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `count`
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `make-counter`
+	      -> argument #1
+	        -> Expression: Numeral: `0`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `count'`
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `make-counter`
+	      -> argument #1
+	        -> Expression: Numeral: `99`
+	  -> Statement #4: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `count1`
+	      -> argument #2
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `count`
+	          -> arguments (none)
+	  -> Statement #5: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `count'100`
+	      -> argument #2
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `count'`
+	          -> arguments (none)
+	  -> Statement #6: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `count2`
+	      -> argument #2
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `count`
+	          -> arguments (none)
+	  -> Statement #7: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: StrLiteral: `count'101`
+	      -> argument #2
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `count'`
+	          -> arguments (none)
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

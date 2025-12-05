@@ -1,0 +1,903 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	1
+	2
+	3
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `tern`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `cond`
+	        -> Term #2
+	          -> Word: Atom: `if_true`
+	        -> Term #3
+	          -> Word: Atom: `if_false`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `res`
+	          -> ProgramWord #3: Atom: `_`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `&&`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_true`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `cond`
+	          -> ProgramWord #2: Atom: `||`
+	          -> ProgramWord #3: CurlyBracketsGroup
+	            -> Term
+	              -> Word #1: Atom: `res`
+	              -> Word #2: Atom: `:=`
+	              -> Word #3: Atom: `if_false`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `res`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `!tern`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `cond`
+	        -> Term #2
+	          -> Word: Atom: `if_false`
+	        -> Term #3
+	          -> Word: Atom: `if_true`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `tern`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `cond`
+	              -> Term #2
+	                -> Word: Atom: `if_true`
+	              -> Term #3
+	                -> Word: Atom: `if_false`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `not`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `bool`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `tern`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `bool`
+	              -> Term #2
+	                -> Word: Atom: `$false`
+	              -> Term #3
+	                -> Word: Atom: `$true`
+	  -> ProgramSentence #4
+	    -> ProgramWord: Quotation: `===Pair==============================`
+	  -> ProgramSentence #5
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `Pair`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `left`
+	        -> Term #2
+	          -> Word: Atom: `right`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `selector`
+	            -> Word: CurlyBracketsGroup
+	              -> Term
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `selector`
+	                  -> ParenthesesGroup
+	                    -> Term #1
+	                      -> Word: Atom: `left`
+	                    -> Term #2
+	                      -> Word: Atom: `right`
+	  -> ProgramSentence #6
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `left`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `pair`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `pair`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Association
+	                  -> Word: ParenthesesGroup
+	                    -> Term #1
+	                      -> Word: Atom: `left`
+	                    -> Term #2
+	                      -> Word: Atom: `right`
+	                  -> Word: CurlyBracketsGroup
+	                    -> Term
+	                      -> Word: Atom: `left`
+	  -> ProgramSentence #7
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `right`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `pair`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `pair`
+	            -> ParenthesesGroup
+	              -> Term
+	                -> Word: Association
+	                  -> Word: ParenthesesGroup
+	                    -> Term #1
+	                      -> Word: Atom: `left`
+	                    -> Term #2
+	                      -> Word: Atom: `right`
+	                  -> Word: CurlyBracketsGroup
+	                    -> Term
+	                      -> Word: Atom: `right`
+	  -> ProgramSentence #8
+	    -> ProgramWord: Quotation: `===Optional==========================`
+	  -> ProgramSentence #9
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `Optional`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `some?`
+	        -> Term #2
+	          -> Word: Atom: `val`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `none?`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup (empty)
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord: PostfixParenthesesGroup
+	                  -> Word: Atom: `not`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: Atom: `some?`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `some`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup (empty)
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence #1
+	                -> ProgramWord #1: Atom: `some?`
+	                -> ProgramWord #2: Atom: `||`
+	                -> ProgramWord #3: CurlyBracketsGroup
+	                  -> ProgramSentence #1
+	                    -> ProgramWord: PostfixParenthesesGroup
+	                      -> Word: Atom: `print`
+	                      -> ParenthesesGroup
+	                        -> Term
+	                          -> Word: Quotation: `ERR calling some() on empty Optional`
+	                  -> ProgramSentence #2
+	                    -> ProgramWord: PostfixParenthesesGroup
+	                      -> Word: Atom: `exit`
+	                      -> ParenthesesGroup
+	                        -> Term
+	                          -> Word: Atom: `1`
+	              -> ProgramSentence #2
+	                -> ProgramWord: Atom: `val`
+	        -> ProgramSentence #3
+	          -> ProgramWord: Quotation: `----------------`
+	        -> ProgramSentence #4
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `dispatcher`
+	          -> ProgramWord #3: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `msg_id`
+	            -> Word: CurlyBracketsGroup
+	              -> ProgramSentence
+	                -> ProgramWord: PostfixParenthesesGroup
+	                  -> Word: Atom: `!tern`
+	                  -> ParenthesesGroup
+	                    -> Term #1
+	                      -> Word: Atom: `msg_id`
+	                    -> Term #2
+	                      -> Word: Atom: `none?`
+	                    -> Term #3
+	                      -> Word: CurlyBracketsGroup
+	                        -> ProgramSentence
+	                          -> ProgramWord: PostfixParenthesesGroup
+	                            -> Word: Atom: `!tern`
+	                            -> ParenthesesGroup
+	                              -> Term #1
+	                                -> Word #1: Atom: `msg_id`
+	                                -> Word #2: Atom: `+`
+	                                -> Word #3: Atom: `-1`
+	                              -> Term #2
+	                                -> Word: Atom: `some`
+	                              -> Term #3
+	                                -> Word: CurlyBracketsGroup
+	                                  -> ProgramSentence #1
+	                                    -> ProgramWord: PostfixParenthesesGroup
+	                                      -> Word: Atom: `print`
+	                                      -> ParenthesesGroup
+	                                        -> Term
+	                                          -> Word #1: Quotation: `ERR invalid msg_id in dispatcher: ``
+	                                          -> Word #2: Atom: `+`
+	                                          -> Word #3: Atom: `msg_id`
+	                                          -> Word #4: Atom: `+`
+	                                          -> Word #5: Quotation: ```
+	                                  -> ProgramSentence #2
+	                                    -> ProgramWord: PostfixParenthesesGroup
+	                                      -> Word: Atom: `exit`
+	                                      -> ParenthesesGroup
+	                                        -> Term
+	                                          -> Word: Atom: `1`
+	        -> ProgramSentence #5
+	          -> ProgramWord: Atom: `dispatcher`
+	  -> ProgramSentence #10
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `none?`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `opt`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: PostfixParenthesesGroup
+	              -> Word: Atom: `opt`
+	              -> ParenthesesGroup
+	                -> Term
+	                  -> Word: Atom: `0`
+	            -> ParenthesesGroup (empty)
+	  -> ProgramSentence #11
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `some`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `opt`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: PostfixParenthesesGroup
+	              -> Word: Atom: `opt`
+	              -> ParenthesesGroup
+	                -> Term
+	                  -> Word: Atom: `1`
+	            -> ParenthesesGroup (empty)
+	  -> ProgramSentence #12
+	    -> ProgramWord: Quotation: `===List==============================`
+	  -> ProgramSentence #13
+	    -> ProgramWord #1: Atom: `_`
+	    -> ProgramWord #2: Atom: `:=`
+	    -> ProgramWord #3: Quotation: `Lists are nested Optional Pairs.` (8 more lines)
+	      -> `As opposed to a Pair, a List can be empty (0 element)..`
+	      -> `  -> END`
+	      -> `it can also contain only 1 element..`
+	      -> `  -> Pair?(x, END)`
+	      -> `or 2+ elements as such..`
+	      -> `  -> Pair?(a, Pair?(b, END))`
+	      -> `  -> Pair?(a, Pair?(b, Pair?(c, END)))`
+	      -> `  -> ...`
+	  -> ProgramSentence #14
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `Pair?`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `left`
+	        -> Term #2
+	          -> Word: Atom: `right`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence
+	          -> ProgramWord: PostfixParenthesesGroup
+	            -> Word: Atom: `Optional`
+	            -> ParenthesesGroup
+	              -> Term #1
+	                -> Word: Atom: `$true`
+	              -> Term #2
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `Pair`
+	                  -> ParenthesesGroup
+	                    -> Term #1
+	                      -> Word: Atom: `left`
+	                    -> Term #2
+	                      -> Word: Atom: `right`
+	  -> ProgramSentence #15
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `END`
+	    -> ProgramWord #3: CurlyBracketsGroup
+	      -> ProgramSentence
+	        -> ProgramWord: PostfixParenthesesGroup
+	          -> Word: Atom: `Optional`
+	          -> ParenthesesGroup
+	            -> Term #1
+	              -> Word: Atom: `$false`
+	            -> Term #2
+	              -> Word: Atom: `_`
+	  -> ProgramSentence #16
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `List`
+	    -> ProgramWord #3: CurlyBracketsGroup
+	      -> ProgramSentence #1
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `List-1+`
+	        -> ProgramWord #3: Atom: `_`
+	      -> ProgramSentence #2
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `List`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term
+	              -> Word: Atom: `xs...`
+	          -> Word: CurlyBracketsGroup
+	            -> ProgramSentence
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `!tern`
+	                -> ParenthesesGroup
+	                  -> Term #1
+	                    -> Word: Atom: `$#varargs`
+	                  -> Term #2
+	                    -> Word: Atom: `END`
+	                  -> Term #3
+	                    -> Word: CurlyBracketsGroup
+	                      -> ProgramSentence
+	                        -> ProgramWord: PostfixParenthesesGroup
+	                          -> Word: Atom: `List-1+`
+	                          -> ParenthesesGroup
+	                            -> Term
+	                              -> Word: Atom: `xs...`
+	      -> ProgramSentence #3
+	        -> ProgramWord #1: Atom: `List-1+`
+	        -> ProgramWord #2: Atom: `:=`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term #1
+	              -> Word: Atom: `x`
+	            -> Term #2
+	              -> Word: Atom: `xs...`
+	          -> Word: CurlyBracketsGroup
+	            -> ProgramSentence
+	              -> ProgramWord: PostfixParenthesesGroup
+	                -> Word: Atom: `Pair?`
+	                -> ParenthesesGroup
+	                  -> Term #1
+	                    -> Word: Atom: `x`
+	                  -> Term #2
+	                    -> Word: PostfixParenthesesGroup
+	                      -> Word: Atom: `List`
+	                      -> ParenthesesGroup
+	                        -> Term
+	                          -> Word: Atom: `xs...`
+	      -> ProgramSentence #4
+	        -> ProgramWord: Atom: `List`
+	  -> ProgramSentence #17
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `foreach`
+	    -> ProgramWord #3: CurlyBracketsGroup
+	      -> ProgramSentence #1
+	        -> ProgramWord #1: Atom: `var`
+	        -> ProgramWord #2: Atom: `foreach`
+	        -> ProgramWord #3: Atom: `_`
+	      -> ProgramSentence #2
+	        -> ProgramWord #1: Atom: `foreach`
+	        -> ProgramWord #2: Atom: `:=`
+	        -> ProgramWord #3: Association
+	          -> Word: ParenthesesGroup
+	            -> Term #1
+	              -> Word: Atom: `list`
+	            -> Term #2
+	              -> Word: Atom: `do`
+	          -> Word: CurlyBracketsGroup
+	            -> ProgramSentence
+	              -> ProgramWord #1: PostfixParenthesesGroup
+	                -> Word: Atom: `none?`
+	                -> ParenthesesGroup
+	                  -> Term
+	                    -> Word: Atom: `list`
+	              -> ProgramWord #2: Atom: `||`
+	              -> ProgramWord #3: CurlyBracketsGroup
+	                -> ProgramSentence #1
+	                  -> ProgramWord: PostfixParenthesesGroup
+	                    -> Word: Atom: `do`
+	                    -> ParenthesesGroup
+	                      -> Term
+	                        -> Word: PostfixParenthesesGroup
+	                          -> Word: Atom: `left`
+	                          -> ParenthesesGroup
+	                            -> Term
+	                              -> Word: PostfixParenthesesGroup
+	                                -> Word: Atom: `some`
+	                                -> ParenthesesGroup
+	                                  -> Term
+	                                    -> Word: Atom: `list`
+	                -> ProgramSentence #2
+	                  -> ProgramWord: PostfixParenthesesGroup
+	                    -> Word: Atom: `foreach`
+	                    -> ParenthesesGroup
+	                      -> Term #1
+	                        -> Word: PostfixParenthesesGroup
+	                          -> Word: Atom: `right`
+	                          -> ParenthesesGroup
+	                            -> Term
+	                              -> Word: PostfixParenthesesGroup
+	                                -> Word: Atom: `some`
+	                                -> ParenthesesGroup
+	                                  -> Term
+	                                    -> Word: Atom: `list`
+	                      -> Term #2
+	                        -> Word: Atom: `do`
+	      -> ProgramSentence #3
+	        -> ProgramWord: ParenthesesGroup
+	          -> Term
+	            -> Word: Atom: `foreach`
+	  -> ProgramSentence #18
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `mylist`
+	    -> ProgramWord #3: PostfixParenthesesGroup
+	      -> Word: Atom: `List`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `1`
+	        -> Term #2
+	          -> Word: Atom: `2`
+	        -> Term #3
+	          -> Word: Atom: `3`
+	  -> ProgramSentence #19
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `foreach`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `mylist`
+	        -> Term #2
+	          -> Word: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `cur`
+	            -> Word: CurlyBracketsGroup
+	              -> Term
+	                -> Word: PostfixParenthesesGroup
+	                  -> Word: Atom: `print`
+	                  -> ParenthesesGroup
+	                    -> Term
+	                      -> Word: Atom: `cur`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `tern`
+	    -> Expression: Lambda
+	      -> parameter #1: `cond`
+	      -> parameter #2: `if_true`
+	      -> parameter #3: `if_false`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `res`
+	          -> Expression: Symbol: `_`
+	        -> Statement #2: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `&&`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_true`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: Operation
+	            -> Expression: Symbol: `cond`
+	            -> operator: `||`
+	            -> Expression: BlockExpression
+	              -> Statement: Assignment
+	                -> Lvalue: Symbol: `res`
+	                -> Expression: Symbol: `if_false`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: Symbol: `res`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `!tern`
+	    -> Expression: Lambda
+	      -> parameter #1: `cond`
+	      -> parameter #2: `if_false`
+	      -> parameter #3: `if_true`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `tern`
+	            -> argument #1
+	              -> Expression: Symbol: `cond`
+	            -> argument #2
+	              -> Expression: Symbol: `if_true`
+	            -> argument #3
+	              -> Expression: Symbol: `if_false`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `not`
+	    -> Expression: Lambda
+	      -> parameter #1: `bool`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `tern`
+	            -> argument #1
+	              -> Expression: Symbol: `bool`
+	            -> argument #2
+	              -> Expression: SpecialSymbol: `$false`
+	            -> argument #3
+	              -> Expression: SpecialSymbol: `$true`
+	  -> Statement #4: ExpressionStatement
+	    -> Expression: StrLiteral: `===Pair==============================`
+	  -> Statement #5: VarStatement
+	    -> Symbol: `Pair`
+	    -> Expression: Lambda
+	      -> parameter #1: `left`
+	      -> parameter #2: `right`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: Lambda
+	            -> parameter #1: `selector`
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `selector`
+	                  -> argument #1
+	                    -> Expression: Symbol: `left`
+	                  -> argument #2
+	                    -> Expression: Symbol: `right`
+	  -> Statement #6: VarStatement
+	    -> Symbol: `left`
+	    -> Expression: Lambda
+	      -> parameter #1: `pair`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `pair`
+	            -> argument #1
+	              -> Expression: Lambda
+	                -> parameter #1: `left`
+	                -> parameter #2: `right`
+	                -> body
+	                  -> Statement: ExpressionStatement
+	                    -> Expression: Symbol: `left`
+	  -> Statement #7: VarStatement
+	    -> Symbol: `right`
+	    -> Expression: Lambda
+	      -> parameter #1: `pair`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `pair`
+	            -> argument #1
+	              -> Expression: Lambda
+	                -> parameter #1: `left`
+	                -> parameter #2: `right`
+	                -> body
+	                  -> Statement: ExpressionStatement
+	                    -> Expression: Symbol: `right`
+	  -> Statement #8: ExpressionStatement
+	    -> Expression: StrLiteral: `===Optional==========================`
+	  -> Statement #9: VarStatement
+	    -> Symbol: `Optional`
+	    -> Expression: Lambda
+	      -> parameter #1: `some?`
+	      -> parameter #2: `val`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `none?`
+	          -> Expression: Lambda
+	            -> (no parameters)
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `not`
+	                  -> argument #1
+	                    -> Expression: Symbol: `some?`
+	        -> Statement #2: VarStatement
+	          -> Symbol: `some`
+	          -> Expression: Lambda
+	            -> (no parameters)
+	            -> body
+	              -> Statement #1: ExpressionStatement
+	                -> Expression: Operation
+	                  -> Expression: Symbol: `some?`
+	                  -> operator: `||`
+	                  -> Expression: BlockExpression
+	                    -> Statement #1: ExpressionStatement
+	                      -> Expression: FunctionCall
+	                        -> function
+	                          -> Expression: Symbol: `print`
+	                        -> argument #1
+	                          -> Expression: StrLiteral: `ERR calling some() on empty Optional`
+	                    -> Statement #2: ExpressionStatement
+	                      -> Expression: FunctionCall
+	                        -> function
+	                          -> Expression: Symbol: `exit`
+	                        -> argument #1
+	                          -> Expression: Numeral: `1`
+	              -> Statement #2: ExpressionStatement
+	                -> Expression: Symbol: `val`
+	        -> Statement #3: ExpressionStatement
+	          -> Expression: StrLiteral: `----------------`
+	        -> Statement #4: VarStatement
+	          -> Symbol: `dispatcher`
+	          -> Expression: Lambda
+	            -> parameter #1: `msg_id`
+	            -> body
+	              -> Statement: ExpressionStatement
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `!tern`
+	                  -> argument #1
+	                    -> Expression: Symbol: `msg_id`
+	                  -> argument #2
+	                    -> Expression: Symbol: `none?`
+	                  -> argument #3
+	                    -> Expression: BlockExpression
+	                      -> Statement: ExpressionStatement
+	                        -> Expression: FunctionCall
+	                          -> function
+	                            -> Expression: Symbol: `!tern`
+	                          -> argument #1
+	                            -> Expression: Operation
+	                              -> Expression: Symbol: `msg_id`
+	                              -> operator: `+`
+	                              -> Expression: Numeral: `-1`
+	                          -> argument #2
+	                            -> Expression: Symbol: `some`
+	                          -> argument #3
+	                            -> Expression: BlockExpression
+	                              -> Statement #1: ExpressionStatement
+	                                -> Expression: FunctionCall
+	                                  -> function
+	                                    -> Expression: Symbol: `print`
+	                                  -> argument #1
+	                                    -> Expression: Operation
+	                                      -> Expression: Operation
+	                                        -> Expression: StrLiteral: `ERR invalid msg_id in dispatcher: ``
+	                                        -> operator: `+`
+	                                        -> Expression: Symbol: `msg_id`
+	                                      -> operator: `+`
+	                                      -> Expression: StrLiteral: ```
+	                              -> Statement #2: ExpressionStatement
+	                                -> Expression: FunctionCall
+	                                  -> function
+	                                    -> Expression: Symbol: `exit`
+	                                  -> argument #1
+	                                    -> Expression: Numeral: `1`
+	        -> Statement #5: ExpressionStatement
+	          -> Expression: Symbol: `dispatcher`
+	  -> Statement #10: VarStatement
+	    -> Symbol: `none?`
+	    -> Expression: Lambda
+	      -> parameter #1: `opt`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `opt`
+	                -> argument #1
+	                  -> Expression: Numeral: `0`
+	            -> arguments (none)
+	  -> Statement #11: VarStatement
+	    -> Symbol: `some`
+	    -> Expression: Lambda
+	      -> parameter #1: `opt`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `opt`
+	                -> argument #1
+	                  -> Expression: Numeral: `1`
+	            -> arguments (none)
+	  -> Statement #12: ExpressionStatement
+	    -> Expression: StrLiteral: `===List==============================`
+	  -> Statement #13: Assignment
+	    -> Lvalue: Symbol: `_`
+	    -> Expression: StrLiteral: `Lists are nested Optional Pairs.` (8 more lines)
+	      -> `As opposed to a Pair, a List can be empty (0 element)..`
+	      -> `  -> END`
+	      -> `it can also contain only 1 element..`
+	      -> `  -> Pair?(x, END)`
+	      -> `or 2+ elements as such..`
+	      -> `  -> Pair?(a, Pair?(b, END))`
+	      -> `  -> Pair?(a, Pair?(b, Pair?(c, END)))`
+	      -> `  -> ...`
+	  -> Statement #14: VarStatement
+	    -> Symbol: `Pair?`
+	    -> Expression: Lambda
+	      -> parameter #1: `left`
+	      -> parameter #2: `right`
+	      -> body
+	        -> Statement: ExpressionStatement
+	          -> Expression: FunctionCall
+	            -> function
+	              -> Expression: Symbol: `Optional`
+	            -> argument #1
+	              -> Expression: SpecialSymbol: `$true`
+	            -> argument #2
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `Pair`
+	                -> argument #1
+	                  -> Expression: Symbol: `left`
+	                -> argument #2
+	                  -> Expression: Symbol: `right`
+	  -> Statement #15: VarStatement
+	    -> Symbol: `END`
+	    -> Expression: BlockExpression
+	      -> Statement: ExpressionStatement
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `Optional`
+	          -> argument #1
+	            -> Expression: SpecialSymbol: `$false`
+	          -> argument #2
+	            -> Expression: Symbol: `_`
+	  -> Statement #16: VarStatement
+	    -> Symbol: `List`
+	    -> Expression: BlockExpression
+	      -> Statement #1: VarStatement
+	        -> Symbol: `List-1+`
+	        -> Expression: Symbol: `_`
+	      -> Statement #2: VarStatement
+	        -> Symbol: `List`
+	        -> Expression: Lambda
+	          -> (no parameters)
+	          -> variadic parameters: `xs...`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `!tern`
+	                -> argument #1
+	                  -> Expression: SpecialSymbol: `$#varargs`
+	                -> argument #2
+	                  -> Expression: Symbol: `END`
+	                -> argument #3
+	                  -> Expression: BlockExpression
+	                    -> Statement: ExpressionStatement
+	                      -> Expression: FunctionCall
+	                        -> function
+	                          -> Expression: Symbol: `List-1+`
+	                        -> argument #1
+	                          -> Expression: Symbol: `xs...`
+	      -> Statement #3: Assignment
+	        -> Lvalue: Symbol: `List-1+`
+	        -> Expression: Lambda
+	          -> parameter #1: `x`
+	          -> variadic parameters: `xs...`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `Pair?`
+	                -> argument #1
+	                  -> Expression: Symbol: `x`
+	                -> argument #2
+	                  -> Expression: FunctionCall
+	                    -> function
+	                      -> Expression: Symbol: `List`
+	                    -> argument #1
+	                      -> Expression: Symbol: `xs...`
+	      -> Statement #4: ExpressionStatement
+	        -> Expression: Symbol: `List`
+	  -> Statement #17: VarStatement
+	    -> Symbol: `foreach`
+	    -> Expression: BlockExpression
+	      -> Statement #1: VarStatement
+	        -> Symbol: `foreach`
+	        -> Expression: Symbol: `_`
+	      -> Statement #2: Assignment
+	        -> Lvalue: Symbol: `foreach`
+	        -> Expression: Lambda
+	          -> parameter #1: `list`
+	          -> parameter #2: `do`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: Operation
+	                -> Expression: FunctionCall
+	                  -> function
+	                    -> Expression: Symbol: `none?`
+	                  -> argument #1
+	                    -> Expression: Symbol: `list`
+	                -> operator: `||`
+	                -> Expression: BlockExpression
+	                  -> Statement #1: ExpressionStatement
+	                    -> Expression: FunctionCall
+	                      -> function
+	                        -> Expression: Symbol: `do`
+	                      -> argument #1
+	                        -> Expression: FunctionCall
+	                          -> function
+	                            -> Expression: Symbol: `left`
+	                          -> argument #1
+	                            -> Expression: FunctionCall
+	                              -> function
+	                                -> Expression: Symbol: `some`
+	                              -> argument #1
+	                                -> Expression: Symbol: `list`
+	                  -> Statement #2: ExpressionStatement
+	                    -> Expression: FunctionCall
+	                      -> function
+	                        -> Expression: Symbol: `foreach`
+	                      -> argument #1
+	                        -> Expression: FunctionCall
+	                          -> function
+	                            -> Expression: Symbol: `right`
+	                          -> argument #1
+	                            -> Expression: FunctionCall
+	                              -> function
+	                                -> Expression: Symbol: `some`
+	                              -> argument #1
+	                                -> Expression: Symbol: `list`
+	                      -> argument #2
+	                        -> Expression: Symbol: `do`
+	      -> Statement #3: ExpressionStatement
+	        -> Expression: Symbol: `foreach`
+	  -> Statement #18: VarStatement
+	    -> Symbol: `mylist`
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `List`
+	      -> argument #1
+	        -> Expression: Numeral: `1`
+	      -> argument #2
+	        -> Expression: Numeral: `2`
+	      -> argument #3
+	        -> Expression: Numeral: `3`
+	  -> Statement #19: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `foreach`
+	      -> argument #1
+	        -> Expression: Symbol: `mylist`
+	      -> argument #2
+	        -> Expression: Lambda
+	          -> parameter #1: `cur`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: FunctionCall
+	                -> function
+	                  -> Expression: Symbol: `print`
+	                -> argument #1
+	                  -> Expression: Symbol: `cur`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null

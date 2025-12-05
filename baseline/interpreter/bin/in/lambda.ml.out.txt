@@ -1,0 +1,49 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Association
+	            -> Word: ParenthesesGroup
+	              -> Term
+	                -> Word: Atom: `x`
+	            -> Word: CurlyBracketsGroup
+	              -> Term
+	                -> Word: Atom: `x`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `91`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Lambda
+	          -> parameter #1: `x`
+	          -> body
+	            -> Statement: ExpressionStatement
+	              -> Expression: Symbol: `x`
+	      -> argument #1
+	        -> Expression: Numeral: `91`
+	
+```
+
+out/LV1.tokens.json: null
+
+out/LV2.tokens.json: null
