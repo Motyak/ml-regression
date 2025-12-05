@@ -25,7 +25,7 @@ var fib {
     fib
 }
 
-var res fib(24)
+var res fib(20)
 
 print(res)
 print(count)
