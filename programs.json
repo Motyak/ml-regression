@@ -257,9 +257,9 @@
 				"author_date": "2025-04-27T19:54:20Z"
 			},
 			"interpreter": {
-				"hash": "93a05bc840274e3872b37f4880c9d1019a09612f",
-				"title_line": "need to impl InterpretVisitor now",
-				"author_date": "2025-04-27T19:55:13Z"
+				"hash": "",
+				"title_line": "",
+				"author_date": "1970-01-01T00:00:00Z"
 			}
 		}
 	},
@@ -313,19 +313,19 @@
 		"creation_time": "2025-05-11T15:33:54Z",
 		"baseline_commits": {
 			"LV1": {
-				"hash": "696fbc29b4d423a85d32814151350b6c22585be5",
-				"title_line": "update utils headers",
-				"author_date": "2025-05-07T01:34:02Z"
+				"hash": "9249ea3e36792adf9fb44e9f73b5c840757c50ed",
+				"title_line": "added _tokenId",
+				"author_date": "2025-05-15T12:49:23Z"
 			},
 			"parser": {
-				"hash": "9203ea870806ae58b44a99e63609001e7819b738",
-				"title_line": "a bunch of renaming on LV2",
-				"author_date": "2025-05-07T02:15:10Z"
+				"hash": "d85a5230251b5fca481c8e8b7ea2f9bda4a34cb3",
+				"title_line": "fix accumulation _token{Len,Id}",
+				"author_date": "2025-05-25T07:58:51Z"
 			},
 			"interpreter": {
-				"hash": "77e45817d358a35d75396834900510b4452043cd",
-				"title_line": "shortcircuit op OK fncall lazy passing not ok",
-				"author_date": "2025-05-11T15:33:54Z"
+				"hash": "6ccf5ea5acffbdcb6057ad5f642eea2c18f75c02",
+				"title_line": "fix segfault",
+				"author_date": "2025-05-25T14:44:45Z"
 			}
 		}
 	},
@@ -362,9 +362,9 @@
 				"author_date": "2025-05-16T16:14:11Z"
 			},
 			"parser": {
-				"hash": "31c7e22d78ae1b2d7329cc1a7a7c53ea606df343",
-				"title_line": "add token id for Operation operator_",
-				"author_date": "2025-05-17T13:43:02Z"
+				"hash": "959fe498020cdabddbf55941cc9d04d6dfe3be31",
+				"title_line": "fix operator_ not having a _tokenLen",
+				"author_date": "2025-05-17T20:28:10Z"
 			},
 			"interpreter": {
 				"hash": "15b2774eb338cc349fcd444379e3dd24937b418d",
@@ -807,9 +807,9 @@
 				"author_date": "2025-05-30T19:33:55Z"
 			},
 			"interpreter": {
-				"hash": "8848b6482665d3ad017eae4463b161682bafdae3",
-				"title_line": "variadic params/args support",
-				"author_date": "2025-06-02T11:28:03Z"
+				"hash": "4248697cadf8f982d28f706deee54979e2fcad3a",
+				"title_line": "fixed variadic params/args, progress..",
+				"author_date": "2025-06-02T22:18:33Z"
 			}
 		}
 	},
@@ -829,9 +829,9 @@
 				"author_date": "2025-05-30T19:33:55Z"
 			},
 			"interpreter": {
-				"hash": "8848b6482665d3ad017eae4463b161682bafdae3",
-				"title_line": "variadic params/args support",
-				"author_date": "2025-06-02T11:28:03Z"
+				"hash": "4248697cadf8f982d28f706deee54979e2fcad3a",
+				"title_line": "fixed variadic params/args, progress..",
+				"author_date": "2025-06-02T22:18:33Z"
 			}
 		}
 	},
@@ -1423,9 +1423,9 @@
 				"author_date": "2025-07-04T15:28:04Z"
 			},
 			"interpreter": {
-				"hash": "7d77567d1c40569b671019fe6f6afb7ad69f440b",
-				"title_line": "fix == op impl",
-				"author_date": "2025-07-06T16:03:54Z"
+				"hash": "55aaa505727f080f61a7c61eed1d3269a7c78fa5",
+				"title_line": "avoid using broken __first_it",
+				"author_date": "2025-07-06T23:12:58Z"
 			}
 		}
 	},
@@ -1660,9 +1660,9 @@
 				"author_date": "2025-07-27T12:30:26Z"
 			},
 			"parser": {
-				"hash": "8b610ddb496d592b26675be4d8a510f309716dbf",
-				"title_line": "updated env.sh",
-				"author_date": "2025-07-23T19:18:59Z"
+				"hash": "b84f4a36c9952bcff618b3fd09627f75660a7674",
+				"title_line": "added range operator",
+				"author_date": "2025-07-28T21:04:34Z"
 			},
 			"interpreter": {
 				"hash": "4983f2015e41a923b2f900fd570cefa75b3aec8b",
@@ -1907,9 +1907,9 @@
 				"author_date": "2025-08-18T06:16:01Z"
 			},
 			"interpreter": {
-				"hash": "0dc32a41a8947d8b68f3d9f7e3eb7087950476bf",
-				"title_line": "added NullStatement + remove some assertions",
-				"author_date": "2025-08-17T20:05:16Z"
+				"hash": "563b0720f3f1d7ff62bbdb5518d49eeaed98e8d8",
+				"title_line": "added field access for map objects",
+				"author_date": "2025-08-21T14:21:05Z"
 			}
 		}
 	},
