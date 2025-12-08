@@ -644,5 +644,5 @@ var sort {
 [3, 1, 4, 15, 9, 2, 6, 5, 35, 8, 97] |> sort(<) |> stdout
 [3, 1, 4, 15, 9, 2, 6, 5, 35, 8, 97] |> sort(>) |> stdout
 
-"Bonjour, je m'appelle Motyak." |> sort(<) |> stdout
-"Bonjour, je m'appelle Motyak." |> sort(>) |> stdout
+"Salut a tous." |> sort(<) |> stdout
+"Salut a tous." |> sort(>) |> stdout
