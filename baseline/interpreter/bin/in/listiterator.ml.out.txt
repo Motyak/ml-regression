@@ -1406,8 +1406,7 @@ out/LV2.ast.txt: ```
 	      -> Statement #2: VarStatement
 	        -> Symbol: `List`
 	        -> Expression: Lambda
-	          -> (no parameters)
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
@@ -1429,7 +1428,7 @@ out/LV2.ast.txt: ```
 	        -> Lvalue: Symbol: `List-1+`
 	        -> Expression: Lambda
 	          -> parameter #1: `x`
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
@@ -1622,8 +1621,7 @@ out/LV2.ast.txt: ```
 	        -> Statement #2: Assignment
 	          -> Lvalue: Symbol: `curried`
 	          -> Expression: Lambda
-	            -> (no parameters)
-	            -> variadic parameters: `args...`
+	            -> variadic parameter: `args...`
 	            -> body
 	              -> Statement: ExpressionStatement
 	                -> Expression: FunctionCall
@@ -1648,8 +1646,7 @@ out/LV2.ast.txt: ```
 	                    -> Expression: BlockExpression
 	                      -> Statement: ExpressionStatement
 	                        -> Expression: Lambda
-	                          -> (no parameters)
-	                          -> variadic parameters: `args2...`
+	                          -> variadic parameter: `args2...`
 	                          -> body
 	                            -> Statement: ExpressionStatement
 	                              -> Expression: FunctionCall
@@ -22427,9 +22424,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 81,
-				"line": 5,
-				"column": 1
+				"i": 80,
+				"line": 4,
+				"column": 29
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -22587,9 +22584,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 111,
-				"line": 6,
-				"column": 1
+				"i": 110,
+				"line": 5,
+				"column": 30
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -22747,9 +22744,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 119,
-				"line": 7,
-				"column": 1
+				"i": 118,
+				"line": 6,
+				"column": 8
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -22927,9 +22924,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 194,
-				"line": 11,
-				"column": 1
+				"i": 193,
+				"line": 10,
+				"column": 34
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -23207,9 +23204,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 244,
-				"line": 15,
-				"column": 1
+				"i": 243,
+				"line": 14,
+				"column": 30
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -23627,9 +23624,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 416,
-				"line": 25,
-				"column": 1
+				"i": 415,
+				"line": 24,
+				"column": 11
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -23807,9 +23804,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 405,
-				"line": 24,
-				"column": 1
+				"i": 404,
+				"line": 23,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -24047,9 +24044,9 @@ out/LV2.tokens.json: {
 				"column": 17
 			},
 			"end": {
-				"i": 390,
-				"line": 23,
-				"column": 1
+				"i": 389,
+				"line": 22,
+				"column": 39
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -24407,9 +24404,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 458,
-				"line": 29,
-				"column": 1
+				"i": 457,
+				"line": 28,
+				"column": 19
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -24667,9 +24664,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 502,
-				"line": 33,
-				"column": 1
+				"i": 501,
+				"line": 32,
+				"column": 18
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -24827,9 +24824,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 518,
-				"line": 36,
-				"column": 1
+				"i": 517,
+				"line": 35,
+				"column": 9
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -24867,9 +24864,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 560,
-				"line": 39,
-				"column": 1
+				"i": 559,
+				"line": 38,
+				"column": 39
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -25027,9 +25024,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 625,
-				"line": 42,
-				"column": 1
+				"i": 624,
+				"line": 41,
+				"column": 39
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -25347,9 +25344,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 677,
-				"line": 46,
-				"column": 1
+				"i": 676,
+				"line": 45,
+				"column": 31
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -25647,9 +25644,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 731,
-				"line": 50,
-				"column": 1
+				"i": 730,
+				"line": 49,
+				"column": 32
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -25847,9 +25844,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 773,
-				"line": 53,
-				"column": 1
+				"i": 772,
+				"line": 52,
+				"column": 39
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -26087,9 +26084,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 840,
-				"line": 57,
-				"column": 1
+				"i": 839,
+				"line": 56,
+				"column": 19
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -26267,9 +26264,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 972,
-				"line": 64,
-				"column": 1
+				"i": 971,
+				"line": 63,
+				"column": 10
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -26367,9 +26364,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 942,
-				"line": 62,
-				"column": 1
+				"i": 941,
+				"line": 61,
+				"column": 58
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -26467,9 +26464,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 962,
-				"line": 63,
-				"column": 1
+				"i": 961,
+				"line": 62,
+				"column": 20
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -26567,9 +26564,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 984,
-				"line": 65,
-				"column": 1
+				"i": 983,
+				"line": 64,
+				"column": 12
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -26607,9 +26604,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 1013,
-				"line": 68,
-				"column": 1
+				"i": 1012,
+				"line": 67,
+				"column": 22
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -26747,9 +26744,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 1240,
-				"line": 76,
-				"column": 1
+				"i": 1239,
+				"line": 75,
+				"column": 11
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -26927,9 +26924,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 1229,
-				"line": 75,
-				"column": 1
+				"i": 1228,
+				"line": 74,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -27167,9 +27164,9 @@ out/LV2.tokens.json: {
 				"column": 17
 			},
 			"end": {
-				"i": 1190,
-				"line": 73,
-				"column": 1
+				"i": 1189,
+				"line": 72,
+				"column": 76
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -27387,9 +27384,9 @@ out/LV2.tokens.json: {
 				"column": 17
 			},
 			"end": {
-				"i": 1214,
-				"line": 74,
-				"column": 1
+				"i": 1213,
+				"line": 73,
+				"column": 24
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -27487,9 +27484,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 1262,
-				"line": 79,
-				"column": 1
+				"i": 1261,
+				"line": 78,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -27627,9 +27624,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 1296,
-				"line": 83,
-				"column": 1
+				"i": 1295,
+				"line": 82,
+				"column": 13
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -27847,9 +27844,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 1329,
-				"line": 87,
-				"column": 1
+				"i": 1328,
+				"line": 86,
+				"column": 13
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -27967,9 +27964,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 1371,
-				"line": 90,
-				"column": 1
+				"i": 1370,
+				"line": 89,
+				"column": 39
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -28187,9 +28184,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 1743,
-				"line": 105,
-				"column": 1
+				"i": 1742,
+				"line": 104,
+				"column": 39
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -28487,9 +28484,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 1779,
-				"line": 108,
-				"column": 1
+				"i": 1778,
+				"line": 107,
+				"column": 24
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -28847,9 +28844,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 1905,
-				"line": 117,
-				"column": 1
+				"i": 1904,
+				"line": 116,
+				"column": 11
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -29027,9 +29024,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 1894,
-				"line": 116,
-				"column": 1
+				"i": 1893,
+				"line": 115,
+				"column": 27
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -29247,9 +29244,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 1970,
-				"line": 121,
-				"column": 1
+				"i": 1969,
+				"line": 120,
+				"column": 30
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -29447,9 +29444,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 1986,
-				"line": 124,
-				"column": 1
+				"i": 1985,
+				"line": 123,
+				"column": 9
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -29627,9 +29624,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 2063,
-				"line": 129,
-				"column": 1
+				"i": 2062,
+				"line": 128,
+				"column": 41
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -29727,9 +29724,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 2079,
-				"line": 130,
-				"column": 1
+				"i": 2078,
+				"line": 129,
+				"column": 16
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -30007,9 +30004,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 2321,
-				"line": 140,
-				"column": 1
+				"i": 2320,
+				"line": 139,
+				"column": 11
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -30387,9 +30384,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 2310,
-				"line": 139,
-				"column": 1
+				"i": 2309,
+				"line": 138,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -30687,9 +30684,9 @@ out/LV2.tokens.json: {
 				"column": 17
 			},
 			"end": {
-				"i": 2295,
-				"line": 138,
-				"column": 1
+				"i": 2294,
+				"line": 137,
+				"column": 49
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -30947,9 +30944,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 2342,
-				"line": 143,
-				"column": 1
+				"i": 2341,
+				"line": 142,
+				"column": 14
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -31227,9 +31224,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 2517,
-				"line": 153,
-				"column": 1
+				"i": 2516,
+				"line": 152,
+				"column": 10
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -31387,9 +31384,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 2464,
-				"line": 151,
-				"column": 1
+				"i": 2463,
+				"line": 150,
+				"column": 33
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -31607,9 +31604,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 2507,
-				"line": 152,
-				"column": 1
+				"i": 2506,
+				"line": 151,
+				"column": 43
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -31867,9 +31864,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 2538,
-				"line": 156,
-				"column": 1
+				"i": 2537,
+				"line": 155,
+				"column": 14
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -32067,9 +32064,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 2611,
-				"line": 161,
-				"column": 1
+				"i": 2610,
+				"line": 160,
+				"column": 36
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -32327,9 +32324,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 2621,
-				"line": 162,
-				"column": 1
+				"i": 2620,
+				"line": 161,
+				"column": 10
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -32367,9 +32364,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 2671,
-				"line": 165,
-				"column": 1
+				"i": 2670,
+				"line": 164,
+				"column": 47
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -32667,9 +32664,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 2849,
-				"line": 173,
-				"column": 1
+				"i": 2848,
+				"line": 172,
+				"column": 11
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -33027,9 +33024,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 2838,
-				"line": 172,
-				"column": 1
+				"i": 2837,
+				"line": 171,
+				"column": 52
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -33247,9 +33244,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 2868,
-				"line": 176,
-				"column": 1
+				"i": 2867,
+				"line": 175,
+				"column": 12
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -33407,9 +33404,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 2906,
-				"line": 180,
-				"column": 1
+				"i": 2905,
+				"line": 179,
+				"column": 14
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -33507,9 +33504,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 2956,
-				"line": 183,
-				"column": 1
+				"i": 2955,
+				"line": 182,
+				"column": 47
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -34027,9 +34024,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 3097,
-				"line": 191,
-				"column": 1
+				"i": 3096,
+				"line": 190,
+				"column": 12
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -34147,9 +34144,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 3155,
-				"line": 195,
-				"column": 1
+				"i": 3154,
+				"line": 194,
+				"column": 33
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -34287,9 +34284,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 3184,
-				"line": 198,
-				"column": 1
+				"i": 3183,
+				"line": 197,
+				"column": 22
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -34427,9 +34424,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 3413,
-				"line": 206,
-				"column": 1
+				"i": 3412,
+				"line": 205,
+				"column": 11
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -34607,9 +34604,9 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 3402,
-				"line": 205,
-				"column": 1
+				"i": 3401,
+				"line": 204,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -34847,9 +34844,9 @@ out/LV2.tokens.json: {
 				"column": 17
 			},
 			"end": {
-				"i": 3363,
-				"line": 203,
-				"column": 1
+				"i": 3362,
+				"line": 202,
+				"column": 76
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -35067,9 +35064,9 @@ out/LV2.tokens.json: {
 				"column": 17
 			},
 			"end": {
-				"i": 3387,
-				"line": 204,
-				"column": 1
+				"i": 3386,
+				"line": 203,
+				"column": 24
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -35167,9 +35164,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 3435,
-				"line": 209,
-				"column": 1
+				"i": 3434,
+				"line": 208,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -35367,9 +35364,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 3501,
-				"line": 214,
-				"column": 1
+				"i": 3500,
+				"line": 213,
+				"column": 21
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -35487,9 +35484,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 3526,
-				"line": 216,
-				"column": 1
+				"i": 3525,
+				"line": 215,
+				"column": 19
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -35747,9 +35744,9 @@ out/LV2.tokens.json: {
 				"column": 9
 			},
 			"end": {
-				"i": 3586,
-				"line": 221,
-				"column": 1
+				"i": 3585,
+				"line": 220,
+				"column": 21
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -35867,9 +35864,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 3608,
-				"line": 223,
-				"column": 1
+				"i": 3607,
+				"line": 222,
+				"column": 16
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -35967,9 +35964,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 3653,
-				"line": 229,
-				"column": 1
+				"i": 3652,
+				"line": 228,
+				"column": 39
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -36247,9 +36244,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 3942,
-				"line": 243,
-				"column": 1
+				"i": 3941,
+				"line": 242,
+				"column": 2
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -36527,9 +36524,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 3769,
-				"line": 236,
-				"column": 1
+				"i": 3768,
+				"line": 235,
+				"column": 26
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -36787,9 +36784,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 3823,
-				"line": 238,
-				"column": 1
+				"i": 3822,
+				"line": 237,
+				"column": 30
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -37047,9 +37044,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 3880,
-				"line": 240,
-				"column": 1
+				"i": 3879,
+				"line": 239,
+				"column": 30
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -37307,9 +37304,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 3940,
-				"line": 242,
-				"column": 1
+				"i": 3939,
+				"line": 241,
+				"column": 32
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -37447,9 +37444,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 4037,
-				"line": 249,
-				"column": 1
+				"i": 4036,
+				"line": 248,
+				"column": 2
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -37727,9 +37724,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 4035,
-				"line": 248,
-				"column": 1
+				"i": 4034,
+				"line": 247,
+				"column": 26
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -37867,9 +37864,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 4094,
-				"line": 253,
-				"column": 1
+				"i": 4093,
+				"line": 252,
+				"column": 4
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -37907,9 +37904,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 4192,
-				"line": 258,
-				"column": 1
+				"i": 4191,
+				"line": 257,
+				"column": 2
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -38207,9 +38204,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 4190,
-				"line": 257,
-				"column": 1
+				"i": 4189,
+				"line": 256,
+				"column": 26
 			},
 			"is_malformed": false,
 			"err_start": {

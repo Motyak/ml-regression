@@ -204,8 +204,7 @@ out/LV2.ast.txt: ```
 	      -> Statement #2: VarStatement
 	        -> Symbol: `ByteStr`
 	        -> Expression: Lambda
-	          -> (no parameters)
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
@@ -227,7 +226,7 @@ out/LV2.ast.txt: ```
 	        -> Lvalue: Symbol: `ByteStr-1+`
 	        -> Expression: Lambda
 	          -> parameter #1: `x`
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: Operation

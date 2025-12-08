@@ -215,23 +215,23 @@ out/LV2.ast.txt: ```
 	            -> Expression: Symbol: `person`
 	            -> key
 	              -> Expression: StrLiteral: `name`
-	        -> Statement: LetStatement
+	        -> Statement #2: LetStatement
 	          -> Symbol: `age`
 	          -> Lvalue: Subscript
 	            -> Expression: Symbol: `person`
 	            -> key
 	              -> Expression: StrLiteral: `age`
-	        -> Statement: VarStatement
+	        -> Statement #3: VarStatement
 	          -> Symbol: `res`
 	          -> Expression: StrLiteral: ``
-	        -> Statement #2: Accumulation
+	        -> Statement #4: Accumulation
 	          -> Lvalue: Symbol: `res`
 	          -> operator: `+`
 	          -> Expression: Operation
 	            -> Expression: StrLiteral: `Vous êtes `
 	            -> operator: `+`
 	            -> Expression: Symbol: `name`
-	        -> Statement #3: Accumulation
+	        -> Statement #5: Accumulation
 	          -> Lvalue: Symbol: `res`
 	          -> operator: `+`
 	          -> Expression: Operation
@@ -241,9 +241,9 @@ out/LV2.ast.txt: ```
 	              -> Expression: Symbol: `age`
 	            -> operator: `+`
 	            -> Expression: StrLiteral: ` ans.`
-	        -> Statement #4: ExpressionStatement
+	        -> Statement #6: ExpressionStatement
 	          -> Expression: Symbol: `res`
-	  -> Statement #5: VarStatement
+	  -> Statement #3: VarStatement
 	    -> Symbol: `mutate`
 	    -> Expression: Lambda
 	      -> parameter #1: `person`
@@ -254,18 +254,18 @@ out/LV2.ast.txt: ```
 	            -> Expression: Symbol: `person`
 	            -> key
 	              -> Expression: StrLiteral: `name`
-	        -> Statement: LetStatement
+	        -> Statement #2: LetStatement
 	          -> Symbol: `age`
 	          -> Lvalue: Subscript
 	            -> Expression: Symbol: `person`
 	            -> key
 	              -> Expression: StrLiteral: `age`
-	        -> Statement: Assignment
+	        -> Statement #3: Assignment
 	          -> Lvalue: Symbol: `name`
 	          -> Expression: StrLiteral: `Gilbert`
-	        -> Statement #2: ExpressionStatement
+	        -> Statement #4: ExpressionStatement
 	          -> Expression: Symbol: `person`
-	  -> Statement #3: VarStatement
+	  -> Statement #4: VarStatement
 	    -> Symbol: `person`
 	    -> Expression: FunctionCall
 	      -> function
@@ -274,22 +274,22 @@ out/LV2.ast.txt: ```
 	        -> Expression: StrLiteral: `Tommy`
 	      -> argument #2
 	        -> Expression: Numeral: `28`
-	  -> Statement #4: ExpressionStatement (empty)
+	  -> Statement #5: ExpressionStatement (empty)
 	  -> Statement #6: ExpressionStatement
 	    -> Expression: FunctionCall
 	      -> function
 	        -> Expression: Symbol: `mutate`
 	      -> argument #1 (passed by reference)
 	        -> Expression: Symbol: `person`
-	  -> Statement #3: ExpressionStatement (empty)
-	  -> Statement #4: VarStatement
+	  -> Statement #7: ExpressionStatement (empty)
+	  -> Statement #8: VarStatement
 	    -> Symbol: `res`
 	    -> Expression: FunctionCall
 	      -> function
 	        -> Expression: Symbol: `introduce`
 	      -> argument #1
 	        -> Expression: Symbol: `person`
-	  -> Statement #5: ExpressionStatement
+	  -> Statement #9: ExpressionStatement
 	    -> Expression: FunctionCall
 	      -> function
 	        -> Expression: Symbol: `print`

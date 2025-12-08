@@ -9,8 +9,7 @@ out/traceback.txt: ```
 out/console.txt: ```
 	die() with no message
 	    at fn2(data/interpreter/bin/in/test_traceback_fncall/c.ml:7:5)
-	    at x(data/interpreter/bin/in/test_traceback_fncall/c.ml:14:4)
-	    at x(data/interpreter/bin/in/test_traceback_fncall/c.ml:11:5)
+	    at fn(data/interpreter/bin/in/test_traceback_fncall/c.ml:14:4)
 	    at fn(data/interpreter/bin/in/test_traceback_fncall/c.ml:11:5)
 	    at <program>(data/interpreter/bin/in/test_traceback_fncall/c.ml:14:1)
 	

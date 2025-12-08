@@ -7,7 +7,7 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	Runtime error: Unbound symbol `fds` (src/interpret.cpp:533)
+	Runtime error: Unbound symbol `fds` (src/interpret.cpp:942)
 	    at <program>(data/parser/bin/in/oneline_block_sym_stmt.txt:1:2)
 	    at <program>(data/parser/bin/in/oneline_block_sym_stmt.txt:1:1)
 	
@@ -227,9 +227,9 @@ out/LV2.tokens.json: {
 				"column": 2
 			},
 			"end": {
-				"i": 3,
+				"i": 4,
 				"line": 1,
-				"column": 4
+				"column": 5
 			},
 			"is_malformed": false,
 			"err_start": {

@@ -1,6 +1,6 @@
 prog: interpreter
 
-prog_exitcode: 0
+prog_exitcode: 101
 
 out/traceback.txt: ```
 	
@@ -10,8 +10,8 @@ out/console.txt: ```
 	$nil
 	13
 	---
-	$nil
-	$nil
+	Runtime error: Can't pass special name by ref (src/interpret.cpp:299)
+	    at <program>(data/interpreter/bin/in/specialname.ml:18:5)
 	
 ```
 
@@ -1371,9 +1371,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 30,
-				"line": 3,
-				"column": 1
+				"i": 29,
+				"line": 2,
+				"column": 13
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -1531,9 +1531,9 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 55,
-				"line": 5,
-				"column": 1
+				"i": 54,
+				"line": 4,
+				"column": 13
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -1691,9 +1691,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 77,
-				"line": 10,
-				"column": 1
+				"i": 76,
+				"line": 9,
+				"column": 9
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -1791,9 +1791,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 113,
-				"line": 15,
-				"column": 1
+				"i": 112,
+				"line": 14,
+				"column": 4
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -1831,9 +1831,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 127,
-				"line": 17,
-				"column": 1
+				"i": 126,
+				"line": 16,
+				"column": 13
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -1931,9 +1931,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 135,
-				"line": 19,
-				"column": 1
+				"i": 134,
+				"line": 18,
+				"column": 7
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2031,9 +2031,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 326,
-				"line": 26,
-				"column": 1
+				"i": 325,
+				"line": 25,
+				"column": 4
 			},
 			"is_malformed": false,
 			"err_start": {

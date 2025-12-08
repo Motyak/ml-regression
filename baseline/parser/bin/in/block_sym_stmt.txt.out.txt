@@ -7,7 +7,7 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	Runtime error: Unbound symbol `fds` (src/interpret.cpp:533)
+	Runtime error: Unbound symbol `fds` (src/interpret.cpp:942)
 	    at <program>(data/parser/bin/in/block_sym_stmt.txt:2:5)
 	    at <program>(data/parser/bin/in/block_sym_stmt.txt:1:1)
 	

@@ -451,7 +451,7 @@ out/LV2.ast.txt: ```
 	  -> Statement #5: VarStatement
 	    -> Symbol: `Set`
 	    -> Expression: Lambda
-	      -> variadic parameters: `elems...`
+	      -> variadic parameter: `elems...`
 	      -> body
 	        -> Statement #1: VarStatement
 	          -> Symbol: `map`

@@ -1,16 +1,16 @@
 prog: interpreter
 
-prog_exitcode: 0
+prog_exitcode: 101
 
 out/traceback.txt: ```
 	
 ```
 
 out/console.txt: ```
-	37 13
-	13 37
-	37 37
-	13 $nil
+	Runtime error: Unbound symbol `$old` (src/interpret.cpp:819)
+	    at swap(data/interpreter/bin/in/swap.ml:6:10)
+	    at <program>(data/interpreter/bin/in/swap.ml:13:5)
+	    at <program>(data/interpreter/bin/in/swap.ml:10:1)
 	
 ```
 

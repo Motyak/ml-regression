@@ -7,8 +7,8 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	dds dds
-	x ["x", "b", "c"]
+	dds fds
+	x ["a", "b", "c"]
 	
 ```
 

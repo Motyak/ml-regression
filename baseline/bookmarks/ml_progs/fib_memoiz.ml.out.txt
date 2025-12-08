@@ -408,7 +408,7 @@ out/LV2.ast.txt: ```
 	        -> Statement #4: VarStatement
 	          -> Symbol: `memoized_fn`
 	          -> Expression: Lambda
-	            -> variadic parameters: `args...`
+	            -> variadic parameter: `args...`
 	            -> body
 	              -> Statement #1: VarStatement
 	                -> Symbol: `args`

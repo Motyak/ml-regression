@@ -3247,7 +3247,7 @@ out/LV2.ast.txt: ```
 	      -> Statement #2: VarStatement
 	        -> Symbol: `LazyList`
 	        -> Expression: Lambda
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
@@ -3272,7 +3272,7 @@ out/LV2.ast.txt: ```
 	        -> Lvalue: Symbol: `LazyList-1+`
 	        -> Expression: Lambda
 	          -> parameter #1: `x`
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
@@ -3529,7 +3529,7 @@ out/LV2.ast.txt: ```
 	  -> Statement #33: VarStatement
 	    -> Symbol: `ArgIterator`
 	    -> Expression: Lambda
-	      -> variadic parameters: `args...`
+	      -> variadic parameter: `args...`
 	      -> body
 	        -> Statement: ExpressionStatement
 	          -> Expression: FunctionCall
@@ -3969,7 +3969,7 @@ out/LV2.ast.txt: ```
 	    -> Expression: Lambda
 	      -> parameter #1: `a`
 	      -> parameter #2: `b`
-	      -> variadic parameters: `varargs...`
+	      -> variadic parameter: `varargs...`
 	      -> body
 	        -> Statement: ExpressionStatement
 	          -> Expression: FunctionCall
@@ -3990,7 +3990,7 @@ out/LV2.ast.txt: ```
 	    -> Expression: Lambda
 	      -> parameter #1: `a`
 	      -> parameter #2: `b`
-	      -> variadic parameters: `varargs...`
+	      -> variadic parameter: `varargs...`
 	      -> body
 	        -> Statement #1: VarStatement
 	          -> Symbol: `otherArgs`
@@ -4085,7 +4085,7 @@ out/LV2.ast.txt: ```
 	    -> Expression: Lambda
 	      -> parameter #1: `a`
 	      -> parameter #2: `b`
-	      -> variadic parameters: `varargs...`
+	      -> variadic parameter: `varargs...`
 	      -> body
 	        -> Statement #1: VarStatement
 	          -> Symbol: `otherArgs`
@@ -4174,7 +4174,7 @@ out/LV2.ast.txt: ```
 	    -> Expression: Lambda
 	      -> parameter #1: `a`
 	      -> parameter #2: `b`
-	      -> variadic parameters: `varargs...`
+	      -> variadic parameter: `varargs...`
 	      -> body
 	        -> Statement #1: VarStatement
 	          -> Symbol: `otherArgs`
@@ -4285,7 +4285,7 @@ out/LV2.ast.txt: ```
 	        -> Expression: Lambda
 	          -> parameter #1: `a`
 	          -> parameter #2: `b`
-	          -> variadic parameters: `varargs...`
+	          -> variadic parameter: `varargs...`
 	          -> body
 	            -> Statement #1: VarStatement
 	              -> Symbol: `otherArgs`
@@ -4354,7 +4354,7 @@ out/LV2.ast.txt: ```
 	        -> Symbol: `-`
 	        -> Expression: Lambda
 	          -> parameter #1: `x`
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall

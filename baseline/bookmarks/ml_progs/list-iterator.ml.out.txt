@@ -1406,8 +1406,7 @@ out/LV2.ast.txt: ```
 	      -> Statement #2: VarStatement
 	        -> Symbol: `List`
 	        -> Expression: Lambda
-	          -> (no parameters)
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
@@ -1429,7 +1428,7 @@ out/LV2.ast.txt: ```
 	        -> Lvalue: Symbol: `List-1+`
 	        -> Expression: Lambda
 	          -> parameter #1: `x`
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
@@ -1622,8 +1621,7 @@ out/LV2.ast.txt: ```
 	        -> Statement #2: Assignment
 	          -> Lvalue: Symbol: `curried`
 	          -> Expression: Lambda
-	            -> (no parameters)
-	            -> variadic parameters: `args...`
+	            -> variadic parameter: `args...`
 	            -> body
 	              -> Statement: ExpressionStatement
 	                -> Expression: FunctionCall
@@ -1648,8 +1646,7 @@ out/LV2.ast.txt: ```
 	                    -> Expression: BlockExpression
 	                      -> Statement: ExpressionStatement
 	                        -> Expression: Lambda
-	                          -> (no parameters)
-	                          -> variadic parameters: `args2...`
+	                          -> variadic parameter: `args2...`
 	                          -> body
 	                            -> Statement: ExpressionStatement
 	                              -> Expression: FunctionCall

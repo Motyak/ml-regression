@@ -44,7 +44,7 @@ out/LV1.ast.txt: ```
 	  -> ProgramSentence #2
 	    -> ProgramWord #1: Atom: `var`
 	    -> ProgramWord #2: Atom: `program`
-	    -> ProgramWord #3: Quotation: ``
+	    -> ProgramWord #3: Quotation: `\`
 	  -> ProgramSentence #3
 	    -> ProgramWord: Quotation: `===Optional==========================`
 	  -> ProgramSentence #4

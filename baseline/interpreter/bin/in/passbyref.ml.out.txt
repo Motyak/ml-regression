@@ -10,7 +10,7 @@ out/console.txt: ```
 	x91 91
 	x91 91
 	x0 0
-	Runtime error: Unbound symbol `ahiuhiufzehuifzehiu` (src/interpret.cpp:557)
+	Runtime error: Unbound symbol `ahiuhiufzehuifzehiu` (src/interpret.cpp:1102)
 	    at fn(data/interpreter/bin/in/passbyref.ml:16:5)
 	    at fn(data/interpreter/bin/in/passbyref.ml:3:21)
 	    at <program>(data/interpreter/bin/in/passbyref.ml:16:1)
@@ -1835,9 +1835,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 58,
-				"line": 6,
-				"column": 1
+				"i": 57,
+				"line": 5,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -1975,9 +1975,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 64,
-				"line": 7,
-				"column": 1
+				"i": 63,
+				"line": 6,
+				"column": 6
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2075,9 +2075,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 79,
-				"line": 8,
-				"column": 1
+				"i": 78,
+				"line": 7,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2215,9 +2215,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 86,
-				"line": 9,
-				"column": 1
+				"i": 85,
+				"line": 8,
+				"column": 7
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2315,9 +2315,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 100,
-				"line": 10,
-				"column": 1
+				"i": 99,
+				"line": 9,
+				"column": 14
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2455,9 +2455,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 125,
-				"line": 12,
-				"column": 1
+				"i": 124,
+				"line": 11,
+				"column": 24
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2555,9 +2555,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 151,
-				"line": 15,
-				"column": 1
+				"i": 150,
+				"line": 14,
+				"column": 4
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2595,9 +2595,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 177,
-				"line": 17,
-				"column": 1
+				"i": 176,
+				"line": 16,
+				"column": 25
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2695,9 +2695,9 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 213,
-				"line": 20,
-				"column": 1
+				"i": 212,
+				"line": 19,
+				"column": 4
 			},
 			"is_malformed": false,
 			"err_start": {

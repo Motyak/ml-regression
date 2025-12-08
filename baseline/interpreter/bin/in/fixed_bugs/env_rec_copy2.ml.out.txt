@@ -7,7 +7,7 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	Runtime error: Unbound symbol `a` (src/interpret.cpp:1043)
+	Runtime error: Unbound symbol `a` (src/interpret.cpp:1102)
 	    at delayed(data/interpreter/bin/in/fixed_bugs/env_rec_copy2.ml:8:12)
 	    at delayed(data/interpreter/bin/in/fixed_bugs/env_rec_copy2.ml:3:21)
 	    at <program>(data/interpreter/bin/in/fixed_bugs/env_rec_copy2.ml:12:1)

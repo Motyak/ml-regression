@@ -166,7 +166,7 @@ out/LV2.ast.txt: ```
 	    -> Expression: Symbol: `sdf`
 	  -> Statement #3: LetStatement
 	    -> Symbol: `fds`
-	    -> Expression: Symbol: `sdf`
+	    -> Lvalue: Symbol: `sdf`
 	  -> Statement #4: VarStatement
 	    -> Symbol: `fds`
 	    -> Expression: Symbol: `sdf`

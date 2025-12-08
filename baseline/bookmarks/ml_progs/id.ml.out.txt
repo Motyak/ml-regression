@@ -443,10 +443,10 @@ out/LV2.ast.txt: ```
 	            -> Statement #2: LetStatement
 	              -> Symbol: `str`
 	              -> Lvalue: Symbol: `input`
-	            -> Statement: VarStatement
+	            -> Statement #3: VarStatement
 	              -> Symbol: `hash`
 	              -> Expression: Numeral: `2166136261`
-	            -> Statement #3: ExpressionStatement
+	            -> Statement #4: ExpressionStatement
 	              -> Expression: FunctionCall
 	                -> function
 	                  -> Expression: Symbol: `foreach`
@@ -481,13 +481,13 @@ out/LV2.ast.txt: ```
 	                                  -> Expression: Numeral: `2^32`
 	                                -> operator: `+`
 	                                -> Expression: Numeral: `2^32`
-	            -> Statement #4: ExpressionStatement
+	            -> Statement #5: ExpressionStatement
 	              -> Expression: Symbol: `hash`
-	      -> Statement #5: VarStatement
+	      -> Statement #2: VarStatement
 	        -> Symbol: `count`
 	        -> Expression: Numeral: `-2^33`
-	      -> Statement #2: ExpressionStatement (empty)
-	      -> Statement #3: VarStatement
+	      -> Statement #3: ExpressionStatement (empty)
+	      -> Statement #4: VarStatement
 	        -> Symbol: `next_id`
 	        -> Expression: Lambda
 	          -> (no parameters)
@@ -510,7 +510,7 @@ out/LV2.ast.txt: ```
 	                    -> Expression: StrLiteral: `exceeded max nb of ids`
 	            -> Statement #3: ExpressionStatement
 	              -> Expression: Symbol: `count`
-	      -> Statement #4: VarStatement
+	      -> Statement #5: VarStatement
 	        -> Symbol: `id`
 	        -> Expression: Lambda
 	          -> parameter #1: `input`
@@ -537,18 +537,8 @@ out/LV2.ast.txt: ```
 	                          -> Expression: Symbol: `FNV-1a`
 	                        -> argument #1
 	                          -> Expression: Symbol: `input`
-	      -> Statement #5: ExpressionStatement
+	      -> Statement #6: ExpressionStatement
 	        -> Expression: Symbol: `id`
-	  -> Statement #6: ExpressionStatement
-	    -> Expression: FunctionCall
-	      -> function
-	        -> Expression: Symbol: `print`
-	      -> argument #1
-	        -> Expression: FunctionCall
-	          -> function
-	            -> Expression: Symbol: `id`
-	          -> argument #1
-	            -> Expression: StrLiteral: `fffds`
 	  -> Statement #5: ExpressionStatement
 	    -> Expression: FunctionCall
 	      -> function
@@ -558,7 +548,7 @@ out/LV2.ast.txt: ```
 	          -> function
 	            -> Expression: Symbol: `id`
 	          -> argument #1
-	            -> Expression: StrLiteral: `fffd`
+	            -> Expression: StrLiteral: `fffds`
 	  -> Statement #6: ExpressionStatement
 	    -> Expression: FunctionCall
 	      -> function
@@ -568,8 +558,18 @@ out/LV2.ast.txt: ```
 	          -> function
 	            -> Expression: Symbol: `id`
 	          -> argument #1
-	            -> Expression: Symbol: `_`
+	            -> Expression: StrLiteral: `fffd`
 	  -> Statement #7: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: FunctionCall
+	          -> function
+	            -> Expression: Symbol: `id`
+	          -> argument #1
+	            -> Expression: Symbol: `_`
+	  -> Statement #8: ExpressionStatement
 	    -> Expression: FunctionCall
 	      -> function
 	        -> Expression: Symbol: `print`

@@ -1,0 +1,13 @@
+git log -1 --pretty=format:'%aI %H %s'
+
+monlang
+2025-11-28T17:45:07+01:00 cc93e83421c8a968519e39b44ae2f4ae2b35726e fix tools/aggregate-libs.mri.sh
+
+monlang-parser
+2025-11-29T09:38:50+01:00 825e825b25e0c891457437f3d9ee92347e7636be fix err nb order
+
+monlang-interpreter
+2025-11-28T17:46:50+01:00 8a576dacf6bd8ddd21481c41c5ffe6e7cee4ec42 fix tools/aggregate-libs.mri.sh
+
+monlang-server
+2025-12-03T10:36:11+01:00 d5db730e21a2057f211ec5746d9d44ea9ee513c9 better traceback visuals

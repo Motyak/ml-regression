@@ -1128,7 +1128,7 @@ out/LV2.ast.txt: ```
 	      -> Statement #2: VarStatement
 	        -> Symbol: `LazyList`
 	        -> Expression: Lambda
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
@@ -1153,7 +1153,7 @@ out/LV2.ast.txt: ```
 	        -> Lvalue: Symbol: `LazyList-1+`
 	        -> Expression: Lambda
 	          -> parameter #1: `x`
-	          -> variadic parameters: `xs...`
+	          -> variadic parameter: `xs...`
 	          -> body
 	            -> Statement: ExpressionStatement
 	              -> Expression: FunctionCall
