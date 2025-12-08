@@ -1,5 +1,3 @@
-git log -1 --pretty=format:'%aI %H %s'
-
 monlang
 2025-11-28T17:45:07+01:00 cc93e83421c8a968519e39b44ae2f4ae2b35726e fix tools/aggregate-libs.mri.sh
 
