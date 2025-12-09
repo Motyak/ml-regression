@@ -21,6 +21,11 @@ function json_to_out {
 }
 
 cd "${SCRIPT_DIR}/data"
+
+parser/update.sh
+interpreter/update.sh
+bookmarks/update.sh
+
 for program in **/*; do
     [ -f "$program" ] || continue
     [[ "$program" != *.out.json ]] || continue
@@ -60,3 +65,13 @@ cd "${SCRIPT_DIR}"
     echo
     :
 } > "baseline/regression.txt"
+
+# we can safely revert oneline changes matching err report src file path
+# (since they are going to change very often)
+modified_files="$(git ls-files -m | grep -s '^baseline/')"
+for f in $modified_files; do
+    # echo "$f"
+    git diff --shortstat "$f" | grep -q '1 insertion(+), 1 deletion(-)' || continue
+    git diff --quiet -G'\(src\/.+\.cpp:[0-9]+\)$' "$f" && continue
+    git checkout -- "$f"
+done

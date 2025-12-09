@@ -8,8 +8,9 @@ out/traceback.txt: ```
 
 out/console.txt: ```
 	acc10 10
-	Runtime error: Lambda defined with 1 param, but called with 2 args (src/interpret.cpp:399)
+	Runtime error: Lambda defined with 1 param, but called with 2 args (src/interpret.cpp:389)
 	    at <program>(data/interpreter/bin/in/unbound2.ml:26:17)
+	    at <program>(data/interpreter/bin/in/unbound2.ml:62:5)
 	    at <program>(data/interpreter/bin/in/unbound2.ml:53:1)
 	
 ```
