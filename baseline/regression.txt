@@ -2,7 +2,7 @@ monlang
 2025-12-05T16:30:16+01:00 965557a07d3cc9fb42e35fc235a400fde65b2ebb remove no longer useful test
 
 monlang-parser
-2025-12-04T21:28:13+01:00 0f9959c7525c71fa53bd99e4e3b0156946fdb57b fix err report positioning with utf8 chars
+2025-12-12T16:59:53+01:00 9dd72df34132b8ce3f4527a2be244087156079ad fix err offset ERR 162
 
 monlang-interpreter
 2025-12-09T09:09:05+01:00 4e0b731183ed99086f248bb1124ae4034e9e7a14 fix fncall traceback
