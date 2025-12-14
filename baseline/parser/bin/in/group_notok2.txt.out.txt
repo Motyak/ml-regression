@@ -1,0 +1,314 @@
+prog: parser
+
+prog_exitcode: 101
+
+out/traceback.txt: ```
+	data/parser/bin/in/group_notok2.txt:1:8: LV1 error: Malformed Term
+	    1 | (a, (b)]
+	      |     ^  ^ERR-103
+	data/parser/bin/in/group_notok2.txt:1:5: LV1 error: Malformed ParenthesesGroup
+	    1 | (a, (b)]
+	      | ^   ^ERR-429
+	data/parser/bin/in/group_notok2.txt:1:1: LV1 error: Malformed ProgramSentence
+	    1 | (a, (b)]
+	      | ^ERR-129
+	data/parser/bin/in/group_notok2.txt:1:1: LV1 error: Malformed Program
+	    1 | (a, (b)]
+	      | ^ERR-119
+	
+```
+
+out/console.txt: ```
+	Parsing error
+	
+```
+
+out/LV1.ast.txt: ```
+	~> Program
+	  ~> ProgramSentence
+	    ~> ProgramWord: ParenthesesGroup
+	      -> Term #1
+	        -> Word: Atom: `a`
+	      ~> Term #2
+	        -> Word: ParenthesesGroup
+	          -> Term
+	            -> Word: Atom: `b`
+	        ~> ERR-103
+	
+```
+
+out/LV2.ast.txt: ```
+	
+```
+
+out/LV1.tokens.json: {
+	"list": [
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"err_fmt": "ERR-119"
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"err_fmt": "ERR-129"
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 2,
+				"line": 1,
+				"column": 3
+			},
+			"err_fmt": "ERR-429"
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 1,
+				"line": 1,
+				"column": 2
+			},
+			"end": {
+				"i": 2,
+				"line": 1,
+				"column": 3
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 1,
+				"line": 1,
+				"column": 2
+			},
+			"end": {
+				"i": 2,
+				"line": 1,
+				"column": 3
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 4,
+				"line": 1,
+				"column": 5
+			},
+			"end": {
+				"i": 4,
+				"line": 1,
+				"column": 5
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 7,
+				"line": 1,
+				"column": 8
+			},
+			"err_fmt": "ERR-103"
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 4,
+				"line": 1,
+				"column": 5
+			},
+			"end": {
+				"i": 7,
+				"line": 1,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 5,
+				"line": 1,
+				"column": 6
+			},
+			"end": {
+				"i": 6,
+				"line": 1,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 5,
+				"line": 1,
+				"column": 6
+			},
+			"end": {
+				"i": 6,
+				"line": 1,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		}
+	],
+	"traceback": [
+		{
+			"name": "Term",
+			"start": {
+				"i": 4,
+				"line": 1,
+				"column": 5
+			},
+			"end": {
+				"i": 4,
+				"line": 1,
+				"column": 5
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 7,
+				"line": 1,
+				"column": 8
+			},
+			"err_fmt": "ERR-103"
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 2,
+				"line": 1,
+				"column": 3
+			},
+			"err_fmt": "ERR-429"
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"err_fmt": "ERR-129"
+		},
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"err_fmt": "ERR-119"
+		}
+	]
+}
+
+out/LV2.tokens.json: {
+	"list": [],
+	"traceback": []
+}

@@ -1,0 +1,5691 @@
+prog: interpreter
+
+prog_exitcode: 0
+
+out/traceback.txt: ```
+	
+```
+
+out/console.txt: ```
+	Vous êtes Gilbert et vous avez 28 ans.
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `Person`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term #1
+	          -> Word: Atom: `name`
+	        -> Term #2
+	          -> Word: Atom: `age`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `res`
+	          -> ProgramWord #3: Atom: `[:]`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: PostfixSquareBracketsGroup
+	            -> Word: Atom: `res`
+	            -> SquareBracketsGroup
+	              -> Term
+	                -> Word: Quotation: `name`
+	          -> ProgramWord #2: Atom: `:=`
+	          -> ProgramWord #3: Atom: `name`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: PostfixSquareBracketsGroup
+	            -> Word: Atom: `res`
+	            -> SquareBracketsGroup
+	              -> Term
+	                -> Word: Quotation: `age`
+	          -> ProgramWord #2: Atom: `:=`
+	          -> ProgramWord #3: Atom: `age`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `res`
+	  -> ProgramSentence #2
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `introduce`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `person`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `let`
+	          -> ProgramWord #2: Atom: `name`
+	          -> ProgramWord #3: PostfixSquareBracketsGroup
+	            -> Word: Atom: `person`
+	            -> SquareBracketsGroup
+	              -> Term
+	                -> Word: Quotation: `name`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `let`
+	          -> ProgramWord #2: Atom: `age`
+	          -> ProgramWord #3: PostfixSquareBracketsGroup
+	            -> Word: Atom: `person`
+	            -> SquareBracketsGroup
+	              -> Term
+	                -> Word: Quotation: `age`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `var`
+	          -> ProgramWord #2: Atom: `res`
+	          -> ProgramWord #3: Quotation: ``
+	        -> ProgramSentence #4
+	          -> ProgramWord #1: Atom: `res`
+	          -> ProgramWord #2: Atom: `+=`
+	          -> ProgramWord #3: Quotation: `Vous êtes `
+	          -> ProgramWord #4: Atom: `+`
+	          -> ProgramWord #5: Atom: `name`
+	        -> ProgramSentence #5
+	          -> ProgramWord #1: Atom: `res`
+	          -> ProgramWord #2: Atom: `+=`
+	          -> ProgramWord #3: Quotation: ` et vous avez `
+	          -> ProgramWord #4: Atom: `+`
+	          -> ProgramWord #5: Atom: `age`
+	          -> ProgramWord #6: Atom: `+`
+	          -> ProgramWord #7: Quotation: ` ans.`
+	        -> ProgramSentence #6
+	          -> ProgramWord: Atom: `res`
+	  -> ProgramSentence #3
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `mutate`
+	    -> ProgramWord #3: Association
+	      -> Word: ParenthesesGroup
+	        -> Term
+	          -> Word #1: Atom: `OUT`
+	          -> Word #2: Atom: `person`
+	      -> Word: CurlyBracketsGroup
+	        -> ProgramSentence #1
+	          -> ProgramWord #1: Atom: `let`
+	          -> ProgramWord #2: Atom: `name`
+	          -> ProgramWord #3: PostfixSquareBracketsGroup
+	            -> Word: Atom: `person`
+	            -> SquareBracketsGroup
+	              -> Term
+	                -> Word: Quotation: `name`
+	        -> ProgramSentence #2
+	          -> ProgramWord #1: Atom: `let`
+	          -> ProgramWord #2: Atom: `age`
+	          -> ProgramWord #3: PostfixSquareBracketsGroup
+	            -> Word: Atom: `person`
+	            -> SquareBracketsGroup
+	              -> Term
+	                -> Word: Quotation: `age`
+	        -> ProgramSentence #3
+	          -> ProgramWord #1: Atom: `name`
+	          -> ProgramWord #2: Atom: `:=`
+	          -> ProgramWord #3: Quotation: `Gilbert`
+	        -> ProgramSentence #4
+	          -> ProgramWord: Atom: `person`
+	  -> ProgramSentence #4
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `person`
+	    -> ProgramWord #3: PostfixParenthesesGroup
+	      -> Word: Atom: `Person`
+	      -> ParenthesesGroup
+	        -> Term #1
+	          -> Word: Quotation: `Tommy`
+	        -> Term #2
+	          -> Word: Atom: `28`
+	  -> ProgramSentence #5
+	    -> ProgramWord #1: Atom: `--`
+	    -> ProgramWord #2: Atom: `var`
+	    -> ProgramWord #3: Atom: `person`
+	    -> ProgramWord #4: SquareBracketsGroup
+	      -> Term
+	        -> Word: Association
+	          -> Word: Quotation: `age`
+	          -> Word: Atom: `28`
+	  -> ProgramSentence #6
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `mutate`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `&person`
+	  -> ProgramSentence #7
+	    -> ProgramWord #1: Atom: `--`
+	    -> ProgramWord #2: Atom: `var`
+	    -> ProgramWord #3: Atom: `res`
+	    -> ProgramWord #4: PostfixParenthesesGroup
+	      -> Word: Atom: `introduce`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: SquareBracketsGroup
+	            -> Term #1
+	              -> Word: Association
+	                -> Word: Quotation: `name`
+	                -> Word: Quotation: `Tommy`
+	            -> Term #2
+	              -> Word: Association
+	                -> Word: Quotation: `age`
+	                -> Word: Atom: `28`
+	  -> ProgramSentence #8
+	    -> ProgramWord #1: Atom: `var`
+	    -> ProgramWord #2: Atom: `res`
+	    -> ProgramWord #3: PostfixParenthesesGroup
+	      -> Word: Atom: `introduce`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `person`
+	  -> ProgramSentence #9
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `res`
+	
+```
+
+out/LV2.ast.txt: ```
+	-> Program
+	  -> Statement #1: VarStatement
+	    -> Symbol: `Person`
+	    -> Expression: Lambda
+	      -> parameter #1: `name`
+	      -> parameter #2: `age`
+	      -> body
+	        -> Statement #1: VarStatement
+	          -> Symbol: `res`
+	          -> Expression: MapLiteral (empty)
+	        -> Statement #2: Assignment
+	          -> Lvalue: Subscript
+	            -> Expression: Symbol: `res`
+	            -> key
+	              -> Expression: StrLiteral: `name`
+	          -> Expression: Symbol: `name`
+	        -> Statement #3: Assignment
+	          -> Lvalue: Subscript
+	            -> Expression: Symbol: `res`
+	            -> key
+	              -> Expression: StrLiteral: `age`
+	          -> Expression: Symbol: `age`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: Symbol: `res`
+	  -> Statement #2: VarStatement
+	    -> Symbol: `introduce`
+	    -> Expression: Lambda
+	      -> parameter #1: `person`
+	      -> body
+	        -> Statement #1: LetStatement
+	          -> Symbol: `name`
+	          -> Lvalue: Subscript
+	            -> Expression: Symbol: `person`
+	            -> key
+	              -> Expression: StrLiteral: `name`
+	        -> Statement #2: LetStatement
+	          -> Symbol: `age`
+	          -> Lvalue: Subscript
+	            -> Expression: Symbol: `person`
+	            -> key
+	              -> Expression: StrLiteral: `age`
+	        -> Statement #3: VarStatement
+	          -> Symbol: `res`
+	          -> Expression: StrLiteral: ``
+	        -> Statement #4: Accumulation
+	          -> Lvalue: Symbol: `res`
+	          -> operator: `+`
+	          -> Expression: Operation
+	            -> Expression: StrLiteral: `Vous êtes `
+	            -> operator: `+`
+	            -> Expression: Symbol: `name`
+	        -> Statement #5: Accumulation
+	          -> Lvalue: Symbol: `res`
+	          -> operator: `+`
+	          -> Expression: Operation
+	            -> Expression: Operation
+	              -> Expression: StrLiteral: ` et vous avez `
+	              -> operator: `+`
+	              -> Expression: Symbol: `age`
+	            -> operator: `+`
+	            -> Expression: StrLiteral: ` ans.`
+	        -> Statement #6: ExpressionStatement
+	          -> Expression: Symbol: `res`
+	  -> Statement #3: VarStatement
+	    -> Symbol: `mutate`
+	    -> Expression: Lambda
+	      -> parameter #1: `person`
+	      -> body
+	        -> Statement #1: LetStatement
+	          -> Symbol: `name`
+	          -> Lvalue: Subscript
+	            -> Expression: Symbol: `person`
+	            -> key
+	              -> Expression: StrLiteral: `name`
+	        -> Statement #2: LetStatement
+	          -> Symbol: `age`
+	          -> Lvalue: Subscript
+	            -> Expression: Symbol: `person`
+	            -> key
+	              -> Expression: StrLiteral: `age`
+	        -> Statement #3: Assignment
+	          -> Lvalue: Symbol: `name`
+	          -> Expression: StrLiteral: `Gilbert`
+	        -> Statement #4: ExpressionStatement
+	          -> Expression: Symbol: `person`
+	  -> Statement #4: VarStatement
+	    -> Symbol: `person`
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `Person`
+	      -> argument #1
+	        -> Expression: StrLiteral: `Tommy`
+	      -> argument #2
+	        -> Expression: Numeral: `28`
+	  -> Statement #5: ExpressionStatement (empty)
+	  -> Statement #6: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `mutate`
+	      -> argument #1 (passed by reference)
+	        -> Expression: Symbol: `person`
+	  -> Statement #7: ExpressionStatement (empty)
+	  -> Statement #8: VarStatement
+	    -> Symbol: `res`
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `introduce`
+	      -> argument #1
+	        -> Expression: Symbol: `person`
+	  -> Statement #9: ExpressionStatement
+	    -> Expression: FunctionCall
+	      -> function
+	        -> Expression: Symbol: `print`
+	      -> argument #1
+	        -> Expression: Symbol: `res`
+	
+```
+
+out/LV1.tokens.json: {
+	"list": [
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 548,
+				"line": 32,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 96,
+				"line": 8,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 4,
+				"line": 2,
+				"column": 4
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 5,
+				"line": 2,
+				"column": 5
+			},
+			"end": {
+				"i": 11,
+				"line": 2,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Association",
+			"start": {
+				"i": 12,
+				"line": 2,
+				"column": 12
+			},
+			"end": {
+				"i": 95,
+				"line": 7,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 12,
+				"line": 2,
+				"column": 12
+			},
+			"end": {
+				"i": 23,
+				"line": 2,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 13,
+				"line": 2,
+				"column": 13
+			},
+			"end": {
+				"i": 17,
+				"line": 2,
+				"column": 17
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 13,
+				"line": 2,
+				"column": 13
+			},
+			"end": {
+				"i": 17,
+				"line": 2,
+				"column": 17
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 19,
+				"line": 2,
+				"column": 19
+			},
+			"end": {
+				"i": 22,
+				"line": 2,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 19,
+				"line": 2,
+				"column": 19
+			},
+			"end": {
+				"i": 22,
+				"line": 2,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "CurlyBracketsGroup",
+			"start": {
+				"i": 24,
+				"line": 2,
+				"column": 24
+			},
+			"end": {
+				"i": 95,
+				"line": 7,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 30,
+				"line": 3,
+				"column": 5
+			},
+			"end": {
+				"i": 42,
+				"line": 4,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 30,
+				"line": 3,
+				"column": 5
+			},
+			"end": {
+				"i": 33,
+				"line": 3,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 34,
+				"line": 3,
+				"column": 9
+			},
+			"end": {
+				"i": 37,
+				"line": 3,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 38,
+				"line": 3,
+				"column": 13
+			},
+			"end": {
+				"i": 41,
+				"line": 3,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 46,
+				"line": 4,
+				"column": 5
+			},
+			"end": {
+				"i": 65,
+				"line": 5,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixSquareBracketsGroup",
+			"start": {
+				"i": 46,
+				"line": 4,
+				"column": 5
+			},
+			"end": {
+				"i": 56,
+				"line": 4,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 46,
+				"line": 4,
+				"column": 5
+			},
+			"end": {
+				"i": 49,
+				"line": 4,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "SquareBracketsGroup",
+			"start": {
+				"i": 49,
+				"line": 4,
+				"column": 8
+			},
+			"end": {
+				"i": 56,
+				"line": 4,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 50,
+				"line": 4,
+				"column": 9
+			},
+			"end": {
+				"i": 55,
+				"line": 4,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 50,
+				"line": 4,
+				"column": 9
+			},
+			"end": {
+				"i": 55,
+				"line": 4,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 57,
+				"line": 4,
+				"column": 16
+			},
+			"end": {
+				"i": 59,
+				"line": 4,
+				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 60,
+				"line": 4,
+				"column": 19
+			},
+			"end": {
+				"i": 64,
+				"line": 4,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 69,
+				"line": 5,
+				"column": 5
+			},
+			"end": {
+				"i": 86,
+				"line": 6,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixSquareBracketsGroup",
+			"start": {
+				"i": 69,
+				"line": 5,
+				"column": 5
+			},
+			"end": {
+				"i": 78,
+				"line": 5,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 69,
+				"line": 5,
+				"column": 5
+			},
+			"end": {
+				"i": 72,
+				"line": 5,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "SquareBracketsGroup",
+			"start": {
+				"i": 72,
+				"line": 5,
+				"column": 8
+			},
+			"end": {
+				"i": 78,
+				"line": 5,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 73,
+				"line": 5,
+				"column": 9
+			},
+			"end": {
+				"i": 77,
+				"line": 5,
+				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 73,
+				"line": 5,
+				"column": 9
+			},
+			"end": {
+				"i": 77,
+				"line": 5,
+				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 79,
+				"line": 5,
+				"column": 15
+			},
+			"end": {
+				"i": 81,
+				"line": 5,
+				"column": 17
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 82,
+				"line": 5,
+				"column": 18
+			},
+			"end": {
+				"i": 85,
+				"line": 5,
+				"column": 21
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 90,
+				"line": 6,
+				"column": 5
+			},
+			"end": {
+				"i": 94,
+				"line": 7,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 90,
+				"line": 6,
+				"column": 5
+			},
+			"end": {
+				"i": 93,
+				"line": 6,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 97,
+				"line": 9,
+				"column": 1
+			},
+			"end": {
+				"i": 277,
+				"line": 17,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 97,
+				"line": 9,
+				"column": 1
+			},
+			"end": {
+				"i": 100,
+				"line": 9,
+				"column": 4
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 101,
+				"line": 9,
+				"column": 5
+			},
+			"end": {
+				"i": 110,
+				"line": 9,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Association",
+			"start": {
+				"i": 111,
+				"line": 9,
+				"column": 15
+			},
+			"end": {
+				"i": 276,
+				"line": 16,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 111,
+				"line": 9,
+				"column": 15
+			},
+			"end": {
+				"i": 119,
+				"line": 9,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 112,
+				"line": 9,
+				"column": 16
+			},
+			"end": {
+				"i": 118,
+				"line": 9,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 112,
+				"line": 9,
+				"column": 16
+			},
+			"end": {
+				"i": 118,
+				"line": 9,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "CurlyBracketsGroup",
+			"start": {
+				"i": 120,
+				"line": 9,
+				"column": 24
+			},
+			"end": {
+				"i": 276,
+				"line": 16,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 126,
+				"line": 10,
+				"column": 5
+			},
+			"end": {
+				"i": 150,
+				"line": 11,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 126,
+				"line": 10,
+				"column": 5
+			},
+			"end": {
+				"i": 129,
+				"line": 10,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 130,
+				"line": 10,
+				"column": 9
+			},
+			"end": {
+				"i": 134,
+				"line": 10,
+				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixSquareBracketsGroup",
+			"start": {
+				"i": 135,
+				"line": 10,
+				"column": 14
+			},
+			"end": {
+				"i": 149,
+				"line": 10,
+				"column": 28
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 135,
+				"line": 10,
+				"column": 14
+			},
+			"end": {
+				"i": 141,
+				"line": 10,
+				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "SquareBracketsGroup",
+			"start": {
+				"i": 141,
+				"line": 10,
+				"column": 20
+			},
+			"end": {
+				"i": 148,
+				"line": 10,
+				"column": 27
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 142,
+				"line": 10,
+				"column": 21
+			},
+			"end": {
+				"i": 147,
+				"line": 10,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 142,
+				"line": 10,
+				"column": 21
+			},
+			"end": {
+				"i": 147,
+				"line": 10,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 154,
+				"line": 11,
+				"column": 5
+			},
+			"end": {
+				"i": 176,
+				"line": 12,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 154,
+				"line": 11,
+				"column": 5
+			},
+			"end": {
+				"i": 157,
+				"line": 11,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 158,
+				"line": 11,
+				"column": 9
+			},
+			"end": {
+				"i": 161,
+				"line": 11,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixSquareBracketsGroup",
+			"start": {
+				"i": 162,
+				"line": 11,
+				"column": 13
+			},
+			"end": {
+				"i": 175,
+				"line": 11,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 162,
+				"line": 11,
+				"column": 13
+			},
+			"end": {
+				"i": 168,
+				"line": 11,
+				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "SquareBracketsGroup",
+			"start": {
+				"i": 168,
+				"line": 11,
+				"column": 19
+			},
+			"end": {
+				"i": 174,
+				"line": 11,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 169,
+				"line": 11,
+				"column": 20
+			},
+			"end": {
+				"i": 173,
+				"line": 11,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 169,
+				"line": 11,
+				"column": 20
+			},
+			"end": {
+				"i": 173,
+				"line": 11,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 180,
+				"line": 12,
+				"column": 5
+			},
+			"end": {
+				"i": 191,
+				"line": 13,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 180,
+				"line": 12,
+				"column": 5
+			},
+			"end": {
+				"i": 183,
+				"line": 12,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 184,
+				"line": 12,
+				"column": 9
+			},
+			"end": {
+				"i": 187,
+				"line": 12,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 188,
+				"line": 12,
+				"column": 13
+			},
+			"end": {
+				"i": 190,
+				"line": 12,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 195,
+				"line": 13,
+				"column": 5
+			},
+			"end": {
+				"i": 223,
+				"line": 14,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 195,
+				"line": 13,
+				"column": 5
+			},
+			"end": {
+				"i": 198,
+				"line": 13,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 199,
+				"line": 13,
+				"column": 9
+			},
+			"end": {
+				"i": 201,
+				"line": 13,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 202,
+				"line": 13,
+				"column": 12
+			},
+			"end": {
+				"i": 215,
+				"line": 13,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 216,
+				"line": 13,
+				"column": 25
+			},
+			"end": {
+				"i": 217,
+				"line": 13,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 218,
+				"line": 13,
+				"column": 27
+			},
+			"end": {
+				"i": 222,
+				"line": 13,
+				"column": 31
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 227,
+				"line": 14,
+				"column": 5
+			},
+			"end": {
+				"i": 267,
+				"line": 15,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 227,
+				"line": 14,
+				"column": 5
+			},
+			"end": {
+				"i": 230,
+				"line": 14,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 231,
+				"line": 14,
+				"column": 9
+			},
+			"end": {
+				"i": 233,
+				"line": 14,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 234,
+				"line": 14,
+				"column": 12
+			},
+			"end": {
+				"i": 250,
+				"line": 14,
+				"column": 28
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 251,
+				"line": 14,
+				"column": 29
+			},
+			"end": {
+				"i": 252,
+				"line": 14,
+				"column": 30
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 253,
+				"line": 14,
+				"column": 31
+			},
+			"end": {
+				"i": 256,
+				"line": 14,
+				"column": 34
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 257,
+				"line": 14,
+				"column": 35
+			},
+			"end": {
+				"i": 258,
+				"line": 14,
+				"column": 36
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 259,
+				"line": 14,
+				"column": 37
+			},
+			"end": {
+				"i": 266,
+				"line": 14,
+				"column": 44
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 271,
+				"line": 15,
+				"column": 5
+			},
+			"end": {
+				"i": 275,
+				"line": 16,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 271,
+				"line": 15,
+				"column": 5
+			},
+			"end": {
+				"i": 274,
+				"line": 15,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 278,
+				"line": 18,
+				"column": 1
+			},
+			"end": {
+				"i": 393,
+				"line": 24,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 278,
+				"line": 18,
+				"column": 1
+			},
+			"end": {
+				"i": 281,
+				"line": 18,
+				"column": 4
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 282,
+				"line": 18,
+				"column": 5
+			},
+			"end": {
+				"i": 288,
+				"line": 18,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Association",
+			"start": {
+				"i": 289,
+				"line": 18,
+				"column": 12
+			},
+			"end": {
+				"i": 392,
+				"line": 23,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 289,
+				"line": 18,
+				"column": 12
+			},
+			"end": {
+				"i": 301,
+				"line": 18,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 290,
+				"line": 18,
+				"column": 13
+			},
+			"end": {
+				"i": 300,
+				"line": 18,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 290,
+				"line": 18,
+				"column": 13
+			},
+			"end": {
+				"i": 293,
+				"line": 18,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 294,
+				"line": 18,
+				"column": 17
+			},
+			"end": {
+				"i": 300,
+				"line": 18,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "CurlyBracketsGroup",
+			"start": {
+				"i": 302,
+				"line": 18,
+				"column": 25
+			},
+			"end": {
+				"i": 392,
+				"line": 23,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 308,
+				"line": 19,
+				"column": 5
+			},
+			"end": {
+				"i": 332,
+				"line": 20,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 308,
+				"line": 19,
+				"column": 5
+			},
+			"end": {
+				"i": 311,
+				"line": 19,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 312,
+				"line": 19,
+				"column": 9
+			},
+			"end": {
+				"i": 316,
+				"line": 19,
+				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixSquareBracketsGroup",
+			"start": {
+				"i": 317,
+				"line": 19,
+				"column": 14
+			},
+			"end": {
+				"i": 331,
+				"line": 19,
+				"column": 28
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 317,
+				"line": 19,
+				"column": 14
+			},
+			"end": {
+				"i": 323,
+				"line": 19,
+				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "SquareBracketsGroup",
+			"start": {
+				"i": 323,
+				"line": 19,
+				"column": 20
+			},
+			"end": {
+				"i": 330,
+				"line": 19,
+				"column": 27
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 324,
+				"line": 19,
+				"column": 21
+			},
+			"end": {
+				"i": 329,
+				"line": 19,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 324,
+				"line": 19,
+				"column": 21
+			},
+			"end": {
+				"i": 329,
+				"line": 19,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 336,
+				"line": 20,
+				"column": 5
+			},
+			"end": {
+				"i": 358,
+				"line": 21,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 336,
+				"line": 20,
+				"column": 5
+			},
+			"end": {
+				"i": 339,
+				"line": 20,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 340,
+				"line": 20,
+				"column": 9
+			},
+			"end": {
+				"i": 343,
+				"line": 20,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixSquareBracketsGroup",
+			"start": {
+				"i": 344,
+				"line": 20,
+				"column": 13
+			},
+			"end": {
+				"i": 357,
+				"line": 20,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 344,
+				"line": 20,
+				"column": 13
+			},
+			"end": {
+				"i": 350,
+				"line": 20,
+				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "SquareBracketsGroup",
+			"start": {
+				"i": 350,
+				"line": 20,
+				"column": 19
+			},
+			"end": {
+				"i": 356,
+				"line": 20,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 351,
+				"line": 20,
+				"column": 20
+			},
+			"end": {
+				"i": 355,
+				"line": 20,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 351,
+				"line": 20,
+				"column": 20
+			},
+			"end": {
+				"i": 355,
+				"line": 20,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 362,
+				"line": 21,
+				"column": 5
+			},
+			"end": {
+				"i": 380,
+				"line": 22,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 362,
+				"line": 21,
+				"column": 5
+			},
+			"end": {
+				"i": 366,
+				"line": 21,
+				"column": 9
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 367,
+				"line": 21,
+				"column": 10
+			},
+			"end": {
+				"i": 369,
+				"line": 21,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 370,
+				"line": 21,
+				"column": 13
+			},
+			"end": {
+				"i": 379,
+				"line": 21,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 384,
+				"line": 22,
+				"column": 5
+			},
+			"end": {
+				"i": 391,
+				"line": 23,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 384,
+				"line": 22,
+				"column": 5
+			},
+			"end": {
+				"i": 390,
+				"line": 22,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 394,
+				"line": 25,
+				"column": 1
+			},
+			"end": {
+				"i": 424,
+				"line": 26,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 394,
+				"line": 25,
+				"column": 1
+			},
+			"end": {
+				"i": 397,
+				"line": 25,
+				"column": 4
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 398,
+				"line": 25,
+				"column": 5
+			},
+			"end": {
+				"i": 404,
+				"line": 25,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixParenthesesGroup",
+			"start": {
+				"i": 405,
+				"line": 25,
+				"column": 12
+			},
+			"end": {
+				"i": 423,
+				"line": 25,
+				"column": 30
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 405,
+				"line": 25,
+				"column": 12
+			},
+			"end": {
+				"i": 411,
+				"line": 25,
+				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 411,
+				"line": 25,
+				"column": 18
+			},
+			"end": {
+				"i": 423,
+				"line": 25,
+				"column": 30
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 412,
+				"line": 25,
+				"column": 19
+			},
+			"end": {
+				"i": 418,
+				"line": 25,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 412,
+				"line": 25,
+				"column": 19
+			},
+			"end": {
+				"i": 418,
+				"line": 25,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 420,
+				"line": 25,
+				"column": 27
+			},
+			"end": {
+				"i": 422,
+				"line": 25,
+				"column": 29
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 420,
+				"line": 25,
+				"column": 27
+			},
+			"end": {
+				"i": 422,
+				"line": 25,
+				"column": 29
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 424,
+				"line": 26,
+				"column": 1
+			},
+			"end": {
+				"i": 448,
+				"line": 27,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 424,
+				"line": 26,
+				"column": 1
+			},
+			"end": {
+				"i": 426,
+				"line": 26,
+				"column": 3
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 427,
+				"line": 26,
+				"column": 4
+			},
+			"end": {
+				"i": 430,
+				"line": 26,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 431,
+				"line": 26,
+				"column": 8
+			},
+			"end": {
+				"i": 437,
+				"line": 26,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "SquareBracketsGroup",
+			"start": {
+				"i": 438,
+				"line": 26,
+				"column": 15
+			},
+			"end": {
+				"i": 447,
+				"line": 26,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 439,
+				"line": 26,
+				"column": 16
+			},
+			"end": {
+				"i": 446,
+				"line": 26,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Association",
+			"start": {
+				"i": 439,
+				"line": 26,
+				"column": 16
+			},
+			"end": {
+				"i": 446,
+				"line": 26,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 439,
+				"line": 26,
+				"column": 16
+			},
+			"end": {
+				"i": 443,
+				"line": 26,
+				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 444,
+				"line": 26,
+				"column": 21
+			},
+			"end": {
+				"i": 446,
+				"line": 26,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 448,
+				"line": 27,
+				"column": 1
+			},
+			"end": {
+				"i": 464,
+				"line": 28,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixParenthesesGroup",
+			"start": {
+				"i": 448,
+				"line": 27,
+				"column": 1
+			},
+			"end": {
+				"i": 463,
+				"line": 27,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 448,
+				"line": 27,
+				"column": 1
+			},
+			"end": {
+				"i": 454,
+				"line": 27,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 454,
+				"line": 27,
+				"column": 7
+			},
+			"end": {
+				"i": 463,
+				"line": 27,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 455,
+				"line": 27,
+				"column": 8
+			},
+			"end": {
+				"i": 462,
+				"line": 27,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 455,
+				"line": 27,
+				"column": 8
+			},
+			"end": {
+				"i": 462,
+				"line": 27,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 465,
+				"line": 29,
+				"column": 1
+			},
+			"end": {
+				"i": 511,
+				"line": 30,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 465,
+				"line": 29,
+				"column": 1
+			},
+			"end": {
+				"i": 467,
+				"line": 29,
+				"column": 3
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 468,
+				"line": 29,
+				"column": 4
+			},
+			"end": {
+				"i": 471,
+				"line": 29,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 472,
+				"line": 29,
+				"column": 8
+			},
+			"end": {
+				"i": 475,
+				"line": 29,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixParenthesesGroup",
+			"start": {
+				"i": 476,
+				"line": 29,
+				"column": 12
+			},
+			"end": {
+				"i": 510,
+				"line": 29,
+				"column": 46
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 476,
+				"line": 29,
+				"column": 12
+			},
+			"end": {
+				"i": 485,
+				"line": 29,
+				"column": 21
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 485,
+				"line": 29,
+				"column": 21
+			},
+			"end": {
+				"i": 510,
+				"line": 29,
+				"column": 46
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 486,
+				"line": 29,
+				"column": 22
+			},
+			"end": {
+				"i": 509,
+				"line": 29,
+				"column": 45
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "SquareBracketsGroup",
+			"start": {
+				"i": 486,
+				"line": 29,
+				"column": 22
+			},
+			"end": {
+				"i": 509,
+				"line": 29,
+				"column": 45
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 487,
+				"line": 29,
+				"column": 23
+			},
+			"end": {
+				"i": 499,
+				"line": 29,
+				"column": 35
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Association",
+			"start": {
+				"i": 487,
+				"line": 29,
+				"column": 23
+			},
+			"end": {
+				"i": 499,
+				"line": 29,
+				"column": 35
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 487,
+				"line": 29,
+				"column": 23
+			},
+			"end": {
+				"i": 492,
+				"line": 29,
+				"column": 28
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 493,
+				"line": 29,
+				"column": 29
+			},
+			"end": {
+				"i": 499,
+				"line": 29,
+				"column": 35
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 501,
+				"line": 29,
+				"column": 37
+			},
+			"end": {
+				"i": 508,
+				"line": 29,
+				"column": 44
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Association",
+			"start": {
+				"i": 501,
+				"line": 29,
+				"column": 37
+			},
+			"end": {
+				"i": 508,
+				"line": 29,
+				"column": 44
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 501,
+				"line": 29,
+				"column": 37
+			},
+			"end": {
+				"i": 505,
+				"line": 29,
+				"column": 41
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 506,
+				"line": 29,
+				"column": 42
+			},
+			"end": {
+				"i": 508,
+				"line": 29,
+				"column": 44
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 511,
+				"line": 30,
+				"column": 1
+			},
+			"end": {
+				"i": 537,
+				"line": 31,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 511,
+				"line": 30,
+				"column": 1
+			},
+			"end": {
+				"i": 514,
+				"line": 30,
+				"column": 4
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 515,
+				"line": 30,
+				"column": 5
+			},
+			"end": {
+				"i": 518,
+				"line": 30,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixParenthesesGroup",
+			"start": {
+				"i": 519,
+				"line": 30,
+				"column": 9
+			},
+			"end": {
+				"i": 536,
+				"line": 30,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 519,
+				"line": 30,
+				"column": 9
+			},
+			"end": {
+				"i": 528,
+				"line": 30,
+				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 528,
+				"line": 30,
+				"column": 18
+			},
+			"end": {
+				"i": 536,
+				"line": 30,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 529,
+				"line": 30,
+				"column": 19
+			},
+			"end": {
+				"i": 535,
+				"line": 30,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 529,
+				"line": 30,
+				"column": 19
+			},
+			"end": {
+				"i": 535,
+				"line": 30,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 537,
+				"line": 31,
+				"column": 1
+			},
+			"end": {
+				"i": 548,
+				"line": 32,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixParenthesesGroup",
+			"start": {
+				"i": 537,
+				"line": 31,
+				"column": 1
+			},
+			"end": {
+				"i": 547,
+				"line": 31,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 537,
+				"line": 31,
+				"column": 1
+			},
+			"end": {
+				"i": 542,
+				"line": 31,
+				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 542,
+				"line": 31,
+				"column": 6
+			},
+			"end": {
+				"i": 547,
+				"line": 31,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 543,
+				"line": 31,
+				"column": 7
+			},
+			"end": {
+				"i": 546,
+				"line": 31,
+				"column": 10
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 543,
+				"line": 31,
+				"column": 7
+			},
+			"end": {
+				"i": 546,
+				"line": 31,
+				"column": 10
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		}
+	],
+	"traceback": []
+}
+
+out/LV2.tokens.json: {
+	"list": [
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 548,
+				"line": 32,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "VarStatement",
+			"start": {
+				"i": 1,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 96,
+				"line": 8,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 5,
+				"line": 2,
+				"column": 5
+			},
+			"end": {
+				"i": 11,
+				"line": 2,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Lambda",
+			"start": {
+				"i": 12,
+				"line": 2,
+				"column": 12
+			},
+			"end": {
+				"i": 95,
+				"line": 7,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 13,
+				"line": 2,
+				"column": 13
+			},
+			"end": {
+				"i": 17,
+				"line": 2,
+				"column": 17
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 19,
+				"line": 2,
+				"column": 19
+			},
+			"end": {
+				"i": 22,
+				"line": 2,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "BlockExpression",
+			"start": {
+				"i": 24,
+				"line": 2,
+				"column": 24
+			},
+			"end": {
+				"i": 95,
+				"line": 7,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "VarStatement",
+			"start": {
+				"i": 30,
+				"line": 3,
+				"column": 5
+			},
+			"end": {
+				"i": 42,
+				"line": 4,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 34,
+				"line": 3,
+				"column": 9
+			},
+			"end": {
+				"i": 37,
+				"line": 3,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteral",
+			"start": {
+				"i": 38,
+				"line": 3,
+				"column": 13
+			},
+			"end": {
+				"i": 41,
+				"line": 3,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Assignment",
+			"start": {
+				"i": 46,
+				"line": 4,
+				"column": 5
+			},
+			"end": {
+				"i": 65,
+				"line": 5,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Subscript",
+			"start": {
+				"i": 46,
+				"line": 4,
+				"column": 5
+			},
+			"end": {
+				"i": 56,
+				"line": 4,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 46,
+				"line": 4,
+				"column": 5
+			},
+			"end": {
+				"i": 49,
+				"line": 4,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 50,
+				"line": 4,
+				"column": 9
+			},
+			"end": {
+				"i": 55,
+				"line": 4,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 60,
+				"line": 4,
+				"column": 19
+			},
+			"end": {
+				"i": 64,
+				"line": 4,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Assignment",
+			"start": {
+				"i": 69,
+				"line": 5,
+				"column": 5
+			},
+			"end": {
+				"i": 86,
+				"line": 6,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Subscript",
+			"start": {
+				"i": 69,
+				"line": 5,
+				"column": 5
+			},
+			"end": {
+				"i": 78,
+				"line": 5,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 69,
+				"line": 5,
+				"column": 5
+			},
+			"end": {
+				"i": 72,
+				"line": 5,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 73,
+				"line": 5,
+				"column": 9
+			},
+			"end": {
+				"i": 77,
+				"line": 5,
+				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 82,
+				"line": 5,
+				"column": 18
+			},
+			"end": {
+				"i": 85,
+				"line": 5,
+				"column": 21
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ExpressionStatement",
+			"start": {
+				"i": 90,
+				"line": 6,
+				"column": 5
+			},
+			"end": {
+				"i": 94,
+				"line": 7,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 90,
+				"line": 6,
+				"column": 5
+			},
+			"end": {
+				"i": 93,
+				"line": 6,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "VarStatement",
+			"start": {
+				"i": 97,
+				"line": 9,
+				"column": 1
+			},
+			"end": {
+				"i": 277,
+				"line": 17,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 101,
+				"line": 9,
+				"column": 5
+			},
+			"end": {
+				"i": 110,
+				"line": 9,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Lambda",
+			"start": {
+				"i": 111,
+				"line": 9,
+				"column": 15
+			},
+			"end": {
+				"i": 276,
+				"line": 16,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 112,
+				"line": 9,
+				"column": 16
+			},
+			"end": {
+				"i": 118,
+				"line": 9,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "BlockExpression",
+			"start": {
+				"i": 120,
+				"line": 9,
+				"column": 24
+			},
+			"end": {
+				"i": 276,
+				"line": 16,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LetStatement",
+			"start": {
+				"i": 126,
+				"line": 10,
+				"column": 5
+			},
+			"end": {
+				"i": 150,
+				"line": 11,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 130,
+				"line": 10,
+				"column": 9
+			},
+			"end": {
+				"i": 134,
+				"line": 10,
+				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Subscript",
+			"start": {
+				"i": 135,
+				"line": 10,
+				"column": 14
+			},
+			"end": {
+				"i": 149,
+				"line": 10,
+				"column": 28
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 135,
+				"line": 10,
+				"column": 14
+			},
+			"end": {
+				"i": 141,
+				"line": 10,
+				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 142,
+				"line": 10,
+				"column": 21
+			},
+			"end": {
+				"i": 147,
+				"line": 10,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LetStatement",
+			"start": {
+				"i": 154,
+				"line": 11,
+				"column": 5
+			},
+			"end": {
+				"i": 176,
+				"line": 12,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 158,
+				"line": 11,
+				"column": 9
+			},
+			"end": {
+				"i": 161,
+				"line": 11,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Subscript",
+			"start": {
+				"i": 162,
+				"line": 11,
+				"column": 13
+			},
+			"end": {
+				"i": 175,
+				"line": 11,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 162,
+				"line": 11,
+				"column": 13
+			},
+			"end": {
+				"i": 168,
+				"line": 11,
+				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 169,
+				"line": 11,
+				"column": 20
+			},
+			"end": {
+				"i": 173,
+				"line": 11,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "VarStatement",
+			"start": {
+				"i": 180,
+				"line": 12,
+				"column": 5
+			},
+			"end": {
+				"i": 191,
+				"line": 13,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 184,
+				"line": 12,
+				"column": 9
+			},
+			"end": {
+				"i": 187,
+				"line": 12,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 188,
+				"line": 12,
+				"column": 13
+			},
+			"end": {
+				"i": 190,
+				"line": 12,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Accumulation",
+			"start": {
+				"i": 195,
+				"line": 13,
+				"column": 5
+			},
+			"end": {
+				"i": 223,
+				"line": 14,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 195,
+				"line": 13,
+				"column": 5
+			},
+			"end": {
+				"i": 198,
+				"line": 13,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 199,
+				"line": 13,
+				"column": 9
+			},
+			"end": {
+				"i": 201,
+				"line": 13,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Operation",
+			"start": {
+				"i": 202,
+				"line": 13,
+				"column": 12
+			},
+			"end": {
+				"i": 222,
+				"line": 13,
+				"column": 31
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 202,
+				"line": 13,
+				"column": 12
+			},
+			"end": {
+				"i": 215,
+				"line": 13,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 216,
+				"line": 13,
+				"column": 25
+			},
+			"end": {
+				"i": 217,
+				"line": 13,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 218,
+				"line": 13,
+				"column": 27
+			},
+			"end": {
+				"i": 222,
+				"line": 13,
+				"column": 31
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Accumulation",
+			"start": {
+				"i": 227,
+				"line": 14,
+				"column": 5
+			},
+			"end": {
+				"i": 267,
+				"line": 15,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 227,
+				"line": 14,
+				"column": 5
+			},
+			"end": {
+				"i": 230,
+				"line": 14,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 231,
+				"line": 14,
+				"column": 9
+			},
+			"end": {
+				"i": 233,
+				"line": 14,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Operation",
+			"start": {
+				"i": 234,
+				"line": 14,
+				"column": 12
+			},
+			"end": {
+				"i": 266,
+				"line": 14,
+				"column": 44
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Operation",
+			"start": {
+				"i": 234,
+				"line": 14,
+				"column": 12
+			},
+			"end": {
+				"i": 256,
+				"line": 14,
+				"column": 34
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 234,
+				"line": 14,
+				"column": 12
+			},
+			"end": {
+				"i": 250,
+				"line": 14,
+				"column": 28
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 251,
+				"line": 14,
+				"column": 29
+			},
+			"end": {
+				"i": 252,
+				"line": 14,
+				"column": 30
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 253,
+				"line": 14,
+				"column": 31
+			},
+			"end": {
+				"i": 256,
+				"line": 14,
+				"column": 34
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 257,
+				"line": 14,
+				"column": 35
+			},
+			"end": {
+				"i": 258,
+				"line": 14,
+				"column": 36
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 259,
+				"line": 14,
+				"column": 37
+			},
+			"end": {
+				"i": 266,
+				"line": 14,
+				"column": 44
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ExpressionStatement",
+			"start": {
+				"i": 271,
+				"line": 15,
+				"column": 5
+			},
+			"end": {
+				"i": 275,
+				"line": 16,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 271,
+				"line": 15,
+				"column": 5
+			},
+			"end": {
+				"i": 274,
+				"line": 15,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "VarStatement",
+			"start": {
+				"i": 278,
+				"line": 18,
+				"column": 1
+			},
+			"end": {
+				"i": 393,
+				"line": 24,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 282,
+				"line": 18,
+				"column": 5
+			},
+			"end": {
+				"i": 288,
+				"line": 18,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Lambda",
+			"start": {
+				"i": 289,
+				"line": 18,
+				"column": 12
+			},
+			"end": {
+				"i": 392,
+				"line": 23,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 290,
+				"line": 18,
+				"column": 13
+			},
+			"end": {
+				"i": 300,
+				"line": 18,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "BlockExpression",
+			"start": {
+				"i": 302,
+				"line": 18,
+				"column": 25
+			},
+			"end": {
+				"i": 392,
+				"line": 23,
+				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LetStatement",
+			"start": {
+				"i": 308,
+				"line": 19,
+				"column": 5
+			},
+			"end": {
+				"i": 332,
+				"line": 20,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 312,
+				"line": 19,
+				"column": 9
+			},
+			"end": {
+				"i": 316,
+				"line": 19,
+				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Subscript",
+			"start": {
+				"i": 317,
+				"line": 19,
+				"column": 14
+			},
+			"end": {
+				"i": 331,
+				"line": 19,
+				"column": 28
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 317,
+				"line": 19,
+				"column": 14
+			},
+			"end": {
+				"i": 323,
+				"line": 19,
+				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 324,
+				"line": 19,
+				"column": 21
+			},
+			"end": {
+				"i": 329,
+				"line": 19,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LetStatement",
+			"start": {
+				"i": 336,
+				"line": 20,
+				"column": 5
+			},
+			"end": {
+				"i": 358,
+				"line": 21,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 340,
+				"line": 20,
+				"column": 9
+			},
+			"end": {
+				"i": 343,
+				"line": 20,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Subscript",
+			"start": {
+				"i": 344,
+				"line": 20,
+				"column": 13
+			},
+			"end": {
+				"i": 357,
+				"line": 20,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 344,
+				"line": 20,
+				"column": 13
+			},
+			"end": {
+				"i": 350,
+				"line": 20,
+				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 351,
+				"line": 20,
+				"column": 20
+			},
+			"end": {
+				"i": 355,
+				"line": 20,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Assignment",
+			"start": {
+				"i": 362,
+				"line": 21,
+				"column": 5
+			},
+			"end": {
+				"i": 380,
+				"line": 22,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 362,
+				"line": 21,
+				"column": 5
+			},
+			"end": {
+				"i": 366,
+				"line": 21,
+				"column": 9
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 370,
+				"line": 21,
+				"column": 13
+			},
+			"end": {
+				"i": 379,
+				"line": 21,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ExpressionStatement",
+			"start": {
+				"i": 384,
+				"line": 22,
+				"column": 5
+			},
+			"end": {
+				"i": 391,
+				"line": 23,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 384,
+				"line": 22,
+				"column": 5
+			},
+			"end": {
+				"i": 390,
+				"line": 22,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "VarStatement",
+			"start": {
+				"i": 394,
+				"line": 25,
+				"column": 1
+			},
+			"end": {
+				"i": 424,
+				"line": 26,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 398,
+				"line": 25,
+				"column": 5
+			},
+			"end": {
+				"i": 404,
+				"line": 25,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCall",
+			"start": {
+				"i": 405,
+				"line": 25,
+				"column": 12
+			},
+			"end": {
+				"i": 423,
+				"line": 25,
+				"column": 30
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 405,
+				"line": 25,
+				"column": 12
+			},
+			"end": {
+				"i": 411,
+				"line": 25,
+				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallArgument",
+			"start": {
+				"i": 412,
+				"line": 25,
+				"column": 19
+			},
+			"end": {
+				"i": 418,
+				"line": 25,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "StrLiteral",
+			"start": {
+				"i": 412,
+				"line": 25,
+				"column": 19
+			},
+			"end": {
+				"i": 418,
+				"line": 25,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallArgument",
+			"start": {
+				"i": 420,
+				"line": 25,
+				"column": 27
+			},
+			"end": {
+				"i": 422,
+				"line": 25,
+				"column": 29
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Numeral",
+			"start": {
+				"i": 420,
+				"line": 25,
+				"column": 27
+			},
+			"end": {
+				"i": 422,
+				"line": 25,
+				"column": 29
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ExpressionStatement",
+			"start": {
+				"i": 424,
+				"line": 26,
+				"column": 1
+			},
+			"end": {
+				"i": 448,
+				"line": 27,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ExpressionStatement",
+			"start": {
+				"i": 448,
+				"line": 27,
+				"column": 1
+			},
+			"end": {
+				"i": 464,
+				"line": 28,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCall",
+			"start": {
+				"i": 448,
+				"line": 27,
+				"column": 1
+			},
+			"end": {
+				"i": 463,
+				"line": 27,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 448,
+				"line": 27,
+				"column": 1
+			},
+			"end": {
+				"i": 454,
+				"line": 27,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallArgument",
+			"start": {
+				"i": 455,
+				"line": 27,
+				"column": 8
+			},
+			"end": {
+				"i": 462,
+				"line": 27,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 456,
+				"line": 27,
+				"column": 9
+			},
+			"end": {
+				"i": 462,
+				"line": 27,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ExpressionStatement",
+			"start": {
+				"i": 465,
+				"line": 29,
+				"column": 1
+			},
+			"end": {
+				"i": 511,
+				"line": 30,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "VarStatement",
+			"start": {
+				"i": 511,
+				"line": 30,
+				"column": 1
+			},
+			"end": {
+				"i": 537,
+				"line": 31,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 515,
+				"line": 30,
+				"column": 5
+			},
+			"end": {
+				"i": 518,
+				"line": 30,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCall",
+			"start": {
+				"i": 519,
+				"line": 30,
+				"column": 9
+			},
+			"end": {
+				"i": 536,
+				"line": 30,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 519,
+				"line": 30,
+				"column": 9
+			},
+			"end": {
+				"i": 528,
+				"line": 30,
+				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallArgument",
+			"start": {
+				"i": 529,
+				"line": 30,
+				"column": 19
+			},
+			"end": {
+				"i": 535,
+				"line": 30,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 529,
+				"line": 30,
+				"column": 19
+			},
+			"end": {
+				"i": 535,
+				"line": 30,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ExpressionStatement",
+			"start": {
+				"i": 537,
+				"line": 31,
+				"column": 1
+			},
+			"end": {
+				"i": 548,
+				"line": 32,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCall",
+			"start": {
+				"i": 537,
+				"line": 31,
+				"column": 1
+			},
+			"end": {
+				"i": 547,
+				"line": 31,
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 537,
+				"line": 31,
+				"column": 1
+			},
+			"end": {
+				"i": 542,
+				"line": 31,
+				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallArgument",
+			"start": {
+				"i": 543,
+				"line": 31,
+				"column": 7
+			},
+			"end": {
+				"i": 546,
+				"line": 31,
+				"column": 10
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 543,
+				"line": 31,
+				"column": 7
+			},
+			"end": {
+				"i": 546,
+				"line": 31,
+				"column": 10
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		}
+	],
+	"traceback": []
+}

@@ -1,0 +1,394 @@
+prog: parser
+
+prog_exitcode: 102
+
+out/traceback.txt: ```
+	data/parser/bin/in/utf8_identifiers.txt:1:8: LV2 error: Malformed LetStatement
+	    1 | let 名前 "太郎"
+	      | ^   　　 ^ERR-237
+	data/parser/bin/in/utf8_identifiers.txt:1:1: LV2 error: Malformed Program
+	    1 | let 名前 "太郎"
+	      | ^ERR-111
+	
+```
+
+out/console.txt: ```
+	Parsing error
+	
+```
+
+out/LV1.ast.txt: ```
+	-> Program
+	  -> ProgramSentence #1
+	    -> ProgramWord #1: Atom: `let`
+	    -> ProgramWord #2: Atom: `名前`
+	    -> ProgramWord #3: Quotation: `太郎`
+	  -> ProgramSentence #2
+	    -> ProgramWord: PostfixParenthesesGroup
+	      -> Word: Atom: `print`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word: Atom: `名前`
+	
+```
+
+out/LV2.ast.txt: ```
+	~> Program
+	  ~> Statement: LetStatement
+	    -> Symbol: `名前`
+	    ~> ERR-237
+	
+```
+
+out/LV1.tokens.json: {
+	"list": [
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 34,
+				"line": 3,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 20,
+				"line": 2,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 3,
+				"line": 1,
+				"column": 4
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 4,
+				"line": 1,
+				"column": 5
+			},
+			"end": {
+				"i": 10,
+				"line": 1,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Quotation",
+			"start": {
+				"i": 11,
+				"line": 1,
+				"column": 8
+			},
+			"end": {
+				"i": 19,
+				"line": 1,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ProgramSentence",
+			"start": {
+				"i": 20,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 34,
+				"line": 3,
+				"column": 1
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixParenthesesGroup",
+			"start": {
+				"i": 20,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 33,
+				"line": 2,
+				"column": 10
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 20,
+				"line": 2,
+				"column": 1
+			},
+			"end": {
+				"i": 25,
+				"line": 2,
+				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 25,
+				"line": 2,
+				"column": 6
+			},
+			"end": {
+				"i": 33,
+				"line": 2,
+				"column": 10
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 26,
+				"line": 2,
+				"column": 7
+			},
+			"end": {
+				"i": 32,
+				"line": 2,
+				"column": 9
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 26,
+				"line": 2,
+				"column": 7
+			},
+			"end": {
+				"i": 32,
+				"line": 2,
+				"column": 9
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		}
+	],
+	"traceback": []
+}
+
+out/LV2.tokens.json: {
+	"list": [
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"err_fmt": "ERR-111"
+		},
+		{
+			"name": "LetStatement",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 11,
+				"line": 1,
+				"column": 8
+			},
+			"err_fmt": "ERR-237"
+		},
+		{
+			"name": "Symbol",
+			"start": {
+				"i": 4,
+				"line": 1,
+				"column": 5
+			},
+			"end": {
+				"i": 10,
+				"line": 1,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Lvalue",
+			"start": {
+				"i": 11,
+				"line": 1,
+				"column": 8
+			},
+			"end": {
+				"i": 11,
+				"line": 1,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		}
+	],
+	"traceback": [
+		{
+			"name": "LetStatement",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 11,
+				"line": 1,
+				"column": 8
+			},
+			"err_fmt": "ERR-237"
+		},
+		{
+			"name": "Program",
+			"start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"end": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"is_malformed": true,
+			"err_start": {
+				"i": 0,
+				"line": 1,
+				"column": 1
+			},
+			"err_fmt": "ERR-111"
+		}
+	]
+}
