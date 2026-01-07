@@ -17,7 +17,7 @@ out/console.txt: ```
 	3 => ["tern(cond,", "if_true,", "if_false)"]
 	1 => ["}"]
 	4 => ["var", "split", "(delim,", "str):{"]
-	3 => ["delim", ":=", "Char(delim)"]
+	3 => ["delim", ":=", "Byte(delim)"]
 	3 => ["var", "res", "[]"]
 	3 => ["var", "curr", "\"\""]
 	3 => ["var", "nth", "1"]
@@ -157,7 +157,7 @@ out/LV1.ast.txt: ```
 	          -> ProgramWord #1: Atom: `delim`
 	          -> ProgramWord #2: Atom: `:=`
 	          -> ProgramWord #3: PostfixParenthesesGroup
-	            -> Word: Atom: `Char`
+	            -> Word: Atom: `Byte`
 	            -> ParenthesesGroup
 	              -> Term
 	                -> Word: Atom: `delim`
@@ -549,7 +549,7 @@ out/LV2.ast.txt: ```
 	          -> Lvalue: Symbol: `delim`
 	          -> Expression: FunctionCall
 	            -> function
-	              -> Expression: Symbol: `Char`
+	              -> Expression: Symbol: `Byte`
 	            -> argument #1
 	              -> Expression: Symbol: `delim`
 	        -> Statement #2: VarStatement

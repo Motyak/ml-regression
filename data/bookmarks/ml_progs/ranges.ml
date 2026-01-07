@@ -14,7 +14,7 @@ var not (bool):{
 }
 
 var ascii (c):{
-    Int(Char(c))
+    Int(Byte(c))
 }
 
 var delay (x):{

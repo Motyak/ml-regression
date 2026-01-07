@@ -150,7 +150,7 @@ var LazyList {
 
 -- increasing range from "from" up to "to" included
 var LazyRange<= (from, to):{
-    "accepts as input Int, Char or Str"
+    "accepts as input Int, Byte or Str"
     var str? (x):{
         len(Str(x + 0)) > len(Str(x))
     }
@@ -159,8 +159,8 @@ var LazyRange<= (from, to):{
         charInputs? &&= str?(to) && len(to) == 1
         charInputs?
     }
-    from := tern(charInputs?, Char, Int)(from)
-    to := tern(charInputs?, Char, Int)(to)
+    from := tern(charInputs?, Byte, Int)(from)
+    to := tern(charInputs?, Byte, Int)(to)
 
     var LazyRange<= _
     LazyRange<= := (from, to):{
@@ -645,7 +645,7 @@ var >> compose
 
 var upper (OUT c):{
     var ascii (c):{
-        Int(Char(c))
+        Int(Byte(c))
     }
 
     var <= (lhs, rhs):{
@@ -657,7 +657,7 @@ var upper (OUT c):{
     }
 
     tern(ascii(c) <= ascii('Z), c, {
-        var local_c Char(c)
+        var local_c Byte(c)
         local_c -= ascii('a) - ascii('A)
         c := local_c
         local_c

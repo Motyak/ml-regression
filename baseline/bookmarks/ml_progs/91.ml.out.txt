@@ -973,7 +973,7 @@ out/LV1.ast.txt: ```
 	            -> ParenthesesGroup
 	              -> Term
 	                -> Word: PostfixParenthesesGroup
-	                  -> Word: Atom: `Char`
+	                  -> Word: Atom: `Byte`
 	                  -> ParenthesesGroup
 	                    -> Term
 	                      -> Word: Atom: `c`
@@ -2039,7 +2039,7 @@ out/LV2.ast.txt: ```
 	            -> argument #1
 	              -> Expression: FunctionCall
 	                -> function
-	                  -> Expression: Symbol: `Char`
+	                  -> Expression: Symbol: `Byte`
 	                -> argument #1
 	                  -> Expression: Symbol: `c`
 	  -> Statement #25: VarStatement

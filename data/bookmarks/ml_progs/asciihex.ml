@@ -22,8 +22,8 @@ var .. {
 
         "setup params"
         {
-            from := tern(charInputs?, Char, Int)(from)
-            to := tern(charInputs?, Char, Int)(to)
+            from := tern(charInputs?, Byte, Int)(from)
+            to := tern(charInputs?, Byte, Int)(to)
         }
 
         "build the res list using loop"
@@ -84,7 +84,7 @@ var as_hex {
 var i Byte(0)
 var loop _
 loop := ():{
-    print(i, as_hex(i), "`" + Char(i) + "`")
+    print(Int(i), as_hex(i), "`" + Byte(i) + "`")
     i += 1
     i == 0 || loop()
 }

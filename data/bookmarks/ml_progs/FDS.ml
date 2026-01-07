@@ -36,7 +36,7 @@ var foreach (OUT list, fn):{
 }
 
 var upper (OUT c):{
-    c := Str(Char(c) + -(Int(Char('a)) + -(Int(Char('A)))))
+    c := Str(Byte(c) + -(Byte('a) + -(Byte('A))))
 }
 
 {

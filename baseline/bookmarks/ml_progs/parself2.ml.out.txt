@@ -327,7 +327,7 @@ out/LV1.ast.txt: ```
 	    -> ProgramWord #1: Atom: `var`
 	    -> ProgramWord #2: Atom: `EOF`
 	    -> ProgramWord #3: PostfixParenthesesGroup
-	      -> Word: Atom: `Char`
+	      -> Word: Atom: `Byte`
 	      -> ParenthesesGroup
 	        -> Term
 	          -> Word: Atom: `-1`
@@ -1641,7 +1641,7 @@ out/LV2.ast.txt: ```
 	    -> Symbol: `EOF`
 	    -> Expression: FunctionCall
 	      -> function
-	        -> Expression: Symbol: `Char`
+	        -> Expression: Symbol: `Byte`
 	      -> argument #1
 	        -> Expression: Numeral: `-1`
 	  -> Statement #13: VarStatement

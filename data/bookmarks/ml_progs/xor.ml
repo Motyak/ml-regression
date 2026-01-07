@@ -8,7 +8,7 @@ var nth 1
 var loop _
 loop := ():{
     nth > len(input) || {
-        input[#nth] := Byte(input[#nth]) ^ key'[#nth]
+        input[#nth] ^= key'[#nth]
         nth += 1
         _ := loop()
     }

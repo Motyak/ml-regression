@@ -20,7 +20,7 @@ var ByteStr {
     }
 
     ByteStr-1+ := (x, xs...):{
-        Char(x) + ByteStr(xs...)
+        Str(Byte(x)) + ByteStr(xs...)
     }
 
     ByteStr

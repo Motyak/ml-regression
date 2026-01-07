@@ -11,7 +11,7 @@ var !tern (cond, if_false, if_true):{
 }
 
 var split (delim, str):{
-    delim := Char(delim)
+    delim := Byte(delim)
 
     var res []
     var curr ""

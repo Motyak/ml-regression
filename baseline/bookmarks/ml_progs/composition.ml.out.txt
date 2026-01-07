@@ -554,7 +554,7 @@ out/LV1.ast.txt: ```
 	          -> Word: Atom: `to`
 	      -> Word: CurlyBracketsGroup
 	        -> ProgramSentence #1
-	          -> ProgramWord: Quotation: `accepts as input Int, Char or Str`
+	          -> ProgramWord: Quotation: `accepts as input Int, Byte or Str`
 	        -> ProgramSentence #2
 	          -> ProgramWord #1: Atom: `var`
 	          -> ProgramWord #2: Atom: `str?`
@@ -633,7 +633,7 @@ out/LV1.ast.txt: ```
 	                -> Term #1
 	                  -> Word: Atom: `charInputs?`
 	                -> Term #2
-	                  -> Word: Atom: `Char`
+	                  -> Word: Atom: `Byte`
 	                -> Term #3
 	                  -> Word: Atom: `Int`
 	            -> ParenthesesGroup
@@ -649,7 +649,7 @@ out/LV1.ast.txt: ```
 	                -> Term #1
 	                  -> Word: Atom: `charInputs?`
 	                -> Term #2
-	                  -> Word: Atom: `Char`
+	                  -> Word: Atom: `Byte`
 	                -> Term #3
 	                  -> Word: Atom: `Int`
 	            -> ParenthesesGroup
@@ -3399,7 +3399,7 @@ out/LV1.ast.txt: ```
 	                  -> ParenthesesGroup
 	                    -> Term
 	                      -> Word: PostfixParenthesesGroup
-	                        -> Word: Atom: `Char`
+	                        -> Word: Atom: `Byte`
 	                        -> ParenthesesGroup
 	                          -> Term
 	                            -> Word: Atom: `c`
@@ -3463,7 +3463,7 @@ out/LV1.ast.txt: ```
 	                    -> ProgramWord #1: Atom: `var`
 	                    -> ProgramWord #2: Atom: `local_c`
 	                    -> ProgramWord #3: PostfixParenthesesGroup
-	                      -> Word: Atom: `Char`
+	                      -> Word: Atom: `Byte`
 	                      -> ParenthesesGroup
 	                        -> Term
 	                          -> Word: Atom: `c`
@@ -4124,7 +4124,7 @@ out/LV2.ast.txt: ```
 	      -> parameter #2: `to`
 	      -> body
 	        -> Statement #1: ExpressionStatement
-	          -> Expression: StrLiteral: `accepts as input Int, Char or Str`
+	          -> Expression: StrLiteral: `accepts as input Int, Byte or Str`
 	        -> Statement #2: VarStatement
 	          -> Symbol: `str?`
 	          -> Expression: Lambda
@@ -4204,7 +4204,7 @@ out/LV2.ast.txt: ```
 	                -> argument #1
 	                  -> Expression: Symbol: `charInputs?`
 	                -> argument #2
-	                  -> Expression: Symbol: `Char`
+	                  -> Expression: Symbol: `Byte`
 	                -> argument #3
 	                  -> Expression: Symbol: `Int`
 	            -> argument #1
@@ -4219,7 +4219,7 @@ out/LV2.ast.txt: ```
 	                -> argument #1
 	                  -> Expression: Symbol: `charInputs?`
 	                -> argument #2
-	                  -> Expression: Symbol: `Char`
+	                  -> Expression: Symbol: `Byte`
 	                -> argument #3
 	                  -> Expression: Symbol: `Int`
 	            -> argument #1
@@ -6697,7 +6697,7 @@ out/LV2.ast.txt: ```
 	                  -> argument #1
 	                    -> Expression: FunctionCall
 	                      -> function
-	                        -> Expression: Symbol: `Char`
+	                        -> Expression: Symbol: `Byte`
 	                      -> argument #1
 	                        -> Expression: Symbol: `c`
 	        -> Statement #2: VarStatement
@@ -6757,7 +6757,7 @@ out/LV2.ast.txt: ```
 	                  -> Symbol: `local_c`
 	                  -> Expression: FunctionCall
 	                    -> function
-	                      -> Expression: Symbol: `Char`
+	                      -> Expression: Symbol: `Byte`
 	                    -> argument #1
 	                      -> Expression: Symbol: `c`
 	                -> Statement #2: Accumulation

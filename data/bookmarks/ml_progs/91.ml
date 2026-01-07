@@ -218,7 +218,7 @@ var - {
 
 
 var ascii (c):{
-    Int(Char(c))
+    Int(Byte(c))
 }
 
 var <> (a, b, varargs...):{

@@ -77,7 +77,7 @@ var in (elem, arr):{
 
 "===InputStream======================="
 
-var EOF Char(-1)
+var EOF Byte(-1)
 
 var InputStream (str):{
     var nth 1
