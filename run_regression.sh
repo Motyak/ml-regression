@@ -36,7 +36,7 @@ for program in **/*; do
     # echo "$program"; continue
     mkdir -p "$(dirname "${SCRIPT_DIR}/baseline/${program}.out.txt")"
 
-   curl -sS http://127.0.0.1:55555 \
+    curl -sS http://127.0.0.1:55555 \
             -F "src=@${program}" \
             -F "srcpath=data/${program}" \
         | json_to_out \
