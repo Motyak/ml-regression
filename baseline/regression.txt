@@ -2,10 +2,10 @@ monlang
 2025-12-05T16:30:16+01:00 965557a07d3cc9fb42e35fc235a400fde65b2ebb remove no longer useful test
 
 monlang-parser
-2025-12-16T12:54:57+01:00 1e2852c8d56f882aa74ba489d05bd7e4217aa4c1 fix multiline map literal errs
+2026-01-30T18:30:37+01:00 68f4c28880b50def59d04270c223f7de56464e2a fix ioperf, not flushing output when program terminates abnormally
 
 monlang-interpreter
-2026-01-07T20:44:56+01:00 67a0cc2141e98fe14bcdc5cdcfbf8be169dad2fc removed Char type, Byte should be used instead
+2026-01-30T19:18:21+01:00 d012261d5f6572163ad54c398347ddd0ec136c1f better trailing stmt in block / lambda body
 
 monlang-server
-2025-12-18T18:01:54+01:00 92461705361a02635f30753361772cc190ecb597 fix gui: removed some border-l
+2026-01-25T16:36:01+01:00 bad4d1c7f543d64e620246a22689daf528b32a69 better
