@@ -5,7 +5,7 @@ monlang-parser
 2026-01-30T18:30:37+01:00 68f4c28880b50def59d04270c223f7de56464e2a fix ioperf, not flushing output when program terminates abnormally
 
 monlang-interpreter
-2026-01-30T19:18:21+01:00 d012261d5f6572163ad54c398347ddd0ec136c1f better trailing stmt in block / lambda body
+2026-02-03T22:25:40+01:00 a9427c15ba21b08564e539c76772f1fa691afc9a fix regression chained autovivification, + new tests
 
 monlang-server
 2026-01-25T16:36:01+01:00 bad4d1c7f543d64e620246a22689daf528b32a69 better
