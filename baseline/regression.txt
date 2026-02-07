@@ -2,10 +2,10 @@ monlang
 2025-12-05T16:30:16+01:00 965557a07d3cc9fb42e35fc235a400fde65b2ebb remove no longer useful test
 
 monlang-parser
-2026-01-30T18:30:37+01:00 68f4c28880b50def59d04270c223f7de56464e2a fix ioperf, not flushing output when program terminates abnormally
+2026-02-07T22:30:48+01:00 a836c6ae09bb21632dcb13086c81e0aae8fa864e fix ioperf unmangled when bad alloc exception
 
 monlang-interpreter
-2026-02-06T16:30:44+01:00 fab1d687c2e2a64b8b4e086aed80ebf3d7cafab2 better ==() + fix push $nil
+2026-02-07T22:35:34+01:00 f815287e32fe2f9db640b92b3669238324f9e0fd propagate changes to PathResolution and createPaths
 
 monlang-server
 2026-01-25T16:36:01+01:00 bad4d1c7f543d64e620246a22689daf528b32a69 better
