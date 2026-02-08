@@ -72,6 +72,9 @@ modified_files="$(git ls-files -m | grep -s '^baseline/')"
 for f in $modified_files; do
     # echo "$f"
     git diff --shortstat "$f" | grep -q '1 insertion(+), 1 deletion(-)' || continue
-    git diff --quiet -G'\(src\/.+\.cpp:[0-9]+\)$' "$f" && continue
+    {
+        git diff --quiet -G'\(src\/.+\.cpp:[0-9]+\)$' "$f" \
+        && git diff --quiet -G"'St9bad_alloc'$" "$f"
+    } && continue
     git checkout -- "$f"
 done

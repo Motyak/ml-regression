@@ -1,11 +1,11 @@
 monlang
-2025-12-05T16:30:16+01:00 965557a07d3cc9fb42e35fc235a400fde65b2ebb remove no longer useful test
+2026-02-07T23:00:20+01:00 d8ae0234c5946aae8ec643159d4c3db697571f29 replace -Og with -O0 everywhere
 
 monlang-parser
-2026-02-07T22:30:48+01:00 a836c6ae09bb21632dcb13086c81e0aae8fa864e fix ioperf unmangled when bad alloc exception
+2026-02-08T18:16:03+01:00 1d0a61c129d1fc2966a0c46d51f3bbe090f5b72e didnt fix the demangling issue, fixed flaky test instead
 
 monlang-interpreter
-2026-02-07T22:35:34+01:00 f815287e32fe2f9db640b92b3669238324f9e0fd propagate changes to PathResolution and createPaths
+2026-02-08T17:31:47+01:00 0c76312d9e006af9f842118049d63121c24eb0c8 fix stack overflow detected from regression
 
 monlang-server
 2026-01-25T16:36:01+01:00 bad4d1c7f543d64e620246a22689daf528b32a69 better
