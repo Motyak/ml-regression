@@ -5,7 +5,7 @@ monlang-parser
 2026-02-08T18:16:03+01:00 1d0a61c129d1fc2966a0c46d51f3bbe090f5b72e didnt fix the demangling issue, fixed flaky test instead
 
 monlang-interpreter
-2026-02-08T17:31:47+01:00 0c76312d9e006af9f842118049d63121c24eb0c8 fix stack overflow detected from regression
+2026-02-09T22:35:52+01:00 16a9d1362f7ebacbef51ee8a336d479176c111a9 fix AGAIN subscript ranges
 
 monlang-server
 2026-01-25T16:36:01+01:00 bad4d1c7f543d64e620246a22689daf528b32a69 better
