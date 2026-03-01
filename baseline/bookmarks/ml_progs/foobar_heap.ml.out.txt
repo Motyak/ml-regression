@@ -45,8 +45,7 @@ out/console.txt: ```
 	36 -> 36
 	37 -> 37
 	38 -> 38
-	39 -> 
-	terminate called after throwing an instance of 'std::bad_alloc'
+	39 -> terminate called after throwing an instance of 'St9bad_alloc'
 	  what():  std::bad_alloc
 	
 ```

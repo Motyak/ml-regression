@@ -12,10 +12,10 @@ loop := ():{
         nth += 1
         _ := loop()
     }
+    nth := 1
 }
 loop()
 
-nth := 1
 -- loop()
 
 print(input)
