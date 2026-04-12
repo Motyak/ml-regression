@@ -797,23 +797,23 @@ var rol::evalLineNb _
 
 var nextLine {
     var str ```
-        ----------------------------------------------------------------------------------------------------------------------------------
-        File                                                                                           blank        comment           code
-        ----------------------------------------------------------------------------------------------------------------------------------
-        ./monlang-parser/src/ReconstructLV2Tokens.cpp                                                    207             54            979
-        ./monlang-interpreter/src/interpret.cpp                                                          170             71            950
-        ./monlang-server/index.html                                                                       90              5            861
-        ./monlang-parser/montree/src/PrintLV2.cpp                                                        168             14            701
-        ./monlang-interpreter/src/PathResolution.cpp                                                     108             67            656
-        ./monlang-parser/montree/src/LV1AstBuilder.cpp                                                   145             10            529
-        ./monlang-parser/src/ReconstructLV1Tokens.cpp                                                     91             24            468
-        ./monlang-parser/montree/src/PrintLV1.cpp                                                         94             25            392
-        ./monlang-parser/monlang-LV2/src/expr/Numeral.cpp                                                 75             21            333
-        ./monlang-parser/monlang-LV2/src/precedence.cpp                                                   85             41            309
-        ./monlang-parser/monlang-LV2/src/stmt/WhileStatement.cpp                                          69             25            305
-        ----------------------------------------------------------------------------------------------------------------------------------
-        SUM:                                                                                            4642           1242          19734
-        ----------------------------------------------------------------------------------------------------------------------------------
+        -------------------------------------------------------------------------------------------------
+        File                                                          blank        comment           code
+        -------------------------------------------------------------------------------------------------
+        ./monlang-parser/src/ReconstructLV2Tokens.cpp                   207             54            979
+        ./monlang-interpreter/src/interpret.cpp                         170             71            950
+        ./monlang-server/index.html                                      90              5            861
+        ./monlang-parser/montree/src/PrintLV2.cpp                       168             14            701
+        ./monlang-interpreter/src/PathResolution.cpp                    108             67            656
+        ./monlang-parser/montree/src/LV1AstBuilder.cpp                  145             10            529
+        ./monlang-parser/src/ReconstructLV1Tokens.cpp                    91             24            468
+        ./monlang-parser/montree/src/PrintLV1.cpp                        94             25            392
+        ./monlang-parser/monlang-LV2/src/expr/Numeral.cpp                75             21            333
+        ./monlang-parser/monlang-LV2/src/precedence.cpp                  85             41            309
+        ./monlang-parser/monlang-LV2/src/stmt/WhileStatement.cpp         69             25            305
+        -------------------------------------------------------------------------------------------------
+        SUM:                                                           4642           1242          19734
+        -------------------------------------------------------------------------------------------------
     ```
 
     var i 1

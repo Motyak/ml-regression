@@ -7,22 +7,22 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	./monlang-parser/monlang-LV2/src/stmt/WhileStatement.cpp                                          69             25            305
-	./monlang-parser/monlang-LV2/src/precedence.cpp                                                   85             41            309
-	./monlang-parser/monlang-LV2/src/expr/Numeral.cpp                                                 75             21            333
-	./monlang-parser/montree/src/PrintLV1.cpp                                                         94             25            392
-	./monlang-parser/src/ReconstructLV1Tokens.cpp                                                     91             24            468
-	./monlang-parser/montree/src/LV1AstBuilder.cpp                                                   145             10            529
-	./monlang-interpreter/src/PathResolution.cpp                                                     108             67            656
-	./monlang-parser/montree/src/PrintLV2.cpp                                                        168             14            701
-	./monlang-server/index.html                                                                       90              5            861
-	./monlang-interpreter/src/interpret.cpp                                                          170             71            950
-	./monlang-parser/src/ReconstructLV2Tokens.cpp                                                    207             54            979
-	----------------------------------------------------------------------------------------------------------------------------------
-	File                                                                                           blank        comment           code
-	----------------------------------------------------------------------------------------------------------------------------------
-	SUM:                                                                                            4642           1242          19734
-	----------------------------------------------------------------------------------------------------------------------------------
+	./monlang-parser/monlang-LV2/src/stmt/WhileStatement.cpp         69             25            305
+	./monlang-parser/monlang-LV2/src/precedence.cpp                  85             41            309
+	./monlang-parser/monlang-LV2/src/expr/Numeral.cpp                75             21            333
+	./monlang-parser/montree/src/PrintLV1.cpp                        94             25            392
+	./monlang-parser/src/ReconstructLV1Tokens.cpp                    91             24            468
+	./monlang-parser/montree/src/LV1AstBuilder.cpp                  145             10            529
+	./monlang-interpreter/src/PathResolution.cpp                    108             67            656
+	./monlang-parser/montree/src/PrintLV2.cpp                       168             14            701
+	./monlang-server/index.html                                      90              5            861
+	./monlang-interpreter/src/interpret.cpp                         170             71            950
+	./monlang-parser/src/ReconstructLV2Tokens.cpp                   207             54            979
+	-------------------------------------------------------------------------------------------------
+	File                                                          blank        comment           code
+	-------------------------------------------------------------------------------------------------
+	SUM:                                                           4642           1242          19734
+	-------------------------------------------------------------------------------------------------
 	
 ```
 
@@ -4346,23 +4346,23 @@ out/LV1.ast.txt: ```
 	      -> ProgramSentence #1
 	        -> ProgramWord #1: Atom: `var`
 	        -> ProgramWord #2: Atom: `str`
-	        -> ProgramWord #3: Quotation: `----------------------------------------------------------------------------------------------------------------------------------` (16 more lines)
-	          -> `File                                                                                           blank        comment           code`
-	          -> `----------------------------------------------------------------------------------------------------------------------------------`
-	          -> `./monlang-parser/src/ReconstructLV2Tokens.cpp                                                    207             54            979`
-	          -> `./monlang-interpreter/src/interpret.cpp                                                          170             71            950`
-	          -> `./monlang-server/index.html                                                                       90              5            861`
-	          -> `./monlang-parser/montree/src/PrintLV2.cpp                                                        168             14            701`
-	          -> `./monlang-interpreter/src/PathResolution.cpp                                                     108             67            656`
-	          -> `./monlang-parser/montree/src/LV1AstBuilder.cpp                                                   145             10            529`
-	          -> `./monlang-parser/src/ReconstructLV1Tokens.cpp                                                     91             24            468`
-	          -> `./monlang-parser/montree/src/PrintLV1.cpp                                                         94             25            392`
-	          -> `./monlang-parser/monlang-LV2/src/expr/Numeral.cpp                                                 75             21            333`
-	          -> `./monlang-parser/monlang-LV2/src/precedence.cpp                                                   85             41            309`
-	          -> `./monlang-parser/monlang-LV2/src/stmt/WhileStatement.cpp                                          69             25            305`
-	          -> `----------------------------------------------------------------------------------------------------------------------------------`
-	          -> `SUM:                                                                                            4642           1242          19734`
-	          -> `----------------------------------------------------------------------------------------------------------------------------------`
+	        -> ProgramWord #3: Quotation: `-------------------------------------------------------------------------------------------------` (16 more lines)
+	          -> `File                                                          blank        comment           code`
+	          -> `-------------------------------------------------------------------------------------------------`
+	          -> `./monlang-parser/src/ReconstructLV2Tokens.cpp                   207             54            979`
+	          -> `./monlang-interpreter/src/interpret.cpp                         170             71            950`
+	          -> `./monlang-server/index.html                                      90              5            861`
+	          -> `./monlang-parser/montree/src/PrintLV2.cpp                       168             14            701`
+	          -> `./monlang-interpreter/src/PathResolution.cpp                    108             67            656`
+	          -> `./monlang-parser/montree/src/LV1AstBuilder.cpp                  145             10            529`
+	          -> `./monlang-parser/src/ReconstructLV1Tokens.cpp                    91             24            468`
+	          -> `./monlang-parser/montree/src/PrintLV1.cpp                        94             25            392`
+	          -> `./monlang-parser/monlang-LV2/src/expr/Numeral.cpp                75             21            333`
+	          -> `./monlang-parser/monlang-LV2/src/precedence.cpp                  85             41            309`
+	          -> `./monlang-parser/monlang-LV2/src/stmt/WhileStatement.cpp         69             25            305`
+	          -> `-------------------------------------------------------------------------------------------------`
+	          -> `SUM:                                                           4642           1242          19734`
+	          -> `-------------------------------------------------------------------------------------------------`
 	      -> ProgramSentence #2
 	        -> ProgramWord #1: Atom: `var`
 	        -> ProgramWord #2: Atom: `i`
@@ -8517,23 +8517,23 @@ out/LV2.ast.txt: ```
 	    -> Expression: BlockExpression
 	      -> Statement #1: VarStatement
 	        -> Symbol: `str`
-	        -> Expression: StrLiteral: `----------------------------------------------------------------------------------------------------------------------------------` (16 more lines)
-	          -> `File                                                                                           blank        comment           code`
-	          -> `----------------------------------------------------------------------------------------------------------------------------------`
-	          -> `./monlang-parser/src/ReconstructLV2Tokens.cpp                                                    207             54            979`
-	          -> `./monlang-interpreter/src/interpret.cpp                                                          170             71            950`
-	          -> `./monlang-server/index.html                                                                       90              5            861`
-	          -> `./monlang-parser/montree/src/PrintLV2.cpp                                                        168             14            701`
-	          -> `./monlang-interpreter/src/PathResolution.cpp                                                     108             67            656`
-	          -> `./monlang-parser/montree/src/LV1AstBuilder.cpp                                                   145             10            529`
-	          -> `./monlang-parser/src/ReconstructLV1Tokens.cpp                                                     91             24            468`
-	          -> `./monlang-parser/montree/src/PrintLV1.cpp                                                         94             25            392`
-	          -> `./monlang-parser/monlang-LV2/src/expr/Numeral.cpp                                                 75             21            333`
-	          -> `./monlang-parser/monlang-LV2/src/precedence.cpp                                                   85             41            309`
-	          -> `./monlang-parser/monlang-LV2/src/stmt/WhileStatement.cpp                                          69             25            305`
-	          -> `----------------------------------------------------------------------------------------------------------------------------------`
-	          -> `SUM:                                                                                            4642           1242          19734`
-	          -> `----------------------------------------------------------------------------------------------------------------------------------`
+	        -> Expression: StrLiteral: `-------------------------------------------------------------------------------------------------` (16 more lines)
+	          -> `File                                                          blank        comment           code`
+	          -> `-------------------------------------------------------------------------------------------------`
+	          -> `./monlang-parser/src/ReconstructLV2Tokens.cpp                   207             54            979`
+	          -> `./monlang-interpreter/src/interpret.cpp                         170             71            950`
+	          -> `./monlang-server/index.html                                      90              5            861`
+	          -> `./monlang-parser/montree/src/PrintLV2.cpp                       168             14            701`
+	          -> `./monlang-interpreter/src/PathResolution.cpp                    108             67            656`
+	          -> `./monlang-parser/montree/src/LV1AstBuilder.cpp                  145             10            529`
+	          -> `./monlang-parser/src/ReconstructLV1Tokens.cpp                    91             24            468`
+	          -> `./monlang-parser/montree/src/PrintLV1.cpp                        94             25            392`
+	          -> `./monlang-parser/monlang-LV2/src/expr/Numeral.cpp                75             21            333`
+	          -> `./monlang-parser/monlang-LV2/src/precedence.cpp                  85             41            309`
+	          -> `./monlang-parser/monlang-LV2/src/stmt/WhileStatement.cpp         69             25            305`
+	          -> `-------------------------------------------------------------------------------------------------`
+	          -> `SUM:                                                           4642           1242          19734`
+	          -> `-------------------------------------------------------------------------------------------------`
 	      -> Statement #2: VarStatement
 	        -> Symbol: `i`
 	        -> Expression: Numeral: `1`
@@ -8693,7 +8693,7 @@ out/LV1.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 25955,
+				"i": 25394,
 				"line": 859,
 				"column": 1
 			},
@@ -94333,7 +94333,7 @@ out/LV1.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 25496,
+				"i": 24935,
 				"line": 840,
 				"column": 1
 			},
@@ -94393,7 +94393,7 @@ out/LV1.tokens.json: {
 				"column": 14
 			},
 			"end": {
-				"i": 25495,
+				"i": 24934,
 				"line": 839,
 				"column": 2
 			},
@@ -94413,7 +94413,7 @@ out/LV1.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 25009,
+				"i": 24448,
 				"line": 818,
 				"column": 1
 			},
@@ -94473,7 +94473,7 @@ out/LV1.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 25008,
+				"i": 24447,
 				"line": 817,
 				"column": 8
 			},
@@ -94488,12 +94488,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25014,
+				"i": 24453,
 				"line": 819,
 				"column": 5
 			},
 			"end": {
-				"i": 25022,
+				"i": 24461,
 				"line": 820,
 				"column": 1
 			},
@@ -94508,12 +94508,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25014,
+				"i": 24453,
 				"line": 819,
 				"column": 5
 			},
 			"end": {
-				"i": 25017,
+				"i": 24456,
 				"line": 819,
 				"column": 8
 			},
@@ -94528,12 +94528,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25018,
+				"i": 24457,
 				"line": 819,
 				"column": 9
 			},
 			"end": {
-				"i": 25019,
+				"i": 24458,
 				"line": 819,
 				"column": 10
 			},
@@ -94548,12 +94548,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25020,
+				"i": 24459,
 				"line": 819,
 				"column": 11
 			},
 			"end": {
-				"i": 25021,
+				"i": 24460,
 				"line": 819,
 				"column": 12
 			},
@@ -94568,12 +94568,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25026,
+				"i": 24465,
 				"line": 820,
 				"column": 5
 			},
 			"end": {
-				"i": 25481,
+				"i": 24920,
 				"line": 838,
 				"column": 1
 			},
@@ -94588,12 +94588,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25026,
+				"i": 24465,
 				"line": 820,
 				"column": 5
 			},
 			"end": {
-				"i": 25029,
+				"i": 24468,
 				"line": 820,
 				"column": 8
 			},
@@ -94608,12 +94608,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25030,
+				"i": 24469,
 				"line": 820,
 				"column": 9
 			},
 			"end": {
-				"i": 25038,
+				"i": 24477,
 				"line": 820,
 				"column": 17
 			},
@@ -94628,12 +94628,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Association",
 			"start": {
-				"i": 25039,
+				"i": 24478,
 				"line": 820,
 				"column": 18
 			},
 			"end": {
-				"i": 25480,
+				"i": 24919,
 				"line": 837,
 				"column": 6
 			},
@@ -94648,12 +94648,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25039,
+				"i": 24478,
 				"line": 820,
 				"column": 18
 			},
 			"end": {
-				"i": 25041,
+				"i": 24480,
 				"line": 820,
 				"column": 20
 			},
@@ -94668,12 +94668,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "CurlyBracketsGroup",
 			"start": {
-				"i": 25042,
+				"i": 24481,
 				"line": 820,
 				"column": 21
 			},
 			"end": {
-				"i": 25480,
+				"i": 24919,
 				"line": 837,
 				"column": 6
 			},
@@ -94688,12 +94688,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25052,
+				"i": 24491,
 				"line": 821,
 				"column": 9
 			},
 			"end": {
-				"i": 25475,
+				"i": 24914,
 				"line": 837,
 				"column": 1
 			},
@@ -94708,12 +94708,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixParenthesesGroup",
 			"start": {
-				"i": 25052,
+				"i": 24491,
 				"line": 821,
 				"column": 9
 			},
 			"end": {
-				"i": 25474,
+				"i": 24913,
 				"line": 836,
 				"column": 11
 			},
@@ -94728,12 +94728,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25052,
+				"i": 24491,
 				"line": 821,
 				"column": 9
 			},
 			"end": {
-				"i": 25056,
+				"i": 24495,
 				"line": 821,
 				"column": 13
 			},
@@ -94748,12 +94748,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25056,
+				"i": 24495,
 				"line": 821,
 				"column": 13
 			},
 			"end": {
-				"i": 25474,
+				"i": 24913,
 				"line": 836,
 				"column": 11
 			},
@@ -94768,12 +94768,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25057,
+				"i": 24496,
 				"line": 821,
 				"column": 14
 			},
 			"end": {
-				"i": 25069,
+				"i": 24508,
 				"line": 821,
 				"column": 26
 			},
@@ -94788,12 +94788,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25057,
+				"i": 24496,
 				"line": 821,
 				"column": 14
 			},
 			"end": {
-				"i": 25058,
+				"i": 24497,
 				"line": 821,
 				"column": 15
 			},
@@ -94808,12 +94808,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25059,
+				"i": 24498,
 				"line": 821,
 				"column": 16
 			},
 			"end": {
-				"i": 25060,
+				"i": 24499,
 				"line": 821,
 				"column": 17
 			},
@@ -94828,12 +94828,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixParenthesesGroup",
 			"start": {
-				"i": 25061,
+				"i": 24500,
 				"line": 821,
 				"column": 18
 			},
 			"end": {
-				"i": 25069,
+				"i": 24508,
 				"line": 821,
 				"column": 26
 			},
@@ -94848,12 +94848,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25061,
+				"i": 24500,
 				"line": 821,
 				"column": 18
 			},
 			"end": {
-				"i": 25064,
+				"i": 24503,
 				"line": 821,
 				"column": 21
 			},
@@ -94868,12 +94868,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25064,
+				"i": 24503,
 				"line": 821,
 				"column": 21
 			},
 			"end": {
-				"i": 25069,
+				"i": 24508,
 				"line": 821,
 				"column": 26
 			},
@@ -94888,12 +94888,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25065,
+				"i": 24504,
 				"line": 821,
 				"column": 22
 			},
 			"end": {
-				"i": 25068,
+				"i": 24507,
 				"line": 821,
 				"column": 25
 			},
@@ -94908,12 +94908,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25065,
+				"i": 24504,
 				"line": 821,
 				"column": 22
 			},
 			"end": {
-				"i": 25068,
+				"i": 24507,
 				"line": 821,
 				"column": 25
 			},
@@ -94928,12 +94928,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25071,
+				"i": 24510,
 				"line": 821,
 				"column": 28
 			},
 			"end": {
-				"i": 25075,
+				"i": 24514,
 				"line": 821,
 				"column": 32
 			},
@@ -94948,12 +94948,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25071,
+				"i": 24510,
 				"line": 821,
 				"column": 28
 			},
 			"end": {
-				"i": 25075,
+				"i": 24514,
 				"line": 821,
 				"column": 32
 			},
@@ -94968,12 +94968,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25077,
+				"i": 24516,
 				"line": 821,
 				"column": 34
 			},
 			"end": {
-				"i": 25473,
+				"i": 24912,
 				"line": 836,
 				"column": 10
 			},
@@ -94988,12 +94988,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "CurlyBracketsGroup",
 			"start": {
-				"i": 25077,
+				"i": 24516,
 				"line": 821,
 				"column": 34
 			},
 			"end": {
-				"i": 25473,
+				"i": 24912,
 				"line": 836,
 				"column": 10
 			},
@@ -95008,12 +95008,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25091,
+				"i": 24530,
 				"line": 822,
 				"column": 13
 			},
 			"end": {
-				"i": 25103,
+				"i": 24542,
 				"line": 823,
 				"column": 1
 			},
@@ -95028,12 +95028,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25091,
+				"i": 24530,
 				"line": 822,
 				"column": 13
 			},
 			"end": {
-				"i": 25094,
+				"i": 24533,
 				"line": 822,
 				"column": 16
 			},
@@ -95048,12 +95048,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25095,
+				"i": 24534,
 				"line": 822,
 				"column": 17
 			},
 			"end": {
-				"i": 25099,
+				"i": 24538,
 				"line": 822,
 				"column": 21
 			},
@@ -95068,12 +95068,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25100,
+				"i": 24539,
 				"line": 822,
 				"column": 22
 			},
 			"end": {
-				"i": 25102,
+				"i": 24541,
 				"line": 822,
 				"column": 24
 			},
@@ -95088,12 +95088,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25115,
+				"i": 24554,
 				"line": 823,
 				"column": 13
 			},
 			"end": {
-				"i": 25126,
+				"i": 24565,
 				"line": 824,
 				"column": 1
 			},
@@ -95108,12 +95108,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25115,
+				"i": 24554,
 				"line": 823,
 				"column": 13
 			},
 			"end": {
-				"i": 25118,
+				"i": 24557,
 				"line": 823,
 				"column": 16
 			},
@@ -95128,12 +95128,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25119,
+				"i": 24558,
 				"line": 823,
 				"column": 17
 			},
 			"end": {
-				"i": 25123,
+				"i": 24562,
 				"line": 823,
 				"column": 21
 			},
@@ -95148,12 +95148,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25124,
+				"i": 24563,
 				"line": 823,
 				"column": 22
 			},
 			"end": {
-				"i": 25125,
+				"i": 24564,
 				"line": 823,
 				"column": 23
 			},
@@ -95168,12 +95168,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25138,
+				"i": 24577,
 				"line": 824,
 				"column": 13
 			},
 			"end": {
-				"i": 25428,
+				"i": 24867,
 				"line": 834,
 				"column": 1
 			},
@@ -95188,12 +95188,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25138,
+				"i": 24577,
 				"line": 824,
 				"column": 13
 			},
 			"end": {
-				"i": 25142,
+				"i": 24581,
 				"line": 824,
 				"column": 17
 			},
@@ -95208,12 +95208,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25143,
+				"i": 24582,
 				"line": 824,
 				"column": 18
 			},
 			"end": {
-				"i": 25145,
+				"i": 24584,
 				"line": 824,
 				"column": 20
 			},
@@ -95228,12 +95228,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Association",
 			"start": {
-				"i": 25146,
+				"i": 24585,
 				"line": 824,
 				"column": 21
 			},
 			"end": {
-				"i": 25427,
+				"i": 24866,
 				"line": 833,
 				"column": 14
 			},
@@ -95248,12 +95248,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25146,
+				"i": 24585,
 				"line": 824,
 				"column": 21
 			},
 			"end": {
-				"i": 25148,
+				"i": 24587,
 				"line": 824,
 				"column": 23
 			},
@@ -95268,12 +95268,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "CurlyBracketsGroup",
 			"start": {
-				"i": 25149,
+				"i": 24588,
 				"line": 824,
 				"column": 24
 			},
 			"end": {
-				"i": 25427,
+				"i": 24866,
 				"line": 833,
 				"column": 14
 			},
@@ -95288,12 +95288,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25167,
+				"i": 24606,
 				"line": 825,
 				"column": 17
 			},
 			"end": {
-				"i": 25414,
+				"i": 24853,
 				"line": 833,
 				"column": 1
 			},
@@ -95308,12 +95308,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25167,
+				"i": 24606,
 				"line": 825,
 				"column": 17
 			},
 			"end": {
-				"i": 25168,
+				"i": 24607,
 				"line": 825,
 				"column": 18
 			},
@@ -95328,12 +95328,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25169,
+				"i": 24608,
 				"line": 825,
 				"column": 19
 			},
 			"end": {
-				"i": 25170,
+				"i": 24609,
 				"line": 825,
 				"column": 20
 			},
@@ -95348,12 +95348,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixParenthesesGroup",
 			"start": {
-				"i": 25171,
+				"i": 24610,
 				"line": 825,
 				"column": 21
 			},
 			"end": {
-				"i": 25179,
+				"i": 24618,
 				"line": 825,
 				"column": 29
 			},
@@ -95368,12 +95368,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25171,
+				"i": 24610,
 				"line": 825,
 				"column": 21
 			},
 			"end": {
-				"i": 25174,
+				"i": 24613,
 				"line": 825,
 				"column": 24
 			},
@@ -95388,12 +95388,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25174,
+				"i": 24613,
 				"line": 825,
 				"column": 24
 			},
 			"end": {
-				"i": 25179,
+				"i": 24618,
 				"line": 825,
 				"column": 29
 			},
@@ -95408,12 +95408,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25175,
+				"i": 24614,
 				"line": 825,
 				"column": 25
 			},
 			"end": {
-				"i": 25178,
+				"i": 24617,
 				"line": 825,
 				"column": 28
 			},
@@ -95428,12 +95428,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25175,
+				"i": 24614,
 				"line": 825,
 				"column": 25
 			},
 			"end": {
-				"i": 25178,
+				"i": 24617,
 				"line": 825,
 				"column": 28
 			},
@@ -95448,12 +95448,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25180,
+				"i": 24619,
 				"line": 825,
 				"column": 30
 			},
 			"end": {
-				"i": 25182,
+				"i": 24621,
 				"line": 825,
 				"column": 32
 			},
@@ -95468,12 +95468,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "CurlyBracketsGroup",
 			"start": {
-				"i": 25183,
+				"i": 24622,
 				"line": 825,
 				"column": 33
 			},
 			"end": {
-				"i": 25413,
+				"i": 24852,
 				"line": 832,
 				"column": 18
 			},
@@ -95488,12 +95488,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25205,
+				"i": 24644,
 				"line": 826,
 				"column": 21
 			},
 			"end": {
-				"i": 25355,
+				"i": 24794,
 				"line": 831,
 				"column": 1
 			},
@@ -95508,12 +95508,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixSquareBracketsGroup",
 			"start": {
-				"i": 25205,
+				"i": 24644,
 				"line": 826,
 				"column": 21
 			},
 			"end": {
-				"i": 25212,
+				"i": 24651,
 				"line": 826,
 				"column": 28
 			},
@@ -95528,12 +95528,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25205,
+				"i": 24644,
 				"line": 826,
 				"column": 21
 			},
 			"end": {
-				"i": 25208,
+				"i": 24647,
 				"line": 826,
 				"column": 24
 			},
@@ -95548,12 +95548,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "SquareBracketsGroup",
 			"start": {
-				"i": 25208,
+				"i": 24647,
 				"line": 826,
 				"column": 24
 			},
 			"end": {
-				"i": 25212,
+				"i": 24651,
 				"line": 826,
 				"column": 28
 			},
@@ -95568,12 +95568,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25209,
+				"i": 24648,
 				"line": 826,
 				"column": 25
 			},
 			"end": {
-				"i": 25211,
+				"i": 24650,
 				"line": 826,
 				"column": 27
 			},
@@ -95588,12 +95588,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25209,
+				"i": 24648,
 				"line": 826,
 				"column": 25
 			},
 			"end": {
-				"i": 25211,
+				"i": 24650,
 				"line": 826,
 				"column": 27
 			},
@@ -95608,12 +95608,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25213,
+				"i": 24652,
 				"line": 826,
 				"column": 29
 			},
 			"end": {
-				"i": 25215,
+				"i": 24654,
 				"line": 826,
 				"column": 31
 			},
@@ -95628,12 +95628,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25216,
+				"i": 24655,
 				"line": 826,
 				"column": 32
 			},
 			"end": {
-				"i": 25220,
+				"i": 24659,
 				"line": 826,
 				"column": 36
 			},
@@ -95648,12 +95648,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25221,
+				"i": 24660,
 				"line": 826,
 				"column": 37
 			},
 			"end": {
-				"i": 25223,
+				"i": 24662,
 				"line": 826,
 				"column": 39
 			},
@@ -95668,12 +95668,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "CurlyBracketsGroup",
 			"start": {
-				"i": 25224,
+				"i": 24663,
 				"line": 826,
 				"column": 40
 			},
 			"end": {
-				"i": 25354,
+				"i": 24793,
 				"line": 830,
 				"column": 22
 			},
@@ -95688,12 +95688,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25250,
+				"i": 24689,
 				"line": 827,
 				"column": 25
 			},
 			"end": {
-				"i": 25266,
+				"i": 24705,
 				"line": 828,
 				"column": 1
 			},
@@ -95708,12 +95708,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25250,
+				"i": 24689,
 				"line": 827,
 				"column": 25
 			},
 			"end": {
-				"i": 25254,
+				"i": 24693,
 				"line": 827,
 				"column": 29
 			},
@@ -95728,12 +95728,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25255,
+				"i": 24694,
 				"line": 827,
 				"column": 30
 			},
 			"end": {
-				"i": 25257,
+				"i": 24696,
 				"line": 827,
 				"column": 32
 			},
@@ -95748,12 +95748,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixSquareBracketsGroup",
 			"start": {
-				"i": 25258,
+				"i": 24697,
 				"line": 827,
 				"column": 33
 			},
 			"end": {
-				"i": 25265,
+				"i": 24704,
 				"line": 827,
 				"column": 40
 			},
@@ -95768,12 +95768,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25258,
+				"i": 24697,
 				"line": 827,
 				"column": 33
 			},
 			"end": {
-				"i": 25261,
+				"i": 24700,
 				"line": 827,
 				"column": 36
 			},
@@ -95788,12 +95788,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "SquareBracketsGroup",
 			"start": {
-				"i": 25261,
+				"i": 24700,
 				"line": 827,
 				"column": 36
 			},
 			"end": {
-				"i": 25265,
+				"i": 24704,
 				"line": 827,
 				"column": 40
 			},
@@ -95808,12 +95808,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25262,
+				"i": 24701,
 				"line": 827,
 				"column": 37
 			},
 			"end": {
-				"i": 25264,
+				"i": 24703,
 				"line": 827,
 				"column": 39
 			},
@@ -95828,12 +95828,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25262,
+				"i": 24701,
 				"line": 827,
 				"column": 37
 			},
 			"end": {
-				"i": 25264,
+				"i": 24703,
 				"line": 827,
 				"column": 39
 			},
@@ -95848,12 +95848,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25290,
+				"i": 24729,
 				"line": 828,
 				"column": 25
 			},
 			"end": {
-				"i": 25297,
+				"i": 24736,
 				"line": 829,
 				"column": 1
 			},
@@ -95868,12 +95868,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25290,
+				"i": 24729,
 				"line": 828,
 				"column": 25
 			},
 			"end": {
-				"i": 25291,
+				"i": 24730,
 				"line": 828,
 				"column": 26
 			},
@@ -95888,12 +95888,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25292,
+				"i": 24731,
 				"line": 828,
 				"column": 27
 			},
 			"end": {
-				"i": 25294,
+				"i": 24733,
 				"line": 828,
 				"column": 29
 			},
@@ -95908,12 +95908,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25295,
+				"i": 24734,
 				"line": 828,
 				"column": 30
 			},
 			"end": {
-				"i": 25296,
+				"i": 24735,
 				"line": 828,
 				"column": 31
 			},
@@ -95928,12 +95928,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25321,
+				"i": 24760,
 				"line": 829,
 				"column": 25
 			},
 			"end": {
-				"i": 25333,
+				"i": 24772,
 				"line": 830,
 				"column": 1
 			},
@@ -95948,12 +95948,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25321,
+				"i": 24760,
 				"line": 829,
 				"column": 25
 			},
 			"end": {
-				"i": 25322,
+				"i": 24761,
 				"line": 829,
 				"column": 26
 			},
@@ -95968,12 +95968,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25323,
+				"i": 24762,
 				"line": 829,
 				"column": 27
 			},
 			"end": {
-				"i": 25325,
+				"i": 24764,
 				"line": 829,
 				"column": 29
 			},
@@ -95988,12 +95988,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixParenthesesGroup",
 			"start": {
-				"i": 25326,
+				"i": 24765,
 				"line": 829,
 				"column": 30
 			},
 			"end": {
-				"i": 25332,
+				"i": 24771,
 				"line": 829,
 				"column": 36
 			},
@@ -96008,12 +96008,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25326,
+				"i": 24765,
 				"line": 829,
 				"column": 30
 			},
 			"end": {
-				"i": 25330,
+				"i": 24769,
 				"line": 829,
 				"column": 34
 			},
@@ -96028,12 +96028,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25330,
+				"i": 24769,
 				"line": 829,
 				"column": 34
 			},
 			"end": {
-				"i": 25332,
+				"i": 24771,
 				"line": 829,
 				"column": 36
 			},
@@ -96048,12 +96048,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25375,
+				"i": 24814,
 				"line": 831,
 				"column": 21
 			},
 			"end": {
-				"i": 25396,
+				"i": 24835,
 				"line": 832,
 				"column": 1
 			},
@@ -96068,12 +96068,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25375,
+				"i": 24814,
 				"line": 831,
 				"column": 21
 			},
 			"end": {
-				"i": 25376,
+				"i": 24815,
 				"line": 831,
 				"column": 22
 			},
@@ -96088,12 +96088,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25377,
+				"i": 24816,
 				"line": 831,
 				"column": 23
 			},
 			"end": {
-				"i": 25379,
+				"i": 24818,
 				"line": 831,
 				"column": 25
 			},
@@ -96108,12 +96108,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25380,
+				"i": 24819,
 				"line": 831,
 				"column": 26
 			},
 			"end": {
-				"i": 25381,
+				"i": 24820,
 				"line": 831,
 				"column": 27
 			},
@@ -96128,12 +96128,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25382,
+				"i": 24821,
 				"line": 831,
 				"column": 28
 			},
 			"end": {
-				"i": 25384,
+				"i": 24823,
 				"line": 831,
 				"column": 30
 			},
@@ -96148,12 +96148,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25385,
+				"i": 24824,
 				"line": 831,
 				"column": 31
 			},
 			"end": {
-				"i": 25392,
+				"i": 24831,
 				"line": 831,
 				"column": 38
 			},
@@ -96168,12 +96168,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25393,
+				"i": 24832,
 				"line": 831,
 				"column": 39
 			},
 			"end": {
-				"i": 25395,
+				"i": 24834,
 				"line": 831,
 				"column": 41
 			},
@@ -96188,12 +96188,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25440,
+				"i": 24879,
 				"line": 834,
 				"column": 13
 			},
 			"end": {
-				"i": 25447,
+				"i": 24886,
 				"line": 835,
 				"column": 1
 			},
@@ -96208,12 +96208,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixParenthesesGroup",
 			"start": {
-				"i": 25440,
+				"i": 24879,
 				"line": 834,
 				"column": 13
 			},
 			"end": {
-				"i": 25446,
+				"i": 24885,
 				"line": 834,
 				"column": 19
 			},
@@ -96228,12 +96228,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25440,
+				"i": 24879,
 				"line": 834,
 				"column": 13
 			},
 			"end": {
-				"i": 25444,
+				"i": 24883,
 				"line": 834,
 				"column": 17
 			},
@@ -96248,12 +96248,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25444,
+				"i": 24883,
 				"line": 834,
 				"column": 17
 			},
 			"end": {
-				"i": 25446,
+				"i": 24885,
 				"line": 834,
 				"column": 19
 			},
@@ -96268,12 +96268,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25459,
+				"i": 24898,
 				"line": 835,
 				"column": 13
 			},
 			"end": {
-				"i": 25464,
+				"i": 24903,
 				"line": 836,
 				"column": 1
 			},
@@ -96288,12 +96288,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25459,
+				"i": 24898,
 				"line": 835,
 				"column": 13
 			},
 			"end": {
-				"i": 25463,
+				"i": 24902,
 				"line": 835,
 				"column": 17
 			},
@@ -96308,12 +96308,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25485,
+				"i": 24924,
 				"line": 838,
 				"column": 5
 			},
 			"end": {
-				"i": 25494,
+				"i": 24933,
 				"line": 839,
 				"column": 1
 			},
@@ -96328,12 +96328,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25485,
+				"i": 24924,
 				"line": 838,
 				"column": 5
 			},
 			"end": {
-				"i": 25493,
+				"i": 24932,
 				"line": 838,
 				"column": 13
 			},
@@ -96348,12 +96348,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25497,
+				"i": 24936,
 				"line": 841,
 				"column": 1
 			},
 			"end": {
-				"i": 25586,
+				"i": 25025,
 				"line": 845,
 				"column": 1
 			},
@@ -96368,12 +96368,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25497,
+				"i": 24936,
 				"line": 841,
 				"column": 1
 			},
 			"end": {
-				"i": 25500,
+				"i": 24939,
 				"line": 841,
 				"column": 4
 			},
@@ -96388,12 +96388,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25501,
+				"i": 24940,
 				"line": 841,
 				"column": 5
 			},
 			"end": {
-				"i": 25512,
+				"i": 24951,
 				"line": 841,
 				"column": 16
 			},
@@ -96408,12 +96408,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "CurlyBracketsGroup",
 			"start": {
-				"i": 25513,
+				"i": 24952,
 				"line": 841,
 				"column": 17
 			},
 			"end": {
-				"i": 25585,
+				"i": 25024,
 				"line": 844,
 				"column": 2
 			},
@@ -96428,12 +96428,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25519,
+				"i": 24958,
 				"line": 842,
 				"column": 5
 			},
 			"end": {
-				"i": 25553,
+				"i": 24992,
 				"line": 843,
 				"column": 1
 			},
@@ -96448,12 +96448,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25519,
+				"i": 24958,
 				"line": 842,
 				"column": 5
 			},
 			"end": {
-				"i": 25521,
+				"i": 24960,
 				"line": 842,
 				"column": 7
 			},
@@ -96468,12 +96468,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25522,
+				"i": 24961,
 				"line": 842,
 				"column": 8
 			},
 			"end": {
-				"i": 25525,
+				"i": 24964,
 				"line": 842,
 				"column": 11
 			},
@@ -96488,12 +96488,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25526,
+				"i": 24965,
 				"line": 842,
 				"column": 12
 			},
 			"end": {
-				"i": 25534,
+				"i": 24973,
 				"line": 842,
 				"column": 20
 			},
@@ -96508,12 +96508,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25535,
+				"i": 24974,
 				"line": 842,
 				"column": 21
 			},
 			"end": {
-				"i": 25542,
+				"i": 24981,
 				"line": 842,
 				"column": 28
 			},
@@ -96528,12 +96528,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25543,
+				"i": 24982,
 				"line": 842,
 				"column": 29
 			},
 			"end": {
-				"i": 25545,
+				"i": 24984,
 				"line": 842,
 				"column": 31
 			},
@@ -96548,12 +96548,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25546,
+				"i": 24985,
 				"line": 842,
 				"column": 32
 			},
 			"end": {
-				"i": 25552,
+				"i": 24991,
 				"line": 842,
 				"column": 38
 			},
@@ -96568,12 +96568,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25557,
+				"i": 24996,
 				"line": 843,
 				"column": 5
 			},
 			"end": {
-				"i": 25584,
+				"i": 25023,
 				"line": 844,
 				"column": 1
 			},
@@ -96588,12 +96588,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixParenthesesGroup",
 			"start": {
-				"i": 25557,
+				"i": 24996,
 				"line": 843,
 				"column": 5
 			},
 			"end": {
-				"i": 25583,
+				"i": 25022,
 				"line": 843,
 				"column": 31
 			},
@@ -96608,12 +96608,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25557,
+				"i": 24996,
 				"line": 843,
 				"column": 5
 			},
 			"end": {
-				"i": 25573,
+				"i": 25012,
 				"line": 843,
 				"column": 21
 			},
@@ -96628,12 +96628,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25573,
+				"i": 25012,
 				"line": 843,
 				"column": 21
 			},
 			"end": {
-				"i": 25583,
+				"i": 25022,
 				"line": 843,
 				"column": 31
 			},
@@ -96648,12 +96648,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25574,
+				"i": 25013,
 				"line": 843,
 				"column": 22
 			},
 			"end": {
-				"i": 25582,
+				"i": 25021,
 				"line": 843,
 				"column": 30
 			},
@@ -96668,12 +96668,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25574,
+				"i": 25013,
 				"line": 843,
 				"column": 22
 			},
 			"end": {
-				"i": 25582,
+				"i": 25021,
 				"line": 843,
 				"column": 30
 			},
@@ -96688,12 +96688,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25587,
+				"i": 25026,
 				"line": 846,
 				"column": 1
 			},
 			"end": {
-				"i": 25955,
+				"i": 25394,
 				"line": 859,
 				"column": 1
 			},
@@ -96708,12 +96708,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "CurlyBracketsGroup",
 			"start": {
-				"i": 25587,
+				"i": 25026,
 				"line": 846,
 				"column": 1
 			},
 			"end": {
-				"i": 25954,
+				"i": 25393,
 				"line": 858,
 				"column": 2
 			},
@@ -96728,12 +96728,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25593,
+				"i": 25032,
 				"line": 847,
 				"column": 5
 			},
 			"end": {
-				"i": 25634,
+				"i": 25073,
 				"line": 848,
 				"column": 1
 			},
@@ -96748,12 +96748,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25593,
+				"i": 25032,
 				"line": 847,
 				"column": 5
 			},
 			"end": {
-				"i": 25596,
+				"i": 25035,
 				"line": 847,
 				"column": 8
 			},
@@ -96768,12 +96768,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25597,
+				"i": 25036,
 				"line": 847,
 				"column": 9
 			},
 			"end": {
-				"i": 25601,
+				"i": 25040,
 				"line": 847,
 				"column": 13
 			},
@@ -96788,12 +96788,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25602,
+				"i": 25041,
 				"line": 847,
 				"column": 14
 			},
 			"end": {
-				"i": 25633,
+				"i": 25072,
 				"line": 847,
 				"column": 45
 			},
@@ -96808,12 +96808,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25638,
+				"i": 25077,
 				"line": 848,
 				"column": 5
 			},
 			"end": {
-				"i": 25882,
+				"i": 25321,
 				"line": 855,
 				"column": 1
 			},
@@ -96828,12 +96828,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25638,
+				"i": 25077,
 				"line": 848,
 				"column": 5
 			},
 			"end": {
-				"i": 25641,
+				"i": 25080,
 				"line": 848,
 				"column": 8
 			},
@@ -96848,12 +96848,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25642,
+				"i": 25081,
 				"line": 848,
 				"column": 9
 			},
 			"end": {
-				"i": 25649,
+				"i": 25088,
 				"line": 848,
 				"column": 16
 			},
@@ -96868,12 +96868,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "MultilineSquareBracketsGroup",
 			"start": {
-				"i": 25650,
+				"i": 25089,
 				"line": 848,
 				"column": 17
 			},
 			"end": {
-				"i": 25881,
+				"i": 25320,
 				"line": 854,
 				"column": 6
 			},
@@ -96888,12 +96888,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25660,
+				"i": 25099,
 				"line": 849,
 				"column": 9
 			},
 			"end": {
-				"i": 25677,
+				"i": 25116,
 				"line": 850,
 				"column": 1
 			},
@@ -96908,12 +96908,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25660,
+				"i": 25099,
 				"line": 849,
 				"column": 9
 			},
 			"end": {
-				"i": 25671,
+				"i": 25110,
 				"line": 849,
 				"column": 20
 			},
@@ -96928,12 +96928,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25672,
+				"i": 25111,
 				"line": 849,
 				"column": 21
 			},
 			"end": {
-				"i": 25674,
+				"i": 25113,
 				"line": 849,
 				"column": 23
 			},
@@ -96948,12 +96948,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25675,
+				"i": 25114,
 				"line": 849,
 				"column": 24
 			},
 			"end": {
-				"i": 25676,
+				"i": 25115,
 				"line": 849,
 				"column": 25
 			},
@@ -96968,12 +96968,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25685,
+				"i": 25124,
 				"line": 850,
 				"column": 9
 			},
 			"end": {
-				"i": 25742,
+				"i": 25181,
 				"line": 851,
 				"column": 1
 			},
@@ -96988,12 +96988,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25685,
+				"i": 25124,
 				"line": 850,
 				"column": 9
 			},
 			"end": {
-				"i": 25692,
+				"i": 25131,
 				"line": 850,
 				"column": 16
 			},
@@ -97008,12 +97008,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25693,
+				"i": 25132,
 				"line": 850,
 				"column": 17
 			},
 			"end": {
-				"i": 25695,
+				"i": 25134,
 				"line": 850,
 				"column": 19
 			},
@@ -97028,12 +97028,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "SquareBracketsGroup",
 			"start": {
-				"i": 25696,
+				"i": 25135,
 				"line": 850,
 				"column": 20
 			},
 			"end": {
-				"i": 25698,
+				"i": 25137,
 				"line": 850,
 				"column": 22
 			},
@@ -97048,12 +97048,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25699,
+				"i": 25138,
 				"line": 850,
 				"column": 23
 			},
 			"end": {
-				"i": 25701,
+				"i": 25140,
 				"line": 850,
 				"column": 25
 			},
@@ -97068,12 +97068,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25702,
+				"i": 25141,
 				"line": 850,
 				"column": 26
 			},
 			"end": {
-				"i": 25741,
+				"i": 25180,
 				"line": 850,
 				"column": 65
 			},
@@ -97088,12 +97088,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25750,
+				"i": 25189,
 				"line": 851,
 				"column": 9
 			},
 			"end": {
-				"i": 25807,
+				"i": 25246,
 				"line": 852,
 				"column": 1
 			},
@@ -97108,12 +97108,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25750,
+				"i": 25189,
 				"line": 851,
 				"column": 9
 			},
 			"end": {
-				"i": 25757,
+				"i": 25196,
 				"line": 851,
 				"column": 16
 			},
@@ -97128,12 +97128,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25758,
+				"i": 25197,
 				"line": 851,
 				"column": 17
 			},
 			"end": {
-				"i": 25760,
+				"i": 25199,
 				"line": 851,
 				"column": 19
 			},
@@ -97148,12 +97148,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "SquareBracketsGroup",
 			"start": {
-				"i": 25761,
+				"i": 25200,
 				"line": 851,
 				"column": 20
 			},
 			"end": {
-				"i": 25763,
+				"i": 25202,
 				"line": 851,
 				"column": 22
 			},
@@ -97168,12 +97168,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25764,
+				"i": 25203,
 				"line": 851,
 				"column": 23
 			},
 			"end": {
-				"i": 25766,
+				"i": 25205,
 				"line": 851,
 				"column": 25
 			},
@@ -97188,12 +97188,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25767,
+				"i": 25206,
 				"line": 851,
 				"column": 26
 			},
 			"end": {
-				"i": 25806,
+				"i": 25245,
 				"line": 851,
 				"column": 65
 			},
@@ -97208,12 +97208,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25815,
+				"i": 25254,
 				"line": 852,
 				"column": 9
 			},
 			"end": {
-				"i": 25841,
+				"i": 25280,
 				"line": 853,
 				"column": 1
 			},
@@ -97228,12 +97228,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25815,
+				"i": 25254,
 				"line": 852,
 				"column": 9
 			},
 			"end": {
-				"i": 25830,
+				"i": 25269,
 				"line": 852,
 				"column": 24
 			},
@@ -97248,12 +97248,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25831,
+				"i": 25270,
 				"line": 852,
 				"column": 25
 			},
 			"end": {
-				"i": 25833,
+				"i": 25272,
 				"line": 852,
 				"column": 27
 			},
@@ -97268,12 +97268,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25834,
+				"i": 25273,
 				"line": 852,
 				"column": 28
 			},
 			"end": {
-				"i": 25840,
+				"i": 25279,
 				"line": 852,
 				"column": 34
 			},
@@ -97288,12 +97288,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25849,
+				"i": 25288,
 				"line": 853,
 				"column": 9
 			},
 			"end": {
-				"i": 25876,
+				"i": 25315,
 				"line": 854,
 				"column": 1
 			},
@@ -97308,12 +97308,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Quotation",
 			"start": {
-				"i": 25849,
+				"i": 25288,
 				"line": 853,
 				"column": 9
 			},
 			"end": {
-				"i": 25865,
+				"i": 25304,
 				"line": 853,
 				"column": 25
 			},
@@ -97328,12 +97328,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25866,
+				"i": 25305,
 				"line": 853,
 				"column": 26
 			},
 			"end": {
-				"i": 25868,
+				"i": 25307,
 				"line": 853,
 				"column": 28
 			},
@@ -97348,12 +97348,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25869,
+				"i": 25308,
 				"line": 853,
 				"column": 29
 			},
 			"end": {
-				"i": 25875,
+				"i": 25314,
 				"line": 853,
 				"column": 35
 			},
@@ -97368,12 +97368,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25886,
+				"i": 25325,
 				"line": 855,
 				"column": 5
 			},
 			"end": {
-				"i": 25908,
+				"i": 25347,
 				"line": 856,
 				"column": 1
 			},
@@ -97388,12 +97388,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25886,
+				"i": 25325,
 				"line": 855,
 				"column": 5
 			},
 			"end": {
-				"i": 25889,
+				"i": 25328,
 				"line": 855,
 				"column": 8
 			},
@@ -97408,12 +97408,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25890,
+				"i": 25329,
 				"line": 855,
 				"column": 9
 			},
 			"end": {
-				"i": 25901,
+				"i": 25340,
 				"line": 855,
 				"column": 20
 			},
@@ -97428,12 +97428,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25902,
+				"i": 25341,
 				"line": 855,
 				"column": 21
 			},
 			"end": {
-				"i": 25907,
+				"i": 25346,
 				"line": 855,
 				"column": 26
 			},
@@ -97448,12 +97448,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ProgramSentence",
 			"start": {
-				"i": 25913,
+				"i": 25352,
 				"line": 857,
 				"column": 5
 			},
 			"end": {
-				"i": 25953,
+				"i": 25392,
 				"line": 858,
 				"column": 1
 			},
@@ -97468,12 +97468,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "PostfixParenthesesGroup",
 			"start": {
-				"i": 25913,
+				"i": 25352,
 				"line": 857,
 				"column": 5
 			},
 			"end": {
-				"i": 25952,
+				"i": 25391,
 				"line": 857,
 				"column": 44
 			},
@@ -97488,12 +97488,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25913,
+				"i": 25352,
 				"line": 857,
 				"column": 5
 			},
 			"end": {
-				"i": 25924,
+				"i": 25363,
 				"line": 857,
 				"column": 16
 			},
@@ -97508,12 +97508,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "ParenthesesGroup",
 			"start": {
-				"i": 25924,
+				"i": 25363,
 				"line": 857,
 				"column": 16
 			},
 			"end": {
-				"i": 25952,
+				"i": 25391,
 				"line": 857,
 				"column": 44
 			},
@@ -97528,12 +97528,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25925,
+				"i": 25364,
 				"line": 857,
 				"column": 17
 			},
 			"end": {
-				"i": 25929,
+				"i": 25368,
 				"line": 857,
 				"column": 21
 			},
@@ -97548,12 +97548,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25925,
+				"i": 25364,
 				"line": 857,
 				"column": 17
 			},
 			"end": {
-				"i": 25929,
+				"i": 25368,
 				"line": 857,
 				"column": 21
 			},
@@ -97568,12 +97568,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25931,
+				"i": 25370,
 				"line": 857,
 				"column": 23
 			},
 			"end": {
-				"i": 25938,
+				"i": 25377,
 				"line": 857,
 				"column": 30
 			},
@@ -97588,12 +97588,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25931,
+				"i": 25370,
 				"line": 857,
 				"column": 23
 			},
 			"end": {
-				"i": 25938,
+				"i": 25377,
 				"line": 857,
 				"column": 30
 			},
@@ -97608,12 +97608,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 25940,
+				"i": 25379,
 				"line": 857,
 				"column": 32
 			},
 			"end": {
-				"i": 25951,
+				"i": 25390,
 				"line": 857,
 				"column": 43
 			},
@@ -97628,12 +97628,12 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 25940,
+				"i": 25379,
 				"line": 857,
 				"column": 32
 			},
 			"end": {
-				"i": 25951,
+				"i": 25390,
 				"line": 857,
 				"column": 43
 			},
@@ -97659,7 +97659,7 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 25955,
+				"i": 25394,
 				"line": 859,
 				"column": 1
 			},
@@ -169299,7 +169299,7 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 25496,
+				"i": 24935,
 				"line": 840,
 				"column": 1
 			},
@@ -169339,7 +169339,7 @@ out/LV2.tokens.json: {
 				"column": 14
 			},
 			"end": {
-				"i": 25495,
+				"i": 24934,
 				"line": 839,
 				"column": 2
 			},
@@ -169359,7 +169359,7 @@ out/LV2.tokens.json: {
 				"column": 5
 			},
 			"end": {
-				"i": 25009,
+				"i": 24448,
 				"line": 818,
 				"column": 1
 			},
@@ -169399,7 +169399,7 @@ out/LV2.tokens.json: {
 				"column": 13
 			},
 			"end": {
-				"i": 25008,
+				"i": 24447,
 				"line": 817,
 				"column": 8
 			},
@@ -169414,12 +169414,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "VarStatement",
 			"start": {
-				"i": 25014,
+				"i": 24453,
 				"line": 819,
 				"column": 5
 			},
 			"end": {
-				"i": 25022,
+				"i": 24461,
 				"line": 820,
 				"column": 1
 			},
@@ -169434,12 +169434,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25018,
+				"i": 24457,
 				"line": 819,
 				"column": 9
 			},
 			"end": {
-				"i": 25019,
+				"i": 24458,
 				"line": 819,
 				"column": 10
 			},
@@ -169454,12 +169454,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Numeral",
 			"start": {
-				"i": 25020,
+				"i": 24459,
 				"line": 819,
 				"column": 11
 			},
 			"end": {
-				"i": 25021,
+				"i": 24460,
 				"line": 819,
 				"column": 12
 			},
@@ -169474,12 +169474,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "VarStatement",
 			"start": {
-				"i": 25026,
+				"i": 24465,
 				"line": 820,
 				"column": 5
 			},
 			"end": {
-				"i": 25481,
+				"i": 24920,
 				"line": 838,
 				"column": 1
 			},
@@ -169494,12 +169494,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25030,
+				"i": 24469,
 				"line": 820,
 				"column": 9
 			},
 			"end": {
-				"i": 25038,
+				"i": 24477,
 				"line": 820,
 				"column": 17
 			},
@@ -169514,12 +169514,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Lambda",
 			"start": {
-				"i": 25039,
+				"i": 24478,
 				"line": 820,
 				"column": 18
 			},
 			"end": {
-				"i": 25480,
+				"i": 24919,
 				"line": 837,
 				"column": 6
 			},
@@ -169534,12 +169534,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "BlockExpression",
 			"start": {
-				"i": 25042,
+				"i": 24481,
 				"line": 820,
 				"column": 21
 			},
 			"end": {
-				"i": 25480,
+				"i": 24919,
 				"line": 837,
 				"column": 6
 			},
@@ -169554,12 +169554,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25052,
+				"i": 24491,
 				"line": 821,
 				"column": 9
 			},
 			"end": {
-				"i": 25475,
+				"i": 24914,
 				"line": 837,
 				"column": 1
 			},
@@ -169574,12 +169574,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCall",
 			"start": {
-				"i": 25052,
+				"i": 24491,
 				"line": 821,
 				"column": 9
 			},
 			"end": {
-				"i": 25474,
+				"i": 24913,
 				"line": 836,
 				"column": 11
 			},
@@ -169594,12 +169594,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25052,
+				"i": 24491,
 				"line": 821,
 				"column": 9
 			},
 			"end": {
-				"i": 25056,
+				"i": 24495,
 				"line": 821,
 				"column": 13
 			},
@@ -169614,12 +169614,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25057,
+				"i": 24496,
 				"line": 821,
 				"column": 14
 			},
 			"end": {
-				"i": 25069,
+				"i": 24508,
 				"line": 821,
 				"column": 26
 			},
@@ -169634,12 +169634,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Operation",
 			"start": {
-				"i": 25057,
+				"i": 24496,
 				"line": 821,
 				"column": 14
 			},
 			"end": {
-				"i": 25069,
+				"i": 24508,
 				"line": 821,
 				"column": 26
 			},
@@ -169654,12 +169654,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25057,
+				"i": 24496,
 				"line": 821,
 				"column": 14
 			},
 			"end": {
-				"i": 25058,
+				"i": 24497,
 				"line": 821,
 				"column": 15
 			},
@@ -169674,12 +169674,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25059,
+				"i": 24498,
 				"line": 821,
 				"column": 16
 			},
 			"end": {
-				"i": 25060,
+				"i": 24499,
 				"line": 821,
 				"column": 17
 			},
@@ -169694,12 +169694,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCall",
 			"start": {
-				"i": 25061,
+				"i": 24500,
 				"line": 821,
 				"column": 18
 			},
 			"end": {
-				"i": 25069,
+				"i": 24508,
 				"line": 821,
 				"column": 26
 			},
@@ -169714,12 +169714,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25061,
+				"i": 24500,
 				"line": 821,
 				"column": 18
 			},
 			"end": {
-				"i": 25064,
+				"i": 24503,
 				"line": 821,
 				"column": 21
 			},
@@ -169734,12 +169734,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25065,
+				"i": 24504,
 				"line": 821,
 				"column": 22
 			},
 			"end": {
-				"i": 25068,
+				"i": 24507,
 				"line": 821,
 				"column": 25
 			},
@@ -169754,12 +169754,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25065,
+				"i": 24504,
 				"line": 821,
 				"column": 22
 			},
 			"end": {
-				"i": 25068,
+				"i": 24507,
 				"line": 821,
 				"column": 25
 			},
@@ -169774,12 +169774,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25071,
+				"i": 24510,
 				"line": 821,
 				"column": 28
 			},
 			"end": {
-				"i": 25075,
+				"i": 24514,
 				"line": 821,
 				"column": 32
 			},
@@ -169794,12 +169794,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "SpecialSymbol",
 			"start": {
-				"i": 25071,
+				"i": 24510,
 				"line": 821,
 				"column": 28
 			},
 			"end": {
-				"i": 25075,
+				"i": 24514,
 				"line": 821,
 				"column": 32
 			},
@@ -169814,12 +169814,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25077,
+				"i": 24516,
 				"line": 821,
 				"column": 34
 			},
 			"end": {
-				"i": 25473,
+				"i": 24912,
 				"line": 836,
 				"column": 10
 			},
@@ -169834,12 +169834,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "BlockExpression",
 			"start": {
-				"i": 25077,
+				"i": 24516,
 				"line": 821,
 				"column": 34
 			},
 			"end": {
-				"i": 25473,
+				"i": 24912,
 				"line": 836,
 				"column": 10
 			},
@@ -169854,12 +169854,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "VarStatement",
 			"start": {
-				"i": 25091,
+				"i": 24530,
 				"line": 822,
 				"column": 13
 			},
 			"end": {
-				"i": 25103,
+				"i": 24542,
 				"line": 823,
 				"column": 1
 			},
@@ -169874,12 +169874,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25095,
+				"i": 24534,
 				"line": 822,
 				"column": 17
 			},
 			"end": {
-				"i": 25099,
+				"i": 24538,
 				"line": 822,
 				"column": 21
 			},
@@ -169894,12 +169894,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "StrLiteral",
 			"start": {
-				"i": 25100,
+				"i": 24539,
 				"line": 822,
 				"column": 22
 			},
 			"end": {
-				"i": 25102,
+				"i": 24541,
 				"line": 822,
 				"column": 24
 			},
@@ -169914,12 +169914,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "VarStatement",
 			"start": {
-				"i": 25115,
+				"i": 24554,
 				"line": 823,
 				"column": 13
 			},
 			"end": {
-				"i": 25126,
+				"i": 24565,
 				"line": 824,
 				"column": 1
 			},
@@ -169934,12 +169934,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25119,
+				"i": 24558,
 				"line": 823,
 				"column": 17
 			},
 			"end": {
-				"i": 25123,
+				"i": 24562,
 				"line": 823,
 				"column": 21
 			},
@@ -169954,12 +169954,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25124,
+				"i": 24563,
 				"line": 823,
 				"column": 22
 			},
 			"end": {
-				"i": 25125,
+				"i": 24564,
 				"line": 823,
 				"column": 23
 			},
@@ -169974,12 +169974,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Assignment",
 			"start": {
-				"i": 25138,
+				"i": 24577,
 				"line": 824,
 				"column": 13
 			},
 			"end": {
-				"i": 25428,
+				"i": 24867,
 				"line": 834,
 				"column": 1
 			},
@@ -169994,12 +169994,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25138,
+				"i": 24577,
 				"line": 824,
 				"column": 13
 			},
 			"end": {
-				"i": 25142,
+				"i": 24581,
 				"line": 824,
 				"column": 17
 			},
@@ -170014,12 +170014,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Lambda",
 			"start": {
-				"i": 25146,
+				"i": 24585,
 				"line": 824,
 				"column": 21
 			},
 			"end": {
-				"i": 25427,
+				"i": 24866,
 				"line": 833,
 				"column": 14
 			},
@@ -170034,12 +170034,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "BlockExpression",
 			"start": {
-				"i": 25149,
+				"i": 24588,
 				"line": 824,
 				"column": 24
 			},
 			"end": {
-				"i": 25427,
+				"i": 24866,
 				"line": 833,
 				"column": 14
 			},
@@ -170054,12 +170054,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25167,
+				"i": 24606,
 				"line": 825,
 				"column": 17
 			},
 			"end": {
-				"i": 25414,
+				"i": 24853,
 				"line": 833,
 				"column": 1
 			},
@@ -170074,12 +170074,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Operation",
 			"start": {
-				"i": 25167,
+				"i": 24606,
 				"line": 825,
 				"column": 17
 			},
 			"end": {
-				"i": 25413,
+				"i": 24852,
 				"line": 832,
 				"column": 18
 			},
@@ -170094,12 +170094,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Operation",
 			"start": {
-				"i": 25167,
+				"i": 24606,
 				"line": 825,
 				"column": 17
 			},
 			"end": {
-				"i": 25179,
+				"i": 24618,
 				"line": 825,
 				"column": 29
 			},
@@ -170114,12 +170114,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25167,
+				"i": 24606,
 				"line": 825,
 				"column": 17
 			},
 			"end": {
-				"i": 25168,
+				"i": 24607,
 				"line": 825,
 				"column": 18
 			},
@@ -170134,12 +170134,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25169,
+				"i": 24608,
 				"line": 825,
 				"column": 19
 			},
 			"end": {
-				"i": 25170,
+				"i": 24609,
 				"line": 825,
 				"column": 20
 			},
@@ -170154,12 +170154,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCall",
 			"start": {
-				"i": 25171,
+				"i": 24610,
 				"line": 825,
 				"column": 21
 			},
 			"end": {
-				"i": 25179,
+				"i": 24618,
 				"line": 825,
 				"column": 29
 			},
@@ -170174,12 +170174,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25171,
+				"i": 24610,
 				"line": 825,
 				"column": 21
 			},
 			"end": {
-				"i": 25174,
+				"i": 24613,
 				"line": 825,
 				"column": 24
 			},
@@ -170194,12 +170194,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25175,
+				"i": 24614,
 				"line": 825,
 				"column": 25
 			},
 			"end": {
-				"i": 25178,
+				"i": 24617,
 				"line": 825,
 				"column": 28
 			},
@@ -170214,12 +170214,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25175,
+				"i": 24614,
 				"line": 825,
 				"column": 25
 			},
 			"end": {
-				"i": 25178,
+				"i": 24617,
 				"line": 825,
 				"column": 28
 			},
@@ -170234,12 +170234,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25180,
+				"i": 24619,
 				"line": 825,
 				"column": 30
 			},
 			"end": {
-				"i": 25182,
+				"i": 24621,
 				"line": 825,
 				"column": 32
 			},
@@ -170254,12 +170254,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "BlockExpression",
 			"start": {
-				"i": 25183,
+				"i": 24622,
 				"line": 825,
 				"column": 33
 			},
 			"end": {
-				"i": 25413,
+				"i": 24852,
 				"line": 832,
 				"column": 18
 			},
@@ -170274,12 +170274,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25205,
+				"i": 24644,
 				"line": 826,
 				"column": 21
 			},
 			"end": {
-				"i": 25355,
+				"i": 24794,
 				"line": 831,
 				"column": 1
 			},
@@ -170294,12 +170294,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Operation",
 			"start": {
-				"i": 25205,
+				"i": 24644,
 				"line": 826,
 				"column": 21
 			},
 			"end": {
-				"i": 25354,
+				"i": 24793,
 				"line": 830,
 				"column": 22
 			},
@@ -170314,12 +170314,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Operation",
 			"start": {
-				"i": 25205,
+				"i": 24644,
 				"line": 826,
 				"column": 21
 			},
 			"end": {
-				"i": 25220,
+				"i": 24659,
 				"line": 826,
 				"column": 36
 			},
@@ -170334,12 +170334,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Subscript",
 			"start": {
-				"i": 25205,
+				"i": 24644,
 				"line": 826,
 				"column": 21
 			},
 			"end": {
-				"i": 25212,
+				"i": 24651,
 				"line": 826,
 				"column": 28
 			},
@@ -170354,12 +170354,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25205,
+				"i": 24644,
 				"line": 826,
 				"column": 21
 			},
 			"end": {
-				"i": 25208,
+				"i": 24647,
 				"line": 826,
 				"column": 24
 			},
@@ -170374,12 +170374,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "SubscriptIndex",
 			"start": {
-				"i": 25209,
+				"i": 24648,
 				"line": 826,
 				"column": 25
 			},
 			"end": {
-				"i": 25211,
+				"i": 24650,
 				"line": 826,
 				"column": 27
 			},
@@ -170394,12 +170394,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25210,
+				"i": 24649,
 				"line": 826,
 				"column": 26
 			},
 			"end": {
-				"i": 25211,
+				"i": 24650,
 				"line": 826,
 				"column": 27
 			},
@@ -170414,12 +170414,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25213,
+				"i": 24652,
 				"line": 826,
 				"column": 29
 			},
 			"end": {
-				"i": 25215,
+				"i": 24654,
 				"line": 826,
 				"column": 31
 			},
@@ -170434,12 +170434,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "StrLiteral",
 			"start": {
-				"i": 25216,
+				"i": 24655,
 				"line": 826,
 				"column": 32
 			},
 			"end": {
-				"i": 25220,
+				"i": 24659,
 				"line": 826,
 				"column": 36
 			},
@@ -170454,12 +170454,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25221,
+				"i": 24660,
 				"line": 826,
 				"column": 37
 			},
 			"end": {
-				"i": 25223,
+				"i": 24662,
 				"line": 826,
 				"column": 39
 			},
@@ -170474,12 +170474,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "BlockExpression",
 			"start": {
-				"i": 25224,
+				"i": 24663,
 				"line": 826,
 				"column": 40
 			},
 			"end": {
-				"i": 25354,
+				"i": 24793,
 				"line": 830,
 				"column": 22
 			},
@@ -170494,12 +170494,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Accumulation",
 			"start": {
-				"i": 25250,
+				"i": 24689,
 				"line": 827,
 				"column": 25
 			},
 			"end": {
-				"i": 25266,
+				"i": 24705,
 				"line": 828,
 				"column": 1
 			},
@@ -170514,12 +170514,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25250,
+				"i": 24689,
 				"line": 827,
 				"column": 25
 			},
 			"end": {
-				"i": 25254,
+				"i": 24693,
 				"line": 827,
 				"column": 29
 			},
@@ -170534,12 +170534,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25255,
+				"i": 24694,
 				"line": 827,
 				"column": 30
 			},
 			"end": {
-				"i": 25257,
+				"i": 24696,
 				"line": 827,
 				"column": 32
 			},
@@ -170554,12 +170554,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Subscript",
 			"start": {
-				"i": 25258,
+				"i": 24697,
 				"line": 827,
 				"column": 33
 			},
 			"end": {
-				"i": 25265,
+				"i": 24704,
 				"line": 827,
 				"column": 40
 			},
@@ -170574,12 +170574,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25258,
+				"i": 24697,
 				"line": 827,
 				"column": 33
 			},
 			"end": {
-				"i": 25261,
+				"i": 24700,
 				"line": 827,
 				"column": 36
 			},
@@ -170594,12 +170594,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "SubscriptIndex",
 			"start": {
-				"i": 25262,
+				"i": 24701,
 				"line": 827,
 				"column": 37
 			},
 			"end": {
-				"i": 25264,
+				"i": 24703,
 				"line": 827,
 				"column": 39
 			},
@@ -170614,12 +170614,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25263,
+				"i": 24702,
 				"line": 827,
 				"column": 38
 			},
 			"end": {
-				"i": 25264,
+				"i": 24703,
 				"line": 827,
 				"column": 39
 			},
@@ -170634,12 +170634,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Accumulation",
 			"start": {
-				"i": 25290,
+				"i": 24729,
 				"line": 828,
 				"column": 25
 			},
 			"end": {
-				"i": 25297,
+				"i": 24736,
 				"line": 829,
 				"column": 1
 			},
@@ -170654,12 +170654,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25290,
+				"i": 24729,
 				"line": 828,
 				"column": 25
 			},
 			"end": {
-				"i": 25291,
+				"i": 24730,
 				"line": 828,
 				"column": 26
 			},
@@ -170674,12 +170674,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25292,
+				"i": 24731,
 				"line": 828,
 				"column": 27
 			},
 			"end": {
-				"i": 25294,
+				"i": 24733,
 				"line": 828,
 				"column": 29
 			},
@@ -170694,12 +170694,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Numeral",
 			"start": {
-				"i": 25295,
+				"i": 24734,
 				"line": 828,
 				"column": 30
 			},
 			"end": {
-				"i": 25296,
+				"i": 24735,
 				"line": 828,
 				"column": 31
 			},
@@ -170714,12 +170714,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Assignment",
 			"start": {
-				"i": 25321,
+				"i": 24760,
 				"line": 829,
 				"column": 25
 			},
 			"end": {
-				"i": 25333,
+				"i": 24772,
 				"line": 830,
 				"column": 1
 			},
@@ -170734,12 +170734,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25321,
+				"i": 24760,
 				"line": 829,
 				"column": 25
 			},
 			"end": {
-				"i": 25322,
+				"i": 24761,
 				"line": 829,
 				"column": 26
 			},
@@ -170754,12 +170754,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCall",
 			"start": {
-				"i": 25326,
+				"i": 24765,
 				"line": 829,
 				"column": 30
 			},
 			"end": {
-				"i": 25332,
+				"i": 24771,
 				"line": 829,
 				"column": 36
 			},
@@ -170774,12 +170774,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25326,
+				"i": 24765,
 				"line": 829,
 				"column": 30
 			},
 			"end": {
-				"i": 25330,
+				"i": 24769,
 				"line": 829,
 				"column": 34
 			},
@@ -170794,12 +170794,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Accumulation",
 			"start": {
-				"i": 25375,
+				"i": 24814,
 				"line": 831,
 				"column": 21
 			},
 			"end": {
-				"i": 25396,
+				"i": 24835,
 				"line": 832,
 				"column": 1
 			},
@@ -170814,12 +170814,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25375,
+				"i": 24814,
 				"line": 831,
 				"column": 21
 			},
 			"end": {
-				"i": 25376,
+				"i": 24815,
 				"line": 831,
 				"column": 22
 			},
@@ -170834,12 +170834,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25377,
+				"i": 24816,
 				"line": 831,
 				"column": 23
 			},
 			"end": {
-				"i": 25379,
+				"i": 24818,
 				"line": 831,
 				"column": 25
 			},
@@ -170854,12 +170854,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Numeral",
 			"start": {
-				"i": 25380,
+				"i": 24819,
 				"line": 831,
 				"column": 26
 			},
 			"end": {
-				"i": 25395,
+				"i": 24834,
 				"line": 831,
 				"column": 41
 			},
@@ -170874,12 +170874,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25440,
+				"i": 24879,
 				"line": 834,
 				"column": 13
 			},
 			"end": {
-				"i": 25447,
+				"i": 24886,
 				"line": 835,
 				"column": 1
 			},
@@ -170894,12 +170894,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCall",
 			"start": {
-				"i": 25440,
+				"i": 24879,
 				"line": 834,
 				"column": 13
 			},
 			"end": {
-				"i": 25446,
+				"i": 24885,
 				"line": 834,
 				"column": 19
 			},
@@ -170914,12 +170914,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25440,
+				"i": 24879,
 				"line": 834,
 				"column": 13
 			},
 			"end": {
-				"i": 25444,
+				"i": 24883,
 				"line": 834,
 				"column": 17
 			},
@@ -170934,12 +170934,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25459,
+				"i": 24898,
 				"line": 835,
 				"column": 13
 			},
 			"end": {
-				"i": 25464,
+				"i": 24903,
 				"line": 836,
 				"column": 1
 			},
@@ -170954,12 +170954,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25459,
+				"i": 24898,
 				"line": 835,
 				"column": 13
 			},
 			"end": {
-				"i": 25463,
+				"i": 24902,
 				"line": 835,
 				"column": 17
 			},
@@ -170974,12 +170974,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25485,
+				"i": 24924,
 				"line": 838,
 				"column": 5
 			},
 			"end": {
-				"i": 25494,
+				"i": 24933,
 				"line": 839,
 				"column": 1
 			},
@@ -170994,12 +170994,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25485,
+				"i": 24924,
 				"line": 838,
 				"column": 5
 			},
 			"end": {
-				"i": 25493,
+				"i": 24932,
 				"line": 838,
 				"column": 13
 			},
@@ -171014,12 +171014,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "VarStatement",
 			"start": {
-				"i": 25497,
+				"i": 24936,
 				"line": 841,
 				"column": 1
 			},
 			"end": {
-				"i": 25586,
+				"i": 25025,
 				"line": 845,
 				"column": 1
 			},
@@ -171034,12 +171034,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25501,
+				"i": 24940,
 				"line": 841,
 				"column": 5
 			},
 			"end": {
-				"i": 25512,
+				"i": 24951,
 				"line": 841,
 				"column": 16
 			},
@@ -171054,12 +171054,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "BlockExpression",
 			"start": {
-				"i": 25513,
+				"i": 24952,
 				"line": 841,
 				"column": 17
 			},
 			"end": {
-				"i": 25585,
+				"i": 25024,
 				"line": 844,
 				"column": 2
 			},
@@ -171074,12 +171074,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25519,
+				"i": 24958,
 				"line": 842,
 				"column": 5
 			},
 			"end": {
-				"i": 25553,
+				"i": 24992,
 				"line": 843,
 				"column": 1
 			},
@@ -171094,12 +171094,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25557,
+				"i": 24996,
 				"line": 843,
 				"column": 5
 			},
 			"end": {
-				"i": 25584,
+				"i": 25023,
 				"line": 844,
 				"column": 1
 			},
@@ -171114,12 +171114,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCall",
 			"start": {
-				"i": 25557,
+				"i": 24996,
 				"line": 843,
 				"column": 5
 			},
 			"end": {
-				"i": 25583,
+				"i": 25022,
 				"line": 843,
 				"column": 31
 			},
@@ -171134,12 +171134,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25557,
+				"i": 24996,
 				"line": 843,
 				"column": 5
 			},
 			"end": {
-				"i": 25573,
+				"i": 25012,
 				"line": 843,
 				"column": 21
 			},
@@ -171154,12 +171154,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25574,
+				"i": 25013,
 				"line": 843,
 				"column": 22
 			},
 			"end": {
-				"i": 25582,
+				"i": 25021,
 				"line": 843,
 				"column": 30
 			},
@@ -171174,12 +171174,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25574,
+				"i": 25013,
 				"line": 843,
 				"column": 22
 			},
 			"end": {
-				"i": 25582,
+				"i": 25021,
 				"line": 843,
 				"column": 30
 			},
@@ -171194,12 +171194,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25587,
+				"i": 25026,
 				"line": 846,
 				"column": 1
 			},
 			"end": {
-				"i": 25955,
+				"i": 25394,
 				"line": 859,
 				"column": 1
 			},
@@ -171214,12 +171214,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "BlockExpression",
 			"start": {
-				"i": 25587,
+				"i": 25026,
 				"line": 846,
 				"column": 1
 			},
 			"end": {
-				"i": 25954,
+				"i": 25393,
 				"line": 858,
 				"column": 2
 			},
@@ -171234,12 +171234,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "VarStatement",
 			"start": {
-				"i": 25593,
+				"i": 25032,
 				"line": 847,
 				"column": 5
 			},
 			"end": {
-				"i": 25634,
+				"i": 25073,
 				"line": 848,
 				"column": 1
 			},
@@ -171254,12 +171254,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25597,
+				"i": 25036,
 				"line": 847,
 				"column": 9
 			},
 			"end": {
-				"i": 25601,
+				"i": 25040,
 				"line": 847,
 				"column": 13
 			},
@@ -171274,12 +171274,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "StrLiteral",
 			"start": {
-				"i": 25602,
+				"i": 25041,
 				"line": 847,
 				"column": 14
 			},
 			"end": {
-				"i": 25633,
+				"i": 25072,
 				"line": 847,
 				"column": 45
 			},
@@ -171294,12 +171294,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "VarStatement",
 			"start": {
-				"i": 25638,
+				"i": 25077,
 				"line": 848,
 				"column": 5
 			},
 			"end": {
-				"i": 25882,
+				"i": 25321,
 				"line": 855,
 				"column": 1
 			},
@@ -171314,12 +171314,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25642,
+				"i": 25081,
 				"line": 848,
 				"column": 9
 			},
 			"end": {
-				"i": 25649,
+				"i": 25088,
 				"line": 848,
 				"column": 16
 			},
@@ -171334,12 +171334,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "MapLiteral",
 			"start": {
-				"i": 25650,
+				"i": 25089,
 				"line": 848,
 				"column": 17
 			},
 			"end": {
-				"i": 25881,
+				"i": 25320,
 				"line": 854,
 				"column": 6
 			},
@@ -171354,12 +171354,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "StrLiteral",
 			"start": {
-				"i": 25660,
+				"i": 25099,
 				"line": 849,
 				"column": 9
 			},
 			"end": {
-				"i": 25671,
+				"i": 25110,
 				"line": 849,
 				"column": 20
 			},
@@ -171374,12 +171374,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Numeral",
 			"start": {
-				"i": 25675,
+				"i": 25114,
 				"line": 849,
 				"column": 24
 			},
 			"end": {
-				"i": 25676,
+				"i": 25115,
 				"line": 849,
 				"column": 25
 			},
@@ -171394,12 +171394,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "StrLiteral",
 			"start": {
-				"i": 25685,
+				"i": 25124,
 				"line": 850,
 				"column": 9
 			},
 			"end": {
-				"i": 25692,
+				"i": 25131,
 				"line": 850,
 				"column": 16
 			},
@@ -171414,12 +171414,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ListLiteral",
 			"start": {
-				"i": 25696,
+				"i": 25135,
 				"line": 850,
 				"column": 20
 			},
 			"end": {
-				"i": 25741,
+				"i": 25180,
 				"line": 850,
 				"column": 65
 			},
@@ -171434,12 +171434,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "StrLiteral",
 			"start": {
-				"i": 25750,
+				"i": 25189,
 				"line": 851,
 				"column": 9
 			},
 			"end": {
-				"i": 25757,
+				"i": 25196,
 				"line": 851,
 				"column": 16
 			},
@@ -171454,12 +171454,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ListLiteral",
 			"start": {
-				"i": 25761,
+				"i": 25200,
 				"line": 851,
 				"column": 20
 			},
 			"end": {
-				"i": 25806,
+				"i": 25245,
 				"line": 851,
 				"column": 65
 			},
@@ -171474,12 +171474,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "StrLiteral",
 			"start": {
-				"i": 25815,
+				"i": 25254,
 				"line": 852,
 				"column": 9
 			},
 			"end": {
-				"i": 25830,
+				"i": 25269,
 				"line": 852,
 				"column": 24
 			},
@@ -171494,12 +171494,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "SpecialSymbol",
 			"start": {
-				"i": 25834,
+				"i": 25273,
 				"line": 852,
 				"column": 28
 			},
 			"end": {
-				"i": 25840,
+				"i": 25279,
 				"line": 852,
 				"column": 34
 			},
@@ -171514,12 +171514,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "StrLiteral",
 			"start": {
-				"i": 25849,
+				"i": 25288,
 				"line": 853,
 				"column": 9
 			},
 			"end": {
-				"i": 25865,
+				"i": 25304,
 				"line": 853,
 				"column": 25
 			},
@@ -171534,12 +171534,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "SpecialSymbol",
 			"start": {
-				"i": 25869,
+				"i": 25308,
 				"line": 853,
 				"column": 29
 			},
 			"end": {
-				"i": 25875,
+				"i": 25314,
 				"line": 853,
 				"column": 35
 			},
@@ -171554,12 +171554,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "VarStatement",
 			"start": {
-				"i": 25886,
+				"i": 25325,
 				"line": 855,
 				"column": 5
 			},
 			"end": {
-				"i": 25908,
+				"i": 25347,
 				"line": 856,
 				"column": 1
 			},
@@ -171574,12 +171574,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25890,
+				"i": 25329,
 				"line": 855,
 				"column": 9
 			},
 			"end": {
-				"i": 25901,
+				"i": 25340,
 				"line": 855,
 				"column": 20
 			},
@@ -171594,12 +171594,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25902,
+				"i": 25341,
 				"line": 855,
 				"column": 21
 			},
 			"end": {
-				"i": 25907,
+				"i": 25346,
 				"line": 855,
 				"column": 26
 			},
@@ -171614,12 +171614,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "ExpressionStatement",
 			"start": {
-				"i": 25913,
+				"i": 25352,
 				"line": 857,
 				"column": 5
 			},
 			"end": {
-				"i": 25953,
+				"i": 25392,
 				"line": 858,
 				"column": 1
 			},
@@ -171634,12 +171634,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCall",
 			"start": {
-				"i": 25913,
+				"i": 25352,
 				"line": 857,
 				"column": 5
 			},
 			"end": {
-				"i": 25952,
+				"i": 25391,
 				"line": 857,
 				"column": 44
 			},
@@ -171654,12 +171654,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25913,
+				"i": 25352,
 				"line": 857,
 				"column": 5
 			},
 			"end": {
-				"i": 25924,
+				"i": 25363,
 				"line": 857,
 				"column": 16
 			},
@@ -171674,12 +171674,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25925,
+				"i": 25364,
 				"line": 857,
 				"column": 17
 			},
 			"end": {
-				"i": 25929,
+				"i": 25368,
 				"line": 857,
 				"column": 21
 			},
@@ -171694,12 +171694,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25925,
+				"i": 25364,
 				"line": 857,
 				"column": 17
 			},
 			"end": {
-				"i": 25929,
+				"i": 25368,
 				"line": 857,
 				"column": 21
 			},
@@ -171714,12 +171714,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25931,
+				"i": 25370,
 				"line": 857,
 				"column": 23
 			},
 			"end": {
-				"i": 25938,
+				"i": 25377,
 				"line": 857,
 				"column": 30
 			},
@@ -171734,12 +171734,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25931,
+				"i": 25370,
 				"line": 857,
 				"column": 23
 			},
 			"end": {
-				"i": 25938,
+				"i": 25377,
 				"line": 857,
 				"column": 30
 			},
@@ -171754,12 +171754,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "FunctionCallArgument",
 			"start": {
-				"i": 25940,
+				"i": 25379,
 				"line": 857,
 				"column": 32
 			},
 			"end": {
-				"i": 25951,
+				"i": 25390,
 				"line": 857,
 				"column": 43
 			},
@@ -171774,12 +171774,12 @@ out/LV2.tokens.json: {
 		{
 			"name": "Symbol",
 			"start": {
-				"i": 25940,
+				"i": 25379,
 				"line": 857,
 				"column": 32
 			},
 			"end": {
-				"i": 25951,
+				"i": 25390,
 				"line": 857,
 				"column": 43
 			},

@@ -4,22 +4,42 @@ var 2times (fn):{
     fn()
 }
 
-var saysomething _
-saysomething := ():{
-    print("hello")
+{
+    var saysomething _
     saysomething := ():{
-        print("goodbye")
+        print("hello")
+        saysomething := ():{
+            print("goodbye")
+        }
     }
+
+    2times(saysomething) -- ```
+        hello
+        hello
+    ```
+
+    "now saysomething() has been overwritten"
+
+    2times(saysomething) -- ```
+        goodbye
+        goodbye
+    ```
 }
 
-2times(saysomething) -- ```
-    hello
-    hello
-```
+print("=========================")
 
-"now saysomething() has been overwritten"
+{
+    var saysomething _
+    saysomething := ():{
+        print("hello")
+        saysomething := ():{
+            print("goodbye")
+        }
+    }
 
-2times(saysomething) -- ```
-    goodbye
-    goodbye
-```
+    "if we pass by ref, we don't have this behavior anymore"
+    2times(&saysomething) -- ```
+        hello
+        goodbye
+    ```
+}
