@@ -379,4 +379,4 @@ print(set)
 print(set is 'Set)
 print(set is 'List)
 
--- set + [1, 1, 3] -- calls Set ctor with resulting list
+-- Set(set + [1, 1, 3]) -- must explicitly call Set()

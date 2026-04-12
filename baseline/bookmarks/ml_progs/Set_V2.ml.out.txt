@@ -7,7 +7,7 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	Set([2, 1, 3])
+	Set(2, 1, 3)
 	$true
 	$true
 	
@@ -1990,22 +1990,26 @@ out/LV1.ast.txt: ```
 	          -> Word #3: Quotation: `List`
 	  -> ProgramSentence #42
 	    -> ProgramWord #1: Atom: `--`
-	    -> ProgramWord #2: Atom: `set`
-	    -> ProgramWord #3: Atom: `+`
-	    -> ProgramWord #4: SquareBracketsGroup
-	      -> Term #1
-	        -> Word: Atom: `1`
-	      -> Term #2
-	        -> Word: Atom: `1`
-	      -> Term #3
-	        -> Word: Atom: `3`
-	    -> ProgramWord #5: Atom: `--`
-	    -> ProgramWord #6: Atom: `calls`
-	    -> ProgramWord #7: Atom: `Set`
-	    -> ProgramWord #8: Atom: `ctor`
-	    -> ProgramWord #9: Atom: `with`
-	    -> ProgramWord #10: Atom: `resulting`
-	    -> ProgramWord #11: Atom: `list`
+	    -> ProgramWord #2: PostfixParenthesesGroup
+	      -> Word: Atom: `Set`
+	      -> ParenthesesGroup
+	        -> Term
+	          -> Word #1: Atom: `set`
+	          -> Word #2: Atom: `+`
+	          -> Word #3: SquareBracketsGroup
+	            -> Term #1
+	              -> Word: Atom: `1`
+	            -> Term #2
+	              -> Word: Atom: `1`
+	            -> Term #3
+	              -> Word: Atom: `3`
+	    -> ProgramWord #3: Atom: `--`
+	    -> ProgramWord #4: Atom: `must`
+	    -> ProgramWord #5: Atom: `explicitly`
+	    -> ProgramWord #6: Atom: `call`
+	    -> ProgramWord #7: PostfixParenthesesGroup
+	      -> Word: Atom: `Set`
+	      -> ParenthesesGroup (empty)
 	
 ```
 
@@ -3769,7 +3773,7 @@ out/LV1.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 7638,
+				"i": 7635,
 				"line": 383,
 				"column": 1
 			},
@@ -43249,7 +43253,7 @@ out/LV1.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 7638,
+				"i": 7635,
 				"line": 383,
 				"column": 1
 			},
@@ -43282,6 +43286,26 @@ out/LV1.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "PostfixParenthesesGroup",
+			"start": {
+				"i": 7584,
+				"line": 382,
+				"column": 4
+			},
+			"end": {
+				"i": 7604,
+				"line": 382,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "Atom",
 			"start": {
 				"i": 7584,
@@ -43302,6 +43326,46 @@ out/LV1.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "ParenthesesGroup",
+			"start": {
+				"i": 7587,
+				"line": 382,
+				"column": 7
+			},
+			"end": {
+				"i": 7604,
+				"line": 382,
+				"column": 24
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 7588,
+				"line": 382,
+				"column": 8
+			},
+			"end": {
+				"i": 7603,
+				"line": 382,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "Atom",
 			"start": {
 				"i": 7588,
@@ -43309,9 +43373,29 @@ out/LV1.tokens.json: {
 				"column": 8
 			},
 			"end": {
-				"i": 7589,
+				"i": 7591,
 				"line": 382,
-				"column": 9
+				"column": 11
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 7592,
+				"line": 382,
+				"column": 12
+			},
+			"end": {
+				"i": 7593,
+				"line": 382,
+				"column": 13
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -43324,9 +43408,89 @@ out/LV1.tokens.json: {
 		{
 			"name": "SquareBracketsGroup",
 			"start": {
-				"i": 7590,
+				"i": 7594,
 				"line": 382,
-				"column": 10
+				"column": 14
+			},
+			"end": {
+				"i": 7603,
+				"line": 382,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 7595,
+				"line": 382,
+				"column": 15
+			},
+			"end": {
+				"i": 7596,
+				"line": 382,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 7595,
+				"line": 382,
+				"column": 15
+			},
+			"end": {
+				"i": 7596,
+				"line": 382,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Term",
+			"start": {
+				"i": 7598,
+				"line": 382,
+				"column": 18
+			},
+			"end": {
+				"i": 7599,
+				"line": 382,
+				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 7598,
+				"line": 382,
+				"column": 18
 			},
 			"end": {
 				"i": 7599,
@@ -43344,129 +43508,9 @@ out/LV1.tokens.json: {
 		{
 			"name": "Term",
 			"start": {
-				"i": 7591,
+				"i": 7601,
 				"line": 382,
-				"column": 11
-			},
-			"end": {
-				"i": 7592,
-				"line": 382,
-				"column": 12
-			},
-			"is_malformed": false,
-			"err_start": {
-				"i": 0,
-				"line": 0,
-				"column": 0
-			},
-			"err_fmt": ""
-		},
-		{
-			"name": "Atom",
-			"start": {
-				"i": 7591,
-				"line": 382,
-				"column": 11
-			},
-			"end": {
-				"i": 7592,
-				"line": 382,
-				"column": 12
-			},
-			"is_malformed": false,
-			"err_start": {
-				"i": 0,
-				"line": 0,
-				"column": 0
-			},
-			"err_fmt": ""
-		},
-		{
-			"name": "Term",
-			"start": {
-				"i": 7594,
-				"line": 382,
-				"column": 14
-			},
-			"end": {
-				"i": 7595,
-				"line": 382,
-				"column": 15
-			},
-			"is_malformed": false,
-			"err_start": {
-				"i": 0,
-				"line": 0,
-				"column": 0
-			},
-			"err_fmt": ""
-		},
-		{
-			"name": "Atom",
-			"start": {
-				"i": 7594,
-				"line": 382,
-				"column": 14
-			},
-			"end": {
-				"i": 7595,
-				"line": 382,
-				"column": 15
-			},
-			"is_malformed": false,
-			"err_start": {
-				"i": 0,
-				"line": 0,
-				"column": 0
-			},
-			"err_fmt": ""
-		},
-		{
-			"name": "Term",
-			"start": {
-				"i": 7597,
-				"line": 382,
-				"column": 17
-			},
-			"end": {
-				"i": 7598,
-				"line": 382,
-				"column": 18
-			},
-			"is_malformed": false,
-			"err_start": {
-				"i": 0,
-				"line": 0,
-				"column": 0
-			},
-			"err_fmt": ""
-		},
-		{
-			"name": "Atom",
-			"start": {
-				"i": 7597,
-				"line": 382,
-				"column": 17
-			},
-			"end": {
-				"i": 7598,
-				"line": 382,
-				"column": 18
-			},
-			"is_malformed": false,
-			"err_start": {
-				"i": 0,
-				"line": 0,
-				"column": 0
-			},
-			"err_fmt": ""
-		},
-		{
-			"name": "Atom",
-			"start": {
-				"i": 7600,
-				"line": 382,
-				"column": 20
+				"column": 21
 			},
 			"end": {
 				"i": 7602,
@@ -43484,14 +43528,14 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 7603,
+				"i": 7601,
 				"line": 382,
-				"column": 23
+				"column": 21
 			},
 			"end": {
-				"i": 7608,
+				"i": 7602,
 				"line": 382,
-				"column": 28
+				"column": 22
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -43504,9 +43548,29 @@ out/LV1.tokens.json: {
 		{
 			"name": "Atom",
 			"start": {
-				"i": 7609,
+				"i": 7605,
 				"line": 382,
-				"column": 29
+				"column": 25
+			},
+			"end": {
+				"i": 7607,
+				"line": 382,
+				"column": 27
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 7608,
+				"line": 382,
+				"column": 28
 			},
 			"end": {
 				"i": 7612,
@@ -43529,44 +43593,64 @@ out/LV1.tokens.json: {
 				"column": 33
 			},
 			"end": {
-				"i": 7617,
-				"line": 382,
-				"column": 37
-			},
-			"is_malformed": false,
-			"err_start": {
-				"i": 0,
-				"line": 0,
-				"column": 0
-			},
-			"err_fmt": ""
-		},
-		{
-			"name": "Atom",
-			"start": {
-				"i": 7618,
-				"line": 382,
-				"column": 38
-			},
-			"end": {
-				"i": 7622,
-				"line": 382,
-				"column": 42
-			},
-			"is_malformed": false,
-			"err_start": {
-				"i": 0,
-				"line": 0,
-				"column": 0
-			},
-			"err_fmt": ""
-		},
-		{
-			"name": "Atom",
-			"start": {
 				"i": 7623,
 				"line": 382,
 				"column": 43
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 7624,
+				"line": 382,
+				"column": 44
+			},
+			"end": {
+				"i": 7628,
+				"line": 382,
+				"column": 48
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "PostfixParenthesesGroup",
+			"start": {
+				"i": 7629,
+				"line": 382,
+				"column": 49
+			},
+			"end": {
+				"i": 7634,
+				"line": 382,
+				"column": 54
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "Atom",
+			"start": {
+				"i": 7629,
+				"line": 382,
+				"column": 49
 			},
 			"end": {
 				"i": 7632,
@@ -43582,16 +43666,16 @@ out/LV1.tokens.json: {
 			"err_fmt": ""
 		},
 		{
-			"name": "Atom",
+			"name": "ParenthesesGroup",
 			"start": {
-				"i": 7633,
+				"i": 7632,
 				"line": 382,
-				"column": 53
+				"column": 52
 			},
 			"end": {
-				"i": 7637,
+				"i": 7634,
 				"line": 382,
-				"column": 57
+				"column": 54
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -43615,7 +43699,7 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 7638,
+				"i": 7635,
 				"line": 383,
 				"column": 1
 			},
@@ -75715,7 +75799,7 @@ out/LV2.tokens.json: {
 				"column": 1
 			},
 			"end": {
-				"i": 7638,
+				"i": 7635,
 				"line": 383,
 				"column": 1
 			},
