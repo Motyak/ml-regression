@@ -7,7 +7,7 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	Runtime error: Subscript key not found (src/interpret.cpp:764)
+	Runtime error: Subscript key not found (src/interpret.cpp:1203)
 	    at fn1(data/interpreter/bin/in/test_subscripted_passbyref/c.ml:6:7)
 	    at fn1(data/interpreter/bin/in/test_subscripted_passbyref/c.ml:6:5)
 	    at evalProgram(data/interpreter/bin/in/test_subscripted_passbyref/c.ml:10:5)
@@ -1737,6 +1737,26 @@ out/LV2.tokens.json: {
 				"i": 172,
 				"line": 16,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 156,
+				"line": 15,
+				"column": 9
+			},
+			"end": {
+				"i": 166,
+				"line": 15,
+				"column": 19
 			},
 			"is_malformed": false,
 			"err_start": {

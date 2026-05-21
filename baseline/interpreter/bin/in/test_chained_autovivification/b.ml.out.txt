@@ -7,7 +7,7 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	Runtime error: lvaluing a $nil subscript array (src/interpret.cpp:983)
+	Runtime error: lvaluing a $nil subscript array (src/interpret.cpp:1505)
 	    at <program>(data/interpreter/bin/in/test_chained_autovivification/b.ml:5:1)
 	
 ```
@@ -738,6 +738,26 @@ out/LV2.tokens.json: {
 				"i": 19,
 				"line": 3,
 				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 11,
+				"line": 3,
+				"column": 10
+			},
+			"end": {
+				"i": 18,
+				"line": 3,
+				"column": 17
 			},
 			"is_malformed": false,
 			"err_start": {

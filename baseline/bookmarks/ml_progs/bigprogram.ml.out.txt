@@ -129112,6 +129112,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 9456,
+				"line": 400,
+				"column": 10
+			},
+			"end": {
+				"i": 9466,
+				"line": 400,
+				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 9456,
@@ -129142,6 +129162,26 @@ out/LV2.tokens.json: {
 				"i": 9466,
 				"line": 400,
 				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 9468,
+				"line": 400,
+				"column": 22
+			},
+			"end": {
+				"i": 9474,
+				"line": 400,
+				"column": 28
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -138672,6 +138712,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 12712,
+				"line": 497,
+				"column": 38
+			},
+			"end": {
+				"i": 12721,
+				"line": 497,
+				"column": 47
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 12712,
@@ -138702,6 +138762,26 @@ out/LV2.tokens.json: {
 				"i": 12721,
 				"line": 497,
 				"column": 47
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 12723,
+				"line": 497,
+				"column": 49
+			},
+			"end": {
+				"i": 12728,
+				"line": 497,
+				"column": 54
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -146852,6 +146932,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 15652,
+				"line": 587,
+				"column": 42
+			},
+			"end": {
+				"i": 15661,
+				"line": 587,
+				"column": 51
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 15652,
@@ -146882,6 +146982,26 @@ out/LV2.tokens.json: {
 				"i": 15661,
 				"line": 587,
 				"column": 51
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 15663,
+				"line": 587,
+				"column": 53
+			},
+			"end": {
+				"i": 15668,
+				"line": 587,
+				"column": 58
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -147412,6 +147532,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 15915,
+				"line": 595,
+				"column": 38
+			},
+			"end": {
+				"i": 15924,
+				"line": 595,
+				"column": 47
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 15915,
@@ -147442,6 +147582,26 @@ out/LV2.tokens.json: {
 				"i": 15924,
 				"line": 595,
 				"column": 47
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 15926,
+				"line": 595,
+				"column": 49
+			},
+			"end": {
+				"i": 15931,
+				"line": 595,
+				"column": 54
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -158672,6 +158832,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 19507,
+				"line": 707,
+				"column": 42
+			},
+			"end": {
+				"i": 19516,
+				"line": 707,
+				"column": 51
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 19507,
@@ -158702,6 +158882,26 @@ out/LV2.tokens.json: {
 				"i": 19516,
 				"line": 707,
 				"column": 51
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 19518,
+				"line": 707,
+				"column": 53
+			},
+			"end": {
+				"i": 19523,
+				"line": 707,
+				"column": 58
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -159232,6 +159432,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 19770,
+				"line": 715,
+				"column": 38
+			},
+			"end": {
+				"i": 19779,
+				"line": 715,
+				"column": 47
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 19770,
@@ -159262,6 +159482,26 @@ out/LV2.tokens.json: {
 				"i": 19779,
 				"line": 715,
 				"column": 47
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 19781,
+				"line": 715,
+				"column": 49
+			},
+			"end": {
+				"i": 19786,
+				"line": 715,
+				"column": 54
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -171352,6 +171592,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 25099,
+				"line": 849,
+				"column": 9
+			},
+			"end": {
+				"i": 25115,
+				"line": 849,
+				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 25099,
@@ -171392,6 +171652,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 25124,
+				"line": 850,
+				"column": 9
+			},
+			"end": {
+				"i": 25180,
+				"line": 850,
+				"column": 65
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 25124,
@@ -171421,6 +171701,26 @@ out/LV2.tokens.json: {
 			"end": {
 				"i": 25180,
 				"line": 850,
+				"column": 65
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 25189,
+				"line": 851,
+				"column": 9
+			},
+			"end": {
+				"i": 25245,
+				"line": 851,
 				"column": 65
 			},
 			"is_malformed": false,
@@ -171472,6 +171772,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 25254,
+				"line": 852,
+				"column": 9
+			},
+			"end": {
+				"i": 25279,
+				"line": 852,
+				"column": 34
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 25254,
@@ -171502,6 +171822,26 @@ out/LV2.tokens.json: {
 				"i": 25279,
 				"line": 852,
 				"column": 34
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 25288,
+				"line": 853,
+				"column": 9
+			},
+			"end": {
+				"i": 25314,
+				"line": 853,
+				"column": 35
 			},
 			"is_malformed": false,
 			"err_start": {

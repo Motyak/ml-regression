@@ -1309,6 +1309,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 185,
+				"line": 13,
+				"column": 10
+			},
+			"end": {
+				"i": 191,
+				"line": 13,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "Symbol",
 			"start": {
 				"i": 185,
@@ -1339,6 +1359,26 @@ out/LV2.tokens.json: {
 				"i": 191,
 				"line": 13,
 				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 193,
+				"line": 13,
+				"column": 18
+			},
+			"end": {
+				"i": 199,
+				"line": 13,
+				"column": 24
 			},
 			"is_malformed": false,
 			"err_start": {

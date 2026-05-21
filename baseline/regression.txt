@@ -2,10 +2,10 @@ monlang
 2026-02-07T23:00:20+01:00 d8ae0234c5946aae8ec643159d4c3db697571f29 replace -Og with -O0 everywhere
 
 monlang-parser
-2026-05-10T11:32:48+02:00 1ca1121b4fa7be12f1215fcd10f53db31b41ac3b added EnumDefinition
+2026-05-21T21:51:38+02:00 900df759489014a9155532628b970e82c136503c added struct comments
 
 monlang-interpreter
-2026-05-14T17:59:50+02:00 79482a62e1fc6b83b5768f2e8ed2c8f5e6ccc346 optimize stack for InterpretError
+2026-05-21T21:51:03+02:00 4b6c25c358a2fafac8ba04c224deb7e7ca4eaa02 added struct comments
 
 monlang-server
-2026-05-10T15:56:27+02:00 d0f95017c5aa5bc2e65475d002db9a2a3bd3ed61 align vh
+2026-05-21T21:01:27+02:00 982bfbcb415111706a2757cb8047b03a38b6cab8 added enum/struct comments + fix

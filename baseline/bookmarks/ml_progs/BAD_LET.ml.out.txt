@@ -15855,6 +15855,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 1258,
+				"line": 82,
+				"column": 5
+			},
+			"end": {
+				"i": 1279,
+				"line": 82,
+				"column": 26
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 1258,
@@ -15975,6 +15995,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 1284,
+				"line": 83,
+				"column": 5
+			},
+			"end": {
+				"i": 1299,
+				"line": 83,
+				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 1284,
@@ -16065,6 +16105,26 @@ out/LV2.tokens.json: {
 				"i": 1298,
 				"line": 83,
 				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 1304,
+				"line": 84,
+				"column": 5
+			},
+			"end": {
+				"i": 1316,
+				"line": 84,
+				"column": 17
 			},
 			"is_malformed": false,
 			"err_start": {

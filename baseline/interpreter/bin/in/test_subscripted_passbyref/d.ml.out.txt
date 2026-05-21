@@ -2292,6 +2292,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 193,
+				"line": 18,
+				"column": 9
+			},
+			"end": {
+				"i": 203,
+				"line": 18,
+				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "StrLiteral",
 			"start": {
 				"i": 193,

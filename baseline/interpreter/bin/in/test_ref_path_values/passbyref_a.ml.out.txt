@@ -131,7 +131,7 @@ out/LV2.ast.txt: ```
 	                -> Expression: StrLiteral: `field`
 	              -> value
 	                -> Expression: Numeral: `1`
-	      -> argument #3
+	      -> argument #2
 	        -> key
 	          -> Expression: Numeral: `2`
 	        -> value
@@ -2056,6 +2056,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 222,
+				"line": 19,
+				"column": 10
+			},
+			"end": {
+				"i": 234,
+				"line": 19,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "Numeral",
 			"start": {
 				"i": 222,
@@ -2086,6 +2106,26 @@ out/LV2.tokens.json: {
 				"i": 234,
 				"line": 19,
 				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 225,
+				"line": 19,
+				"column": 13
+			},
+			"end": {
+				"i": 233,
+				"line": 19,
+				"column": 21
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2136,6 +2176,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 236,
+				"line": 19,
+				"column": 24
+			},
+			"end": {
+				"i": 248,
+				"line": 19,
+				"column": 36
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "Numeral",
 			"start": {
 				"i": 236,
@@ -2166,6 +2226,26 @@ out/LV2.tokens.json: {
 				"i": 248,
 				"line": 19,
 				"column": 36
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "MapLiteralArgument",
+			"start": {
+				"i": 239,
+				"line": 19,
+				"column": 27
+			},
+			"end": {
+				"i": 247,
+				"line": 19,
+				"column": 35
 			},
 			"is_malformed": false,
 			"err_start": {
