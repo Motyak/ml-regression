@@ -364,11 +364,16 @@ type Set List
         res
     }
 
-    var tag Set
+    var tag {
+        var Set Set
+        (x):{
+            Set() + x
+        }
+    }
     Set := (x):{
         x := [] + x
         remove_dups(&x)
-        tag() + x -- "no longer return type_value_t, see Set_V3.ml instead"
+        tag(x)
     }
 }
 
@@ -376,7 +381,7 @@ var set Set([2, 1, 2, 3, 3])
 -- var set Set(['a:1, 'b:2])
 
 print(set)
-print(set is 'Set) -- "no longer $true, see Set_V3.ml instead"
+print(set is 'Set)
 print(set is 'List)
 
 -- Set(set + [1, 1, 3]) -- must explicitly call Set()

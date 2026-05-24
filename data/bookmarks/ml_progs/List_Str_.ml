@@ -1,6 +1,3 @@
-var not (bool):{
-    ==($false, bool)
-}
 
 var <> (a, b):{
     a == b == $false
@@ -30,7 +27,7 @@ var !tern (cond, if_false, if_true):{
 }
 
 var CaseAnalysis (pred):{
-    $type(pred) == 'Lambda || die("CaseAnalysis pred isn't a Lambda")
+    pred is 'Lambda || die("CaseAnalysis pred isn't a Lambda")
     var end $false
     var fn (val, do):{
         end <> $nil || die("additional case succeeding a fallthrough case")
@@ -78,6 +75,23 @@ var do_while (do, cond):{
     ;
 }
 
+var not {
+    var logical_not (bool):{
+        ==($false, bool)
+    }
+    var op_not (a, b):{
+        a is b == $false
+    }
+    var not (varargs...):{
+        tern($#varargs == 1, logical_not(varargs...), {
+            tern($#varargs == 2, op_not(varargs...), {
+                die("not() takes either 1 or 2 args")
+            })
+        })
+    }
+    not
+}
+
 var - {
     var sub-1 (n):{
         n + n * -2
@@ -95,9 +109,10 @@ var - {
     -
 }
 
+type Range Lambda
 var .. (from, to):{
-    $type(from) == 'Str && {from := Byte(from)}
-    $type(to) == 'Str && {to := Byte(to)}
+    from is 'Str && {from := Byte(from)}
+    to is 'Str && {to := Byte(to)}
     var dispatcher (msg):{
         tern(msg == 'from, from, {
             tern(msg == 'to, to, {
@@ -105,7 +120,7 @@ var .. (from, to):{
             })
         })
     }
-    dispatcher
+    Range(dispatcher)
 }
 
 var foreach {
@@ -128,7 +143,7 @@ var foreach {
     }
 
     var foreach (iterable, fn):{
-        tern($type(iterable) == 'Lambda, Range::foreach(iterable, fn), {
+        tern(iterable is 'Range, Range::foreach(iterable, fn), {
             Container::foreach(&iterable, fn)
         })
     }
@@ -152,7 +167,7 @@ var in {
     }
 
     var in (elem, iterable):{
-        tern($type(iterable) == 'Lambda, Range::in(elem, iterable), {
+        tern(iterable is 'Range, Range::in(elem, iterable), {
             Container::in(elem, iterable)
         })
     }
@@ -161,19 +176,15 @@ var in {
 }
 
 var !in (elem, container):{
-    in(elem, container) == $false
+    elem in container == $false
 }
 
 "autocurries until the nb of required args has been reached"
 var curry_required (requiredArgs, fn):{
     var curried _
     curried := (args...):{
-        List(args...)
         tern($#varargs >= requiredArgs, fn(args...), {
-            (args2...):{
-                List(args2...)
-                curried(args..., args2...)
-            }
+            (args2...):{curried(args..., args2...)}
         })
     }
     curried
@@ -201,7 +212,7 @@ var foreach_do {
 
 var map {
     var map (fn, iterable):{
-        var str? $type(iterable) == 'Str
+        var str? iterable is 'Str
         var res tern(str?, "", [])
         foreach(iterable, (x):{
             res += tern(str?, fn(x), [fn(x)])
@@ -213,7 +224,7 @@ var map {
 
 var filter {
     var filter (pred, iterable):{
-        var str? $type(iterable) == 'Str
+        var str? iterable is 'Str
         var res tern(str?, "", [])
         foreach(iterable, (x):{
             pred(x) && {
@@ -333,50 +344,34 @@ var all {
     curry(all)
 }
 
-var |> (input, fn):{
-    fn(input)
-}
+'==================================
 
-var >> {
-    var rightshift >> -- builtin
-
-    var >> (arg1, arg2, args...):{
-        tern($type(arg1) == 'Lambda, compose(arg1, arg2, args...), {
-            "special case, for conveniency"
-            tern($type(arg1) == '$nil && $#varargs == 0, arg2, {
-                rightshift(arg1, arg2, args...)
-            })
-        })
-    }
-    >>
-}
-
-'============================
-
-type Set List
+type List<Str> List
 {
-    var remove_dups (OUT list):{
-        var res []
-        foreach(list, (x):{
-            x !in res && {res += [x]}
-        })
-        list := res
-        res
+    var tag {
+        var List<Str> List<Str>
+        (x):{
+            List<Str>() + x
+        }
     }
 
-    var tag Set
-    Set := (x):{
-        x := [] + x
-        remove_dups(&x)
-        tag() + x -- "no longer return type_value_t, see Set_V3.ml instead"
+    var all_str {
+        all(curry_rhs(is, 'Str))
+    }
+
+    List<Str> := (list):{
+        all_str(list) || die()
+        tag(list)
     }
 }
 
-var set Set([2, 1, 2, 3, 3])
--- var set Set(['a:1, 'b:2])
+struct Spinner {
+    Float interval
+    List<Str> frames
+}
 
-print(set)
-print(set is 'Set) -- "no longer $true, see Set_V3.ml instead"
-print(set is 'List)
+-- var s Spinner(123.0, List<Str>(123))
+var s Spinner(123.0, List<Str>(["fds"]))
 
--- Set(set + [1, 1, 3]) -- must explicitly call Set()
+-- s.frames := List<Str>(s.frames + [123])
+s.frames := List<Str>(s.frames + ["fds"])

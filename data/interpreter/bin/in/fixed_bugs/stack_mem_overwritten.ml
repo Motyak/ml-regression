@@ -1,3 +1,20 @@
+```
+    Used to have a segfault or undefined behavior, such as:
+    terminate called after throwing an instance of 'std::bad_alloc'
+      what():  std::bad_alloc
+
+    because we were passing the address of a local variable, stored in the stack,
+    but then later on we re-use this same stack space for another stackframe
+    and so assigning to a local variable (paramtersBinding in that case)
+    was resulting in overwriting the stack space that was pointed to
+    (and that originally contained the correct data) and now we have
+    trash data interpreted as an Environment (std::map with millions of entries, etc..)
+
+    The solution was to allocate on the heap.
+    We never encountered the issue before because it was working accidentally,
+    the stack memory was luckily never overwritten.
+```
+
 var not (bool):{
     ==($false, bool)
 }
@@ -59,7 +76,7 @@ var until (cond, do):{
         }
     }
     loop()
-    ;
+    $nil
 }
 
 var do_while (do, cond):{
@@ -168,12 +185,8 @@ var !in (elem, container):{
 var curry_required (requiredArgs, fn):{
     var curried _
     curried := (args...):{
-        List(args...)
         tern($#varargs >= requiredArgs, fn(args...), {
-            (args2...):{
-                List(args2...)
-                curried(args..., args2...)
-            }
+            (args2...):{curried(args..., args2...)}
         })
     }
     curried
@@ -186,6 +199,8 @@ var curry (fn, args...):{
 }
 
 var curry_rhs (fn, rhs):{
+    -- fn
+    -- rhs
     var curried (lhs):{
         fn(lhs, rhs)
     }
@@ -326,7 +341,7 @@ var all {
     var all (pred, container):{
         tern(len(pred) == 1, UnaryPred::all(pred, container), {
             tern(len(pred) == 2, BinPred::all(pred, container), {
-                die("all() pred should require either 1 or 2 args")
+                die("all() pred param requires either 1 or 2 args")
             })
         })
     }
@@ -337,46 +352,12 @@ var |> (input, fn):{
     fn(input)
 }
 
-var >> {
-    var rightshift >> -- builtin
+'=============================
 
-    var >> (arg1, arg2, args...):{
-        tern($type(arg1) == 'Lambda, compose(arg1, arg2, args...), {
-            "special case, for conveniency"
-            tern($type(arg1) == '$nil && $#varargs == 0, arg2, {
-                rightshift(arg1, arg2, args...)
-            })
-        })
-    }
-    >>
+
+
+var fn (x):{
+    var is_elemtype curry_rhs(is, x)
+    all(is_elemtype)
 }
-
-'============================
-
-type Set List
-{
-    var remove_dups (OUT list):{
-        var res []
-        foreach(list, (x):{
-            x !in res && {res += [x]}
-        })
-        list := res
-        res
-    }
-
-    var tag Set
-    Set := (x):{
-        x := [] + x
-        remove_dups(&x)
-        tag() + x -- "no longer return type_value_t, see Set_V3.ml instead"
-    }
-}
-
-var set Set([2, 1, 2, 3, 3])
--- var set Set(['a:1, 'b:2])
-
-print(set)
-print(set is 'Set) -- "no longer $true, see Set_V3.ml instead"
-print(set is 'List)
-
--- Set(set + [1, 1, 3]) -- must explicitly call Set()
+fn("Str")("fds")

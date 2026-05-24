@@ -1,7 +1,3 @@
-var not (bool):{
-    ==($false, bool)
-}
-
 var <> (a, b):{
     a == b == $false
 }
@@ -30,7 +26,7 @@ var !tern (cond, if_false, if_true):{
 }
 
 var CaseAnalysis (pred):{
-    $type(pred) == 'Lambda || die("CaseAnalysis pred isn't a Lambda")
+    pred is 'Lambda || die("CaseAnalysis pred isn't a Lambda")
     var end $false
     var fn (val, do):{
         end <> $nil || die("additional case succeeding a fallthrough case")
@@ -48,13 +44,23 @@ var CaseAnalysis (pred):{
     fn
 }
 
+var while (cond, do):{
+    var loop _
+    loop := ():{
+        cond() && {
+            do()
+            _ := loop()
+        }
+    }
+    loop()
+    ;
+}
+
 var until (cond, do):{
-    var 1st_it? $true
     var loop _
     loop := ():{
         cond() || {
-            do(1st_it?)
-            1st_it? := $false
+            do()
             _ := loop()
         }
     }
@@ -63,19 +69,34 @@ var until (cond, do):{
 }
 
 var do_while (do, cond):{
-    var 1st_it? $true
-    do(1st_it?)
-    1st_it? := $false
+    do()
 
     var loop _
     loop := ():{
         cond() && {
-            do(1st_it?)
+            do()
             _ := loop()
         }
     }
     loop()
     ;
+}
+
+var not {
+    var logical_not (bool):{
+        ==($false, bool)
+    }
+    var op_not (a, b):{
+        a is b == $false
+    }
+    var not (varargs...):{
+        tern($#varargs == 1, logical_not(varargs...), {
+            tern($#varargs == 2, op_not(varargs...), {
+                die("not() takes either 1 or 2 args")
+            })
+        })
+    }
+    not
 }
 
 var - {
@@ -95,9 +116,10 @@ var - {
     -
 }
 
+type Range Lambda
 var .. (from, to):{
-    $type(from) == 'Str && {from := Byte(from)}
-    $type(to) == 'Str && {to := Byte(to)}
+    from is 'Str && {from := Byte(from)}
+    to is 'Str && {to := Byte(to)}
     var dispatcher (msg):{
         tern(msg == 'from, from, {
             tern(msg == 'to, to, {
@@ -105,7 +127,7 @@ var .. (from, to):{
             })
         })
     }
-    dispatcher
+    Range(dispatcher)
 }
 
 var foreach {
@@ -121,14 +143,14 @@ var foreach {
     var Range::foreach (range, fn):{
         var i range('from)
         var to range('to)
-        until(():{i > to}, (_):{
+        until(():{i > to}, ():{
             fn(i)
             i += 1
         })
     }
 
     var foreach (iterable, fn):{
-        tern($type(iterable) == 'Lambda, Range::foreach(iterable, fn), {
+        tern(iterable is 'Range, Range::foreach(iterable, fn), {
             Container::foreach(&iterable, fn)
         })
     }
@@ -140,7 +162,7 @@ var in {
     var Container::in (elem, container):{
         var nth 1
         var found $false
-        until(():{found || nth > len(container)}, (_):{
+        until(():{found || nth > len(container)}, ():{
             found := container[#nth] == elem
             nth += 1
         })
@@ -152,7 +174,7 @@ var in {
     }
 
     var in (elem, iterable):{
-        tern($type(iterable) == 'Lambda, Range::in(elem, iterable), {
+        tern(iterable is 'Range, Range::in(elem, iterable), {
             Container::in(elem, iterable)
         })
     }
@@ -161,19 +183,15 @@ var in {
 }
 
 var !in (elem, container):{
-    in(elem, container) == $false
+    elem in container == $false
 }
 
 "autocurries until the nb of required args has been reached"
 var curry_required (requiredArgs, fn):{
     var curried _
     curried := (args...):{
-        List(args...)
         tern($#varargs >= requiredArgs, fn(args...), {
-            (args2...):{
-                List(args2...)
-                curried(args..., args2...)
-            }
+            (args2...):{curried(args..., args2...)}
         })
     }
     curried
@@ -201,7 +219,7 @@ var foreach_do {
 
 var map {
     var map (fn, iterable):{
-        var str? $type(iterable) == 'Str
+        var str? iterable is 'Str
         var res tern(str?, "", [])
         foreach(iterable, (x):{
             res += tern(str?, fn(x), [fn(x)])
@@ -213,7 +231,7 @@ var map {
 
 var filter {
     var filter (pred, iterable):{
-        var str? $type(iterable) == 'Str
+        var str? iterable is 'Str
         var res tern(str?, "", [])
         foreach(iterable, (x):{
             pred(x) && {
@@ -341,9 +359,9 @@ var >> {
     var rightshift >> -- builtin
 
     var >> (arg1, arg2, args...):{
-        tern($type(arg1) == 'Lambda, compose(arg1, arg2, args...), {
+        tern(arg1 is 'Lambda, compose(arg1, arg2, args...), {
             "special case, for conveniency"
-            tern($type(arg1) == '$nil && $#varargs == 0, arg2, {
+            tern(arg1 == $nil && arg is 'Lambda && $#varargs == 0, arg2, {
                 rightshift(arg1, arg2, args...)
             })
         })
@@ -351,32 +369,114 @@ var >> {
     >>
 }
 
-'============================
+-- include <smallstd/ArgIterator.mlp>
+-- include <smallstd/ascii.mlp> -- "ascii(), lower?(), upper?(), lower(), upper()"
+-- include <smallstd/asList.mlp>
+-- include <smallstd/asMap.mlp>
+-- include <smallstd/ByteStr.mlp>
+-- include <smallstd/delay.mlp>
+-- include <smallstd/io.mlp> -- "getlines(), stdin(), stdout()"
+-- include <smallstd/parseInt.mlp>
+-- include <smallstd/sort.mlp>
+-- include <smallstd/types.mlp> -- "<=>()"
 
-type Set List
-{
-    var remove_dups (OUT list):{
-        var res []
-        foreach(list, (x):{
-            x !in res && {res += [x]}
+'===================================
+
+```
+    perform side-effects based on conditions..
+    ..and/or order of execution
+```
+
+var perform {
+    var keywords ['begin, 'end, 'all, '!all, 'none, '!none]
+
+    var perform (side-effects, input):{
+        var key (nth):{
+            side-effects[#nth][#1]
+        }
+        var val (nth):{
+            side-effects[#nth][#2]
+        }
+
+        var map [:] | side-effects
+        var eval (side-effect):{
+            map[side-effect]? && map[side-effect](input)
+            ;
+        }
+
+        var nth 1
+        var all $true
+        var none $true
+
+        eval('begin)
+
+        ; first iteration for non-keywords
+        while(():{nth < len(side-effects)}, ():{
+            tern(key(nth) in keywords, {nth += 1}, {
+                var pred val(nth)
+                nth += 1
+
+                key(nth) in keywords && die("non-keywords must be passed as pairs; the predicate then the associated side-effect")
+                var side-effect val(nth)
+                nth += 1
+
+                !tern(pred(input), {all &&= $false}, {
+                    none &&= $false
+                    side-effect()
+                })
+            })
         })
-        list := res
-        res
+
+        nth == len(side-effects) && die("trailing isolated non-keyword")
+        nth := 1
+
+        ; second iteration for keywords
+        while(():{nth <= len(side-effects)}, ():{
+            key(nth) in keywords && {
+                var keyword key(nth)
+                var case CaseAnalysis(Bool)
+                case(keyword == 'all, {
+                    all && map['all](input)
+                })
+                case(keyword == '!all, {
+                    not(all) && map['!all](input)
+                })
+                case(keyword == 'none, {
+                    none && map['none](input)
+                })
+                case(keyword == '!none, {
+                    not(none) && map['!none](input)
+                })
+                case(keyword in ['begin, 'end], {
+                    ; dealt separately
+                })
+                case(_, die("bug"))
+            }
+            nth += 1
+        })
+
+        eval('end)
     }
 
-    var tag Set
-    Set := (x):{
-        x := [] + x
-        remove_dups(&x)
-        tag() + x -- "no longer return type_value_t, see Set_V3.ml instead"
-    }
+    perform
 }
 
-var set Set([2, 1, 2, 3, 3])
--- var set Set(['a:1, 'b:2])
+var side-effects [
+    ['begin, (i):{putstr(Str(i) + " -> ")}]
+    ['end, (_):{print()}]
 
-print(set)
-print(set is 'Set) -- "no longer $true, see Set_V3.ml instead"
-print(set is 'List)
+    -- ['all, (_):{;}]
+    -- ['!all, (_):{;}]
+    ['none, (i):{putstr(i)}]
+    ['!none, (_):{;}]
 
--- Set(set + [1, 1, 3]) -- must explicitly call Set()
+    ['foo?, (x):{x % 5 == 0}]
+    ['foo, ():{putstr("Foo")}]
+
+    ['bar?, (x):{x % 7 == 0}]
+    ['bar, ():{putstr("Bar")}]
+]
+
+foreach(1 .. 200, (i):{
+    perform(side-effects, i)
+})
