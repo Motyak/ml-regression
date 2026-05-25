@@ -1,6 +1,6 @@
 prog: interpreter
 
-prog_exitcode: 1
+prog_exitcode: 2
 
 out/traceback.txt: ```
 	

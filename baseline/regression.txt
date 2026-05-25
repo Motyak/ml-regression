@@ -5,7 +5,7 @@ monlang-parser
 2026-05-21T21:51:38+02:00 900df759489014a9155532628b970e82c136503c added struct comments
 
 monlang-interpreter
-2026-05-24T20:37:26+02:00 ce99b63455430d451ca8c8177b00744383f305c3 fix stack mem overwritten
+2026-05-25T16:57:13+02:00 d128bec9a7be2804a6f40fe5e0ad48cfd1346a42 fix builtins + exit codes
 
 monlang-server
-2026-05-23T09:07:42+02:00 6c265e200f3287bb80bf4f073c9c82d0e9e841fa fix when key in quotes, etc..
+2026-05-25T16:54:39+02:00 f9f3a38f6ccf15df6434d96bf65a4cd42c2ee973 changed exit code when die()
