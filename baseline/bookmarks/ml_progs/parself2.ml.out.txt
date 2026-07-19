@@ -30806,6 +30806,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 526,
+				"line": 36,
+				"column": 14
+			},
+			"end": {
+				"i": 526,
+				"line": 36,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "Symbol",
 			"start": {
 				"i": 528,
@@ -30896,6 +30916,26 @@ out/LV2.tokens.json: {
 				"i": 547,
 				"line": 37,
 				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 548,
+				"line": 37,
+				"column": 16
+			},
+			"end": {
+				"i": 548,
+				"line": 37,
+				"column": 16
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -31306,6 +31346,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 643,
+				"line": 45,
+				"column": 12
+			},
+			"end": {
+				"i": 643,
+				"line": 45,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 645,
@@ -31436,6 +31496,26 @@ out/LV2.tokens.json: {
 				"i": 654,
 				"line": 45,
 				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 655,
+				"line": 45,
+				"column": 24
+			},
+			"end": {
+				"i": 655,
+				"line": 45,
+				"column": 24
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -31656,6 +31736,26 @@ out/LV2.tokens.json: {
 				"i": 791,
 				"line": 55,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 706,
+				"line": 51,
+				"column": 14
+			},
+			"end": {
+				"i": 706,
+				"line": 51,
+				"column": 14
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -33026,6 +33126,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 975,
+				"line": 71,
+				"column": 12
+			},
+			"end": {
+				"i": 975,
+				"line": 71,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 977,
@@ -33296,6 +33416,26 @@ out/LV2.tokens.json: {
 				"i": 1061,
 				"line": 74,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 1003,
+				"line": 71,
+				"column": 40
+			},
+			"end": {
+				"i": 1003,
+				"line": 71,
+				"column": 40
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -36726,6 +36866,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 1793,
+				"line": 118,
+				"column": 12
+			},
+			"end": {
+				"i": 1793,
+				"line": 118,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 1795,
@@ -36936,6 +37096,26 @@ out/LV2.tokens.json: {
 				"i": 1865,
 				"line": 120,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 1828,
+				"line": 118,
+				"column": 47
+			},
+			"end": {
+				"i": 1828,
+				"line": 118,
+				"column": 47
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -38446,6 +38626,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 2175,
+				"line": 138,
+				"column": 12
+			},
+			"end": {
+				"i": 2175,
+				"line": 138,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 2177,
@@ -38656,6 +38856,26 @@ out/LV2.tokens.json: {
 				"i": 2240,
 				"line": 140,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 2201,
+				"line": 138,
+				"column": 38
+			},
+			"end": {
+				"i": 2201,
+				"line": 138,
+				"column": 38
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -40046,6 +40266,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 2575,
+				"line": 156,
+				"column": 12
+			},
+			"end": {
+				"i": 2575,
+				"line": 156,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 2577,
@@ -40256,6 +40496,26 @@ out/LV2.tokens.json: {
 				"i": 2830,
 				"line": 164,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 2600,
+				"line": 156,
+				"column": 37
+			},
+			"end": {
+				"i": 2600,
+				"line": 156,
+				"column": 37
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -42026,6 +42286,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 3152,
+				"line": 180,
+				"column": 12
+			},
+			"end": {
+				"i": 3152,
+				"line": 180,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 3154,
@@ -42236,6 +42516,26 @@ out/LV2.tokens.json: {
 				"i": 3218,
 				"line": 182,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 3177,
+				"line": 180,
+				"column": 37
+			},
+			"end": {
+				"i": 3177,
+				"line": 180,
+				"column": 37
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -42486,6 +42786,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 3231,
+				"line": 183,
+				"column": 12
+			},
+			"end": {
+				"i": 3231,
+				"line": 183,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 3233,
@@ -42696,6 +43016,26 @@ out/LV2.tokens.json: {
 				"i": 3385,
 				"line": 188,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 3256,
+				"line": 183,
+				"column": 37
+			},
+			"end": {
+				"i": 3256,
+				"line": 183,
+				"column": 37
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -42926,6 +43266,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 3304,
+				"line": 185,
+				"column": 16
+			},
+			"end": {
+				"i": 3304,
+				"line": 185,
+				"column": 16
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 3306,
@@ -43136,6 +43496,26 @@ out/LV2.tokens.json: {
 				"i": 3378,
 				"line": 187,
 				"column": 10
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 3329,
+				"line": 185,
+				"column": 41
+			},
+			"end": {
+				"i": 3329,
+				"line": 185,
+				"column": 41
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -48446,6 +48826,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 4879,
+				"line": 253,
+				"column": 12
+			},
+			"end": {
+				"i": 4879,
+				"line": 253,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 4881,
@@ -48656,6 +49056,26 @@ out/LV2.tokens.json: {
 				"i": 5030,
 				"line": 257,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 4916,
+				"line": 253,
+				"column": 49
+			},
+			"end": {
+				"i": 4916,
+				"line": 253,
+				"column": 49
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -49586,6 +50006,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 5169,
+				"line": 265,
+				"column": 12
+			},
+			"end": {
+				"i": 5169,
+				"line": 265,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 5171,
@@ -49796,6 +50236,26 @@ out/LV2.tokens.json: {
 				"i": 5309,
 				"line": 269,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 5195,
+				"line": 265,
+				"column": 38
+			},
+			"end": {
+				"i": 5195,
+				"line": 265,
+				"column": 38
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -50786,6 +51246,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 5455,
+				"line": 277,
+				"column": 12
+			},
+			"end": {
+				"i": 5455,
+				"line": 277,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 5457,
@@ -50996,6 +51476,26 @@ out/LV2.tokens.json: {
 				"i": 5518,
 				"line": 279,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 5480,
+				"line": 277,
+				"column": 37
+			},
+			"end": {
+				"i": 5480,
+				"line": 277,
+				"column": 37
 			},
 			"is_malformed": false,
 			"err_start": {

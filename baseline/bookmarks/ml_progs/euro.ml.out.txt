@@ -4102,6 +4102,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 250,
+				"line": 16,
+				"column": 18
+			},
+			"end": {
+				"i": 250,
+				"line": 16,
+				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "Symbol",
 			"start": {
 				"i": 250,

@@ -4720,6 +4720,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 267,
+				"line": 22,
+				"column": 6
+			},
+			"end": {
+				"i": 267,
+				"line": 22,
+				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 269,
@@ -5140,6 +5160,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 353,
+				"line": 26,
+				"column": 23
+			},
+			"end": {
+				"i": 353,
+				"line": 26,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 373,
@@ -5490,6 +5530,26 @@ out/LV2.tokens.json: {
 				"i": 443,
 				"line": 34,
 				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 444,
+				"line": 34,
+				"column": 14
+			},
+			"end": {
+				"i": 444,
+				"line": 34,
+				"column": 14
 			},
 			"is_malformed": false,
 			"err_start": {

@@ -795,6 +795,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 44,
+				"line": 5,
+				"column": 9
+			},
+			"end": {
+				"i": 44,
+				"line": 5,
+				"column": 9
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 46,
@@ -875,6 +895,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 60,
+				"line": 6,
+				"column": 13
+			},
+			"end": {
+				"i": 60,
+				"line": 6,
+				"column": 13
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 62,
@@ -945,6 +985,26 @@ out/LV2.tokens.json: {
 				"i": 66,
 				"line": 6,
 				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 67,
+				"line": 6,
+				"column": 20
+			},
+			"end": {
+				"i": 67,
+				"line": 6,
+				"column": 20
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -1065,6 +1125,46 @@ out/LV2.tokens.json: {
 				"i": 82,
 				"line": 10,
 				"column": 3
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 83,
+				"line": 10,
+				"column": 4
+			},
+			"end": {
+				"i": 83,
+				"line": 10,
+				"column": 4
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 85,
+				"line": 10,
+				"column": 6
+			},
+			"end": {
+				"i": 85,
+				"line": 10,
+				"column": 6
 			},
 			"is_malformed": false,
 			"err_start": {

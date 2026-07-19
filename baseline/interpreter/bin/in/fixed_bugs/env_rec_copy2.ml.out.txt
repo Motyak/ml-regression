@@ -7,7 +7,7 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	Runtime error: Unbound symbol `a` (src/interpret.cpp:1102)
+	Runtime error: Unbound symbol `a` (src/interpret.cpp:1627)
 	    at delayed(data/interpreter/bin/in/fixed_bugs/env_rec_copy2.ml:8:12)
 	    at delayed(data/interpreter/bin/in/fixed_bugs/env_rec_copy2.ml:3:21)
 	    at <program>(data/interpreter/bin/in/fixed_bugs/env_rec_copy2.ml:12:1)
@@ -1262,6 +1262,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 38,
+				"line": 3,
+				"column": 18
+			},
+			"end": {
+				"i": 38,
+				"line": 3,
+				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 40,
@@ -1652,6 +1672,26 @@ out/LV2.tokens.json: {
 				"i": 111,
 				"line": 12,
 				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 112,
+				"line": 12,
+				"column": 9
+			},
+			"end": {
+				"i": 112,
+				"line": 12,
+				"column": 9
 			},
 			"is_malformed": false,
 			"err_start": {

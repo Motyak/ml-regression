@@ -1846,6 +1846,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 24,
+				"line": 4,
+				"column": 8
+			},
+			"end": {
+				"i": 24,
+				"line": 4,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 26,
@@ -2146,6 +2166,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 83,
+				"line": 7,
+				"column": 6
+			},
+			"end": {
+				"i": 83,
+				"line": 7,
+				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 85,
@@ -2296,6 +2336,26 @@ out/LV2.tokens.json: {
 				"i": 168,
 				"line": 13,
 				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 105,
+				"line": 9,
+				"column": 8
+			},
+			"end": {
+				"i": 105,
+				"line": 9,
+				"column": 8
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2586,6 +2646,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 165,
+				"line": 12,
+				"column": 7
+			},
+			"end": {
+				"i": 165,
+				"line": 12,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 170,
@@ -2736,6 +2816,26 @@ out/LV2.tokens.json: {
 				"i": 190,
 				"line": 16,
 				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 191,
+				"line": 16,
+				"column": 3
+			},
+			"end": {
+				"i": 191,
+				"line": 16,
+				"column": 3
 			},
 			"is_malformed": false,
 			"err_start": {

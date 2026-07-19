@@ -1019,6 +1019,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 31,
+				"line": 2,
+				"column": 12
+			},
+			"end": {
+				"i": 31,
+				"line": 2,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "VarStatement",
 			"start": {
 				"i": 36,
@@ -1169,6 +1189,26 @@ out/LV2.tokens.json: {
 				"i": 65,
 				"line": 6,
 				"column": 19
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 53,
+				"line": 6,
+				"column": 7
+			},
+			"end": {
+				"i": 53,
+				"line": 6,
+				"column": 7
 			},
 			"is_malformed": false,
 			"err_start": {

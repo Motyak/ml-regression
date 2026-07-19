@@ -13,7 +13,7 @@ out/console.txt: ```
 	calling a
 	we are in a()
 	calling +
-	Runtime error: Unbound symbol `fds` (src/interpret.cpp:942)
+	Runtime error: Unbound symbol `fds` (src/interpret.cpp:1416)
 	    at +(data/interpreter/bin/in/unbound1.ml:7:5)
 	    at +(data/interpreter/bin/in/unbound1.ml:7:9)
 	    at a(data/interpreter/bin/in/unbound1.ml:7:13)
@@ -1805,6 +1805,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 24,
+				"line": 4,
+				"column": 8
+			},
+			"end": {
+				"i": 24,
+				"line": 4,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 26,
@@ -2245,6 +2265,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 103,
+				"line": 9,
+				"column": 8
+			},
+			"end": {
+				"i": 103,
+				"line": 9,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 105,
@@ -2525,6 +2565,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 163,
+				"line": 12,
+				"column": 7
+			},
+			"end": {
+				"i": 163,
+				"line": 12,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 168,
@@ -2675,6 +2735,26 @@ out/LV2.tokens.json: {
 				"i": 188,
 				"line": 16,
 				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 189,
+				"line": 16,
+				"column": 3
+			},
+			"end": {
+				"i": 189,
+				"line": 16,
+				"column": 3
 			},
 			"is_malformed": false,
 			"err_start": {

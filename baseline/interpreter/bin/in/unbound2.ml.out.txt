@@ -8,7 +8,7 @@ out/traceback.txt: ```
 
 out/console.txt: ```
 	acc10 10
-	Runtime error: Lambda defined with 1 param, but called with 2 args (src/interpret.cpp:389)
+	Runtime error: Lambda defined with 1 param, but called with 2 args (src/interpret.cpp:783)
 	    at <program>(data/interpreter/bin/in/unbound2.ml:26:17)
 	    at <program>(data/interpreter/bin/in/unbound2.ml:62:5)
 	    at <program>(data/interpreter/bin/in/unbound2.ml:53:1)
@@ -10627,6 +10627,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 326,
+				"line": 22,
+				"column": 18
+			},
+			"end": {
+				"i": 326,
+				"line": 22,
+				"column": 18
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 328,
@@ -12807,6 +12827,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 955,
+				"line": 60,
+				"column": 32
+			},
+			"end": {
+				"i": 955,
+				"line": 60,
+				"column": 32
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 963,
@@ -13227,6 +13267,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 1013,
+				"line": 63,
+				"column": 32
+			},
+			"end": {
+				"i": 1013,
+				"line": 63,
+				"column": 32
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 1021,
@@ -13607,6 +13667,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 1069,
+				"line": 66,
+				"column": 31
+			},
+			"end": {
+				"i": 1069,
+				"line": 66,
+				"column": 31
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 1075,
@@ -13897,6 +13977,26 @@ out/LV2.tokens.json: {
 				"i": 1148,
 				"line": 73,
 				"column": 29
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 1150,
+				"line": 73,
+				"column": 31
+			},
+			"end": {
+				"i": 1150,
+				"line": 73,
+				"column": 31
 			},
 			"is_malformed": false,
 			"err_start": {

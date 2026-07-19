@@ -3003,6 +3003,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 22,
+				"line": 3,
+				"column": 21
+			},
+			"end": {
+				"i": 22,
+				"line": 3,
+				"column": 21
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 24,
@@ -3133,6 +3153,26 @@ out/LV2.tokens.json: {
 				"i": 89,
 				"line": 8,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 55,
+				"line": 5,
+				"column": 18
+			},
+			"end": {
+				"i": 55,
+				"line": 5,
+				"column": 18
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -3403,6 +3443,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 127,
+				"line": 12,
+				"column": 23
+			},
+			"end": {
+				"i": 127,
+				"line": 12,
+				"column": 23
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "VarStatement",
 			"start": {
 				"i": 129,
@@ -3473,6 +3533,26 @@ out/LV2.tokens.json: {
 				"i": 150,
 				"line": 13,
 				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 151,
+				"line": 13,
+				"column": 23
+			},
+			"end": {
+				"i": 151,
+				"line": 13,
+				"column": 23
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -3703,6 +3783,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 178,
+				"line": 16,
+				"column": 15
+			},
+			"end": {
+				"i": 178,
+				"line": 16,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 181,
@@ -3853,6 +3953,26 @@ out/LV2.tokens.json: {
 				"i": 194,
 				"line": 17,
 				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 195,
+				"line": 17,
+				"column": 15
+			},
+			"end": {
+				"i": 195,
+				"line": 17,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -4023,6 +4143,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 212,
+				"line": 18,
+				"column": 15
+			},
+			"end": {
+				"i": 212,
+				"line": 18,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 215,
@@ -4173,6 +4313,26 @@ out/LV2.tokens.json: {
 				"i": 228,
 				"line": 19,
 				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 229,
+				"line": 19,
+				"column": 15
+			},
+			"end": {
+				"i": 229,
+				"line": 19,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -4343,6 +4503,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 246,
+				"line": 20,
+				"column": 15
+			},
+			"end": {
+				"i": 246,
+				"line": 20,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 249,
@@ -4493,6 +4673,26 @@ out/LV2.tokens.json: {
 				"i": 262,
 				"line": 21,
 				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 263,
+				"line": 21,
+				"column": 15
+			},
+			"end": {
+				"i": 263,
+				"line": 21,
+				"column": 15
 			},
 			"is_malformed": false,
 			"err_start": {

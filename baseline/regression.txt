@@ -1,11 +1,11 @@
 monlang
-2026-02-07T23:00:20+01:00 d8ae0234c5946aae8ec643159d4c3db697571f29 replace -Og with -O0 everywhere
+2026-07-19T18:18:16+02:00 68bb31be4fcef853f4da1860ff1747c85ba8c5ee fix for arm64
 
 monlang-parser
-2026-05-21T21:51:38+02:00 900df759489014a9155532628b970e82c136503c added struct comments
+2026-07-19T18:18:36+02:00 66a8a25430419b5c2a08b6e3dfcc2bcd39f61c89 fix for arm64
 
 monlang-interpreter
-2026-05-25T16:57:13+02:00 d128bec9a7be2804a6f40fe5e0ad48cfd1346a42 fix builtins + exit codes
+2026-07-19T18:18:55+02:00 b915039e0dbb587255d6614d1000af2c91e735d3 fix for arm64
 
 monlang-server
-2026-05-25T16:54:39+02:00 f9f3a38f6ccf15df6434d96bf65a4cd42c2ee973 changed exit code when die()
+2026-07-11T09:58:37+02:00 c31642868d26e246d2ab3de9c607f5b29dbfaa3e better shift+click on tr

@@ -11,7 +11,7 @@ out/console.txt: ```
 	calling b
 	we are in b()
 	calling a
-	Runtime error: Lambda defined with 0 param, but called with 1 arg (src/interpret.cpp:399)
+	Runtime error: Lambda defined with 0 param, but called with 1 arg (src/interpret.cpp:783)
 	    at a(data/interpreter/bin/in/toomanyargs.ml:3:7)
 	    at b(data/interpreter/bin/in/toomanyargs.ml:10:5)
 	    at <program>(data/interpreter/bin/in/toomanyargs.ml:14:1)
@@ -1512,6 +1512,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 23,
+				"line": 3,
+				"column": 8
+			},
+			"end": {
+				"i": 23,
+				"line": 3,
+				"column": 8
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 25,
@@ -1682,6 +1702,26 @@ out/LV2.tokens.json: {
 				"i": 128,
 				"line": 11,
 				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 64,
+				"line": 7,
+				"column": 8
+			},
+			"end": {
+				"i": 64,
+				"line": 7,
+				"column": 8
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2162,6 +2202,26 @@ out/LV2.tokens.json: {
 				"i": 150,
 				"line": 14,
 				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 151,
+				"line": 14,
+				"column": 3
+			},
+			"end": {
+				"i": 151,
+				"line": 14,
+				"column": 3
 			},
 			"is_malformed": false,
 			"err_start": {

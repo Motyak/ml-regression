@@ -772,6 +772,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 20,
+				"line": 3,
+				"column": 7
+			},
+			"end": {
+				"i": 20,
+				"line": 3,
+				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 25,
@@ -922,6 +942,26 @@ out/LV2.tokens.json: {
 				"i": 161,
 				"line": 11,
 				"column": 7
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 162,
+				"line": 11,
+				"column": 8
+			},
+			"end": {
+				"i": 162,
+				"line": 11,
+				"column": 8
 			},
 			"is_malformed": false,
 			"err_start": {

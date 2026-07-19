@@ -6719,6 +6719,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 36,
+				"line": 8,
+				"column": 12
+			},
+			"end": {
+				"i": 36,
+				"line": 8,
+				"column": 12
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 38,
@@ -7139,6 +7159,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 106,
+				"line": 12,
+				"column": 15
+			},
+			"end": {
+				"i": 106,
+				"line": 12,
+				"column": 15
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "Assignment",
 			"start": {
 				"i": 117,
@@ -7189,6 +7229,26 @@ out/LV2.tokens.json: {
 				"i": 214,
 				"line": 22,
 				"column": 2
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 127,
+				"line": 16,
+				"column": 11
+			},
+			"end": {
+				"i": 127,
+				"line": 16,
+				"column": 11
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -7559,6 +7619,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 205,
+				"line": 20,
+				"column": 20
+			},
+			"end": {
+				"i": 205,
+				"line": 20,
+				"column": 20
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 216,
@@ -7609,6 +7689,26 @@ out/LV2.tokens.json: {
 				"i": 221,
 				"line": 24,
 				"column": 6
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 222,
+				"line": 24,
+				"column": 7
+			},
+			"end": {
+				"i": 222,
+				"line": 24,
+				"column": 7
 			},
 			"is_malformed": false,
 			"err_start": {

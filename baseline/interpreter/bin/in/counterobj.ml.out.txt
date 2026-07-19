@@ -2094,6 +2094,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "LambdaNoParameter",
+			"start": {
+				"i": 58,
+				"line": 5,
+				"column": 14
+			},
+			"end": {
+				"i": 58,
+				"line": 5,
+				"column": 14
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "BlockExpression",
 			"start": {
 				"i": 60,
@@ -2674,6 +2694,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 181,
+				"line": 16,
+				"column": 22
+			},
+			"end": {
+				"i": 181,
+				"line": 16,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 184,
@@ -2824,6 +2864,26 @@ out/LV2.tokens.json: {
 				"i": 208,
 				"line": 17,
 				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 209,
+				"line": 17,
+				"column": 26
+			},
+			"end": {
+				"i": 209,
+				"line": 17,
+				"column": 26
 			},
 			"is_malformed": false,
 			"err_start": {
@@ -2994,6 +3054,26 @@ out/LV2.tokens.json: {
 			"err_fmt": ""
 		},
 		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 233,
+				"line": 18,
+				"column": 22
+			},
+			"end": {
+				"i": 233,
+				"line": 18,
+				"column": 22
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
 			"name": "ExpressionStatement",
 			"start": {
 				"i": 236,
@@ -3144,6 +3224,26 @@ out/LV2.tokens.json: {
 				"i": 260,
 				"line": 19,
 				"column": 25
+			},
+			"is_malformed": false,
+			"err_start": {
+				"i": 0,
+				"line": 0,
+				"column": 0
+			},
+			"err_fmt": ""
+		},
+		{
+			"name": "FunctionCallNoArgument",
+			"start": {
+				"i": 261,
+				"line": 19,
+				"column": 26
+			},
+			"end": {
+				"i": 261,
+				"line": 19,
+				"column": 26
 			},
 			"is_malformed": false,
 			"err_start": {
