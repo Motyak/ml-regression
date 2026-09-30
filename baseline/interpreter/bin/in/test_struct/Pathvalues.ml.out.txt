@@ -7,7 +7,7 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	[Dude(Name("fds"), UInt(29))]
+	[Dude(Name{"fds"}, UInt(29))]
 	
 ```
 

@@ -1,11 +1,11 @@
 monlang
-2026-07-19T18:18:16+02:00 68bb31be4fcef853f4da1860ff1747c85ba8c5ee fix for arm64
+2026-09-30T18:41:56+02:00 77f422f311795a90f4d196d6df6da7df8cd622d4 fix missing include
 
 monlang-parser
-2026-07-19T18:18:36+02:00 66a8a25430419b5c2a08b6e3dfcc2bcd39f61c89 fix for arm64
+2026-08-29T12:01:13+02:00 8343fd91c725e0ad8fdcd0c069be20e4a79df472 fix rebuild_elfs and env utils
 
 monlang-interpreter
-2026-07-19T18:18:55+02:00 b915039e0dbb587255d6614d1000af2c91e735d3 fix for arm64
+2026-09-27T13:26:17+02:00 38cb3198600657f5393b6331b42a9ae5d8dfef0d added environ variables as special symbols
 
 monlang-server
-2026-07-11T09:58:37+02:00 c31642868d26e246d2ab3de9c607f5b29dbfaa3e better shift+click on tr
+2026-08-29T12:41:39+02:00 17b6f7a82f32552fb4076dff17cd88081f9db425 add superstring and remove escapes in multilines

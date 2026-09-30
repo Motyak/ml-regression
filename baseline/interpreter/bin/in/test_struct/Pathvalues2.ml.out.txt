@@ -7,8 +7,8 @@ out/traceback.txt: ```
 ```
 
 out/console.txt: ```
-	MyStruct([])
-	MyStruct([MyStruct([7, 7, 7])])
+	MyStruct{[]}
+	MyStruct{[MyStruct{[7, 7, 7]}]}
 	
 ```
 
